@@ -1,0 +1,145 @@
+<!-- ============================================= -->
+<!--                                          -->
+<!-- ============================================= -->
+
+<project name="UtopiaCoreUI" default="MakeJar" basedir=".">
+
+  <description>
+    This buildfile is used to build the UtopiaCore subproject within 
+    the Utopia project.
+  </description>
+
+	<property file="../Nejat2Build/global.properties"/>	
+
+  <!-- set path to include the necessary jar files for javac -->
+	<path id="project.class.path">
+	    <fileset dir="${Struts.dir}">    	
+	    	<include name="*.jar"/>
+	    </fileset> 
+		<fileset dir="${Quartz.dir}">    	
+			    	<include name="*.jar"/>
+	    </fileset> 
+	    <fileset dir="${ThirdParty.dir}">    	
+	        	<include name="*.jar"/>
+	      </fileset>
+		<fileset dir="${Jasper.dir}">    	
+			        	<include name="*.jar"/>
+			      </fileset>
+	 <fileset dir="${J2EE.dir}">    	
+		        <include name="*.jar"/>
+		      </fileset>
+		<fileset dir="${coreJarsDir}">    	
+			       	<include name="*.jar"/>
+			 </fileset>
+		<fileset dir="${commonJarsDir}">    	
+			        	<include name="*.jar"/>
+			   </fileset>
+		<fileset dir="${GWT.dir}">    	
+			<include name="*.jar"/>
+	    </fileset>
+		<fileset dir="${JacksonLib.dir}">    	
+					<include name="*.jar"/>
+	    </fileset>
+		
+  </path>
+
+
+<!-- *******************************************SVN client init ****************************************************-->	
+<path id="svnClassPath">
+	  <fileset dir="${SVN.Client.dir}">    	
+		    	<include name="*.jar"/>
+	  </fileset>   
+</path>
+	
+<typedef resource="org/tigris/subversion/svnant/svnantlib.xml" classpathref="svnClassPath" />
+
+<svnSetting id="svn.setting" javahl="false" svnkit="true" />
+
+	<target name="checkRevisionInfo" >
+			<svn  refid="svn.setting">
+	            <wcVersion path="." />
+		   </svn>
+		   <echo message="Revision Information:"/>
+		   <echo message= "Subversion revision: ${revision.max}" />
+		   <echo message= "Subversion repository url: ${repository.url}" />
+		
+	</target>
+<!-- *******************************************/SVN client init ****************************************************-->
+	
+
+  <target name="init" description="initialization target" depends="clean">
+    <echo message="=========== Build Utopia Core"/>
+    <!-- create the time stamp -->
+    <tstamp/>
+    <!-- create the build directory structure used by compile -->
+    <mkdir dir="${build.dir}"/>
+    <!-- check for the distribution directory -->
+    <available file="${dist.dir}" type="dir" property="dist.dir.exists"/>
+  </target>
+
+  <target name="makedir" depends="init" unless="dist.dir.exists">
+    <!-- create the distribution directory if not available -->
+    <mkdir dir="${dist}/${dist.dir}"/>
+  </target>
+
+  
+  <target name="compile" depends="makedir">
+    <!-- compile the java code from ${src} into ${build.dir} -->
+    <javac srcdir="${src}"  destdir="${build.dir}" deprecation="on" source="1.6" target="1.6" debug="on" memoryinitialsize="32m" fork="true" memorymaximumsize="256m" >
+      <classpath refid="project.class.path"/>
+    </javac>
+    <!-- copy all image & sound files from src to the build directory -->
+    <copy todir="${build.dir}">
+      <fileset dir="${src}">
+        <include name="**/font/*"/>
+        <include name="**/*.gif"/>
+        <include name="**/*.jpg"/>
+        <include name="**/*.png"/>
+        <include name="**/*.htm"/>
+        <include name="**/*.ttf"/>
+   	    <include name="**/*.fon"/>
+        <include name="**/*.htm"/>
+        <include name="**/*.html"/>
+      	<include name="**/*.java"/>
+        <include name="**/*.properties"/>
+        <include name="**/*.xml"/>
+        <exclude name="**/package.html"/>
+      </fileset>
+    </copy>
+  </target>
+
+
+  <!-- =========================================== -->
+  <!-- Distribution                                -->
+  <!-- =========================================== -->
+<target name="dist" depends="compile,checkRevisionInfo">
+	  	  	  	<tstamp>
+	  	  	  	  	     <format property="NOW" pattern="yyyy MMMM dd HH:mm:ss" locale="en"/>
+	  	  	  	</tstamp>	
+	 <jar jarfile="${dist.dir}/${coreUIJarName}.jar" basedir="${build.dir}">
+	  	    	<manifest>
+	  	    	  		      <attribute name="Built-By" value="${user.name}" />
+	  	    	  			  <attribute name="creation-Date" value="${NOW}" />	 
+	  	    	  			  <attribute name="RevisionId" value="${revision.max}" />
+	  		    </manifest>
+	  	    </jar>	
+	    
+  </target>
+
+	  <target name="clean">
+	    <!-- Delete the ${build.dir} directory trees -->
+	    <delete dir="${build.dir}"/>
+	    <delete file="${dist.dir}/${coreUIJarName}.jar" failonerror="false"/>
+	  </target>
+	  <target name="MakeJar" depends="dist">
+	    <!-- Delete the ${build.dir} directory trees -->
+	    <delete dir="${build.dir}"/>
+	  	<copy todir="${coreJarsDir}" >
+	  		  		  <fileset file="${coreUIJarName}.jar" />
+	  		  	 </copy>
+	  		  	<delete  >
+	  		  	  	  		<fileset file="${coreUIJarName}.jar" />
+	  		  	</delete>
+	  </target>
+
+</project>

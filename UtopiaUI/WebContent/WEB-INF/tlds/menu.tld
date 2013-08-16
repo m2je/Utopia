@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+<tlibversion>1.2</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>menuTld</shortname>
+<uri>menuTld</uri>
+<tag>
+<name>menuItems</name>
+<tagclass>ir.utopia.core.menu.MenuItemWriterTag</tagclass>
+
+
+<!--
+<attribute>
+<name>id</name>
+<required>true</required>
+<rtexprvalue>false</rtexprvalue>
+</attribute>
+
+  -->
+
+</tag>
+</taglib>

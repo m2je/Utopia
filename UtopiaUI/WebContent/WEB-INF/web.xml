@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The web.xml, also known as the deployment descriptor, defines a Java Servlet web application. 
+		 This document is a mandatory element of any web application and must reside within WEB-INF.  The 
+		 deployment descriptor defines all the servlets and servlet filters that belong to this web
+		 application. -->
+
+<web-app >
+	<taglib>
+		<taglib-uri>menuTld</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/menu.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>Saman</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/SamanTags.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>Util</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/UtilityTags.tld
+		</taglib-location>
+	</taglib>
+
+	<display-name>UtopiaUI</display-name>
+	
+	
+	<!-- 
+	<filter>
+        <filter-name>struts2</filter-name>
+          <filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class> 
+        		<init-param>
+  			<param-name>actionPackages</param-name>
+ 			<param-value>ir.utopia</param-value>
+		</init-param>   
+		  <init-param>
+  			<param-name>actionPackages</param-name>
+ 			<param-value>manning.chapterTwo</param-value>
+		</init-param>   
+    </filter>
+	 -->
+	
+	<filter>
+        <filter-name>struts2</filter-name>
+          <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class> 
+        		<init-param>
+  			<param-name>actionPackages</param-name>
+ 			<param-value>ir.utopia</param-value>
+		</init-param>   
+    </filter>
+    
+   
+	 	
+    
+  
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+	<error-page>
+		<exception-type>
+			ir.utopia.core.security.exception.NonAuthorizedActionException
+		</exception-type>
+		<location>/templates/errorPages/authorizationFail.jsp
+		</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>
+			ir.utopia.core.security.exception.NotAuthenticatedException
+		</exception-type>
+		<location>/pages/security/login.jsp
+		</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.Exception	</exception-type>
+		<location>/pages/UnderConstruction.jsp</location>
+	</error-page>
+<!-- 
+	<servlet>
+		<servlet-name>DataInput-service</servlet-name>
+		<servlet-class>
+			ir.utopia.core.util.tags.datainputform.server.DataInputFormServiceImpl
+		</servlet-class>
+	</servlet>
+		
+	<servlet-mapping>
+			<servlet-name>DataInput-service</servlet-name>
+			<url-pattern>/DataInput-service</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>DataInput-service</servlet-name>
+			<url-pattern>/templates/menu/DataInput-service</url-pattern>
+		</servlet-mapping>
+	 -->	
+	<servlet>
+		<servlet-name>ControlPanel-Service</servlet-name>
+		<servlet-class>ir.utopia.core.util.tags.controlpanel.server.ControlPanelServlet</servlet-class>
+	</servlet>
+		<servlet-mapping>
+			<servlet-name>ControlPanel-Service</servlet-name>
+			<url-pattern>/js/components/ir.utopia.core.util.tags.controlpanel.ControlPanel/ControlPanel-Service</url-pattern>
+		</servlet-mapping>
+	<!-- 	
+	<servlet>
+		<servlet-name>Process-Service</servlet-name>
+		<servlet-class>
+			ir.utopia.core.util.tags.datainputform.server.DataInputFormServiceImpl
+		</servlet-class>
+	</servlet>
+	 
+		<servlet-mapping>
+			<servlet-name>Process-Service</servlet-name>
+			<url-pattern>/Process-Service</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Process-Service</servlet-name>
+			<url-pattern>/templates/menu/Process-Service</url-pattern>
+		</servlet-mapping>
+	-->	
+		<session-config>
+                <session-timeout>300</session-timeout>
+        </session-config>
+        
+        <servlet>
+		<servlet-name>Image-Resolver</servlet-name>
+		<servlet-class>
+			ir.utopia.core.util.ImageResoulverServlet
+		</servlet-class>
+	</servlet>
+        <servlet-mapping>
+			<servlet-name>Image-Resolver</servlet-name>
+			<url-pattern>/Image-Resolver</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Image-Resolver</servlet-name>
+			<url-pattern>/templates/menu/Image-Resolver</url-pattern>
+		</servlet-mapping>
+        
+</web-app>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.sun.enterprise.jst.server.runtimeTarget/GlassFish 2.1 Java EE 5">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCoreBasis"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCommon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCore"/>
+	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/jdom.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Apache-commons"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Quartz"/>
+	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/jxl.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JaperReports"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaUIComponents"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaSecurityHandler"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/Struts2.3.4/struts2-json-plugin-2.3.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jackson"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

@@ -1,0 +1,203 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>1</title>
+<style type="text/css">
+	@media all{
+		div{
+			vertical-align:top;
+		}
+		div.childsLabel{
+			text-align:center;
+			width: 100%;		
+			direction:_dir;
+			margin-top:20px;
+		}
+		div.childs{
+			text-align:center;
+			width: 90%;		
+			direction:_dir;
+			margin-_align:3%;
+			padding:2px;
+		}
+		div.block{
+			float:_align;
+			text-align:_align;
+			width:43%;
+			direction:_dir;
+		}
+		.full{
+			float:_align;
+			text-align:_align;
+			direction:_dir;
+			float:_align;
+			width:100%;
+		}
+		.title{
+			float:_align;
+			text-center;
+			direction:_dir;
+			float:_align;
+			width:100%;
+		}
+		div.name{
+			float:_align;
+			direction:inherit;
+			text-align:_alignMirror;
+			padding:3px;
+		}
+		div.value{
+			float:_align;
+			direction:inherit;
+			text-align:_align;
+			padding:3px;
+		}
+		button{
+			font-family:tahoma;
+			font-size:13px;
+		}
+		div.header{
+			text-align: center;
+		}
+		hr{
+			width:100%;
+			float:_align;
+			height:1px;
+			color: silver;
+			border-bottom:0px;
+			border-top: 1px dashed silver;
+		}
+		br{
+			width:100%;
+			float:_align;
+		}
+		button{
+			font-family: tahoma;
+			font-size: 12px;
+		}
+	}
+	
+	@media screen{
+		div.childsLabel{
+			float:_align;
+			font-family:Arial;
+			font-size:15px;
+			font-weight:bold;
+			border:1px solid;
+		}
+
+		div.childs{
+			float:_align;
+		}
+
+		div.printDiv{
+			float: _align;
+			width:100%;
+			padding-top:30px;
+		}
+		div.name{
+			font-family:Arial;
+			font-size:14px;
+			font-weight:bold;
+		}
+		div.value{
+			font-family:tahoma;
+			font-size:12px;
+			font-weight: normal;
+		}
+		div.header{
+			font-family:Arial;
+			font-size: 16;
+			font-weight: bold;
+		}
+		div.subheader{
+			font-family:Arial;
+			font-size: 16;
+			font-weight: bold;
+		}
+		.title{
+			font-family:Arial;
+			font-size: 15px;
+			font-weight: bold;
+			padding-top:10px;
+		}
+		
+	}
+	
+	@media print{
+		div.childsLabel{
+			float:none;;
+			font-family:b zar, zar;
+			font-size:15px;
+			font-weight:bold;
+		}
+		div.childs{
+			float:none;;
+		}
+		
+		div.printDiv{
+			display: none;
+			visibility: hidden;
+		}
+		div.name{
+			font-family:b zar, zar;
+			font-size: 12px;
+			font-weight: bold;
+		}	
+		div.value{
+			font-family:b zar, zar;
+			font-size: 13px;
+			font-weight: normal;
+		}	
+		div.header{
+			font-family:b zar, zar;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.title{
+			font-family:b zar, zar;
+			font-size: 15px;
+			font-weight: bold;
+			margin-top:20px;
+			padding-bottom:20px;
+			padding-top:10px;
+			border-top: 1px solid;
+		}
+	}
+</style><script language=javascript>
+	function printThis(){
+		print();
+	}
+	function winBack(){
+		if(window.event)
+			history.back();
+		else
+			back();
+	}
+</script>
+</head>
+
+<body>
+	<div class="header">_header</div><br/>
+	_body
+	<div align="center" class="printDiv">
+	
+	<table dir="_dir">
+	<tr>
+	<td>
+		<button background-repeat:no-repeat="" onclick="printThis()" style="border:0px;width: 106px; height: 22px; background-image: url(_imageURL/btn_Print_10622_fa.gif);">_printLabel</button>
+	</td>
+	<td>
+		&nbsp; &nbsp;
+	</td>
+	<td>
+		<button background-repeat:no-repeat="" onclick="winBack()" style="border:0px;width: 106px; height: 22px; background-image: url(_imageURL/btn_Cancel_10622_fa.gif);">_cancelLabel</button>	</td>
+	</tr>
+	<tr><td colspan="3"><div class=value><small>_font_comment</small></div></td></tr>
+	</table>	
+	</div>
+	<br><br><br>
+</body>
+
+</html>

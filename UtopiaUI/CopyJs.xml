@@ -1,0 +1,77 @@
+<project name="SamanCostingUI"  basedir=".">
+   
+ <property name="UtopiaCoreUIJs.dir" value="../UtopiaCoreUIComponents/war"/>
+   
+   <property name="CopyToDir.dir" value="./CoreUI/js/components"/>
+	<property name="CSSCopyToDir.dir" value="./CoreUI/css"/>
+   
+   <!--  first delete all the content -->
+   <delete includeemptydirs="true" failonerror="false">
+    <fileset dir="${CopyToDir.dir}/ir.utopia.core.util.tags.datainputform.DataInputForm" includes="**/**" defaultexcludes="false"/>
+    <fileset dir="${CopyToDir.dir}/ir.utopia.core.util.tags.process.ProcessHandler" includes="**/**" defaultexcludes="false"/>
+    <fileset dir="${CopyToDir.dir}/ir.utopia.core.util.tags.searchpage.SearchPage" includes="**/**" defaultexcludes="false"/>
+    <fileset dir="${CopyToDir.dir}/ir.utopia.core.util.tags.controlpanel.ControlPanel" includes="**/**" defaultexcludes="false"/>
+    <fileset dir="${CopyToDir.dir}/js" includes="**/**"  defaultexcludes="false"/>
+    
+    
+  </delete>
+
+   
+  
+    <copy todir="${CopyToDir.dir}/ir.utopia.core.util.tags.datainputform.DataInputForm" >
+    <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.datainputform.DataInputForm" >
+    	<exclude name="**/js/**" />
+    	<exclude name="**/gwt/**" />
+    </fileset>
+  </copy>
+  
+  <copy todir="${CopyToDir.dir}/ir.utopia.core.util.tags.process.ProcessHandler" >
+	  <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.process.ProcessHandler" >
+	    	<exclude name="**/js/**" />
+	    	<exclude name="**/gwt/**" />
+	    </fileset>
+    </copy>
+    
+    <copy todir="${CopyToDir.dir}/ir.utopia.core.util.tags.searchpage.SearchPage" >
+		  <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.searchpage.SearchPage" >
+		    	<exclude name="**/js/**" />
+		    	<exclude name="**/gwt/**" />
+		    </fileset>
+    </copy>
+    
+     <copy todir="${CopyToDir.dir}/ir.utopia.core.util.tags.controlpanel.ControlPanel" >
+		  <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.controlpanel.ControlPanel" >
+		    	<exclude name="**/js/**" />
+		    	<exclude name="**/gwt/**" />
+		    </fileset>
+    </copy>
+   <copy todir="${CopyToDir.dir}/js" >
+		    <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.datainputform.DataInputForm/js" >
+		    	<exclude name="**/*.svn/**" />
+		    </fileset>
+    </copy>
+     <copy todir="${CopyToDir.dir}/js" >
+     <fileset dir="${UtopiaCoreUIJs.dir}/js" >
+		    	<exclude name="**/*.svn/**" />
+		    	<exclude name="air/**"></exclude>
+		    	<exclude name="build/**"></exclude>
+		    	<exclude name="docs/**"></exclude>
+		    	<exclude name="examples/**"></exclude>
+		    	<exclude name="source/**"></exclude>
+		    </fileset>
+	</copy>
+	<!--
+	<copy todir="${CSSCopyToDir.dir}/ir.utopia.core.util.tags.datainputform.DataInputForm" >
+	    <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.datainputform.DataInputForm" >
+	    	<exclude name="**/js/**" />
+	    	<exclude name="**/gwt/**" />
+	    </fileset>
+	  </copy>
+	   copy required css -->
+	<copy todir="${CopyToDir.dir}/ir.utopia.core.util.tags.importpage.ImportPage" >
+				 <fileset dir="${UtopiaCoreUIJs.dir}/ir.utopia.core.util.tags.importpage.ImportPage" >
+						    	<exclude name="js/**" />
+						    	<exclude name="gwt/**" />
+				   </fileset>
+			</copy>
+</project>

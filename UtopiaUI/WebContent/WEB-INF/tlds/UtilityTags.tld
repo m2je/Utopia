@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+<tlibversion>1.2</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>Util</shortname>
+<uri>Util</uri>
+  
+<tag>
+  <name>SearchGrid</name>
+  <tagclass>ir.utopia.core.util.tags.grid.SearchGridTagManager</tagclass>
+  <attribute>
+    <name>forwardUrl</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>width</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>height</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  
+</tag>
+<tag>
+  <name>Header</name>
+  <tagclass>ir.utopia.core.util.tags.comp.PageHeaderManager</tagclass>
+   </tag>
+   
+   <tag>
+  <name>ActionButton</name>
+  <tagclass>ir.utopia.core.util.tags.comp.ActionButtonTagManager</tagclass>
+  <attribute>
+    <name>predefindeAction</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+    <name>forwardURL</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>  
+  <attribute>
+    <name>imageIcon</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>  
+  <attribute>
+    <name>redirect</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>
+   <attribute>
+    <name>onClick</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute>
+     <attribute>
+    <name>text</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+  </attribute> 
+</tag>
+
+<tag>
+  <name>InputForm</name>
+  <tagclass>ir.utopia.core.util.tags.comp.DataInputFormTag</tagclass>
+</tag>
+
+<tag>
+  <name>ImportForm</name>
+  <tagclass>ir.utopia.core.util.tags.comp.DataImportFormTag</tagclass>
+</tag>
+
+<tag>
+  <name>ReportData</name>
+  <tagclass>ir.utopia.core.util.tags.comp.DataReportFormTag</tagclass>
+</tag>
+
+
+</taglib>
+
+
+        
