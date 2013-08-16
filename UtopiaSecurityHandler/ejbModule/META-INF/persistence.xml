@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    
+	<persistence-unit name="coreResource" transaction-type="JTA">
+  		<jta-data-source>coreResource</jta-data-source>
+  		<jar-file>UtopiaCommon.jar</jar-file>
+  		<jar-file>UtopiaCore.jar</jar-file>
+  		<class>ir.utopia.common.systems.subsystem.persistent.CmSubsystem</class>
+  		<class>ir.utopia.common.systems.system.persistent.CmSystem</class>
+  		<class>ir.utopia.core.security.persistent.CoVUserAllValidAccess</class>
+	</persistence-unit>
+</persistence>
