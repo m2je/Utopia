@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    
+	<persistence-unit name="coreResource" transaction-type="JTA">
+  		<jta-data-source>coreResource</jta-data-source>
+  		
+  		   <jar-file>UtopiaCoreBasis.jar</jar-file>  
+  		    <class>ir.utopia.common.systems.subsystem.persistent.CmSubsystem</class>
+  		    <class>ir.utopia.common.systems.system.persistent.CmSystem</class>
+  		    
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmCompanyBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmPersonBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmVBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.fiscalyear.persistent.CmFiscalyear</class>
+  		    <class>ir.utopia.common.basicinformation.fiscalyear.persistent.CmVFiscalyear</class>
+  		    <class>ir.utopia.common.basicinformation.organization.persistent.CmOrganization</class>
+  		    <class>ir.utopia.common.basicinformation.organization.persistent.CmVOrganization</class>
+  		    <class>ir.utopia.common.locality.city.persistent.CmCity</class>
+  		    <class>ir.utopia.common.locality.city.persistent.CmVCity</class>
+  		    <class>ir.utopia.common.locality.country.persistent.CmCountry</class>
+  		    <class>ir.utopia.common.locality.country.persistent.CmVCountry</class>
+  		    <class>ir.utopia.common.locality.currency.persistent.CmCurrency</class>
+  		    <class>ir.utopia.common.locality.currency.persistent.CmVCurrency</class>
+  		    <class>ir.utopia.common.locality.province.persistent.CmProvince</class>
+  		    <class>ir.utopia.common.locality.province.persistent.CmVProvince</class>
+  		    <class>ir.utopia.common.locality.region.persistent.CmRegion</class>
+  		    <class>ir.utopia.common.locality.region.persistent.CmVRegion</class>
+  		    <class>ir.utopia.common.locality.state.persistent.CmState</class>
+  		    <class>ir.utopia.common.locality.state.persistent.CmVState</class>
+  		    <class>ir.utopia.common.systems.subsystem.persistent.CmVSubsystem</class>
+  		    <class>ir.utopia.core.basicinformation.action.persistent.CoAction</class>
+  		    <class>ir.utopia.core.basicinformation.menu.persistent.CoMenu</class>
+  		    <class>ir.utopia.core.basicinformation.menu.persistent.CoVMenu</class>
+  		    <class>ir.utopia.core.basicinformation.menu.persistent.CoVSystemMenu</class>
+  		    <class>ir.utopia.core.importer.setting.persistent.CoImporterSetting</class>
+  		    <class>ir.utopia.core.log.persistent.CoCpLogConfig</class>
+  		    <class>ir.utopia.core.log.persistent.CoCpLogValues</class>
+  		    <class>ir.utopia.core.security.persistent.CoVRoleValidAccess</class>
+  		    <class>ir.utopia.core.security.persistent.CoVUserAllValidAccess</class>
+  		    <class>ir.utopia.core.security.role.persistence.CoRole</class>
+  		    <class>ir.utopia.core.security.rolesubsystemacss.persistence.CoRoleSubsystemAcss</class>
+  		    <class>ir.utopia.core.security.rolesubsystemacss.persistence.CoVRoleSubsystemAcss</class>
+  		    <class>ir.utopia.core.security.roleuscsactnaccs.persistence.CoRoleUscsActnAccs</class>
+  		    <class>ir.utopia.core.security.roleuscsactnaccs.persistence.CoVRoleUscsActnAccs</class>
+  		    <class>ir.utopia.core.security.roleusecaseacss.persistent.CoRoleUsecaseAcss</class>
+  		    <class>ir.utopia.core.security.roleusecaseacss.persistent.CoVRoleUsecaseAcss</class>
+  		    <class>ir.utopia.core.security.user.persistence.CoUser</class>
+  		    <class>ir.utopia.core.security.user.persistence.CoVUser</class>
+  		    <class>ir.utopia.core.security.userrole.persistence.CoUserRoles</class>
+  		    <class>ir.utopia.core.security.userrole.persistence.CoVUserRoles</class>
+  		    <class>ir.utopia.core.security.userusecaseacss.persistent.CoUserUsecaseAcss</class>
+  		    <class>ir.utopia.core.security.userusecaseacss.persistent.CoVUserUsecaseAcss</class>
+  		    <class>ir.utopia.core.security.usruscsactnaccs.persistence.CoVUsrUscsActnAccs</class>
+  		    <class>ir.utopia.core.security.usruscsactnaccs.persistence.CoUsrUscsActnAccs</class>
+  		    <class>ir.utopia.core.usecase.usecase.persistence.CoVUsecase</class>
+  		    <class>ir.utopia.core.usecase.usecase.persistence.CoUsecase</class>
+  		    <class>ir.utopia.core.usecase.usecaseaction.persistence.CoUsecaseAction</class>
+  		    <class>ir.utopia.core.usecase.usecaseaction.persistence.CoVUsecaseAction</class>
+  		    <class>ir.utopia.core.zeroconfiguration.sequence.persistent.CoSequence</class>
+  		    <class>ir.utopia.core.zeroconfiguration.sequence.persistent.CoVSequence</class>
+  		    <class>ir.utopia.core.security.userlog.persistent.CoUserLog</class>
+  		    <class>ir.utopia.core.security.userlogdtl.persistent.CoUserLogDtl</class>
+  		    <class>ir.utopia.core.attachment.persistent.CoAttachment</class> 
+  		    <class>ir.utopia.core.customproperty.persistent.CoCustomProperty</class> 
+  		    <class>ir.utopia.core.security.roleorganizationaccess.persistent.CoRoleOrganizationAcss</class> 
+  		    <class>ir.utopia.core.security.userorganizationaccess.persistent.CoUserOrganizationAcss</class>
+  		    <class>ir.utopia.core.security.userlog.persistent.CoVUserLog</class>
+  		    <class>ir.utopia.core.security.userlogdtl.persistent.CoVUserLogDtl</class>
+  		    <class>ir.utopia.core.security.userorganizationaccess.persistent.CoVValidOrgAccss</class> 
+  		     <exclude-unlisted-classes>false</exclude-unlisted-classes>
+  		<properties>
+        	<property name="toplink.logging.level" value="FINEST"/> 
+        	<property name="toplink.logging.exceptions" value="true"/> 
+        </properties>
+	</persistence-unit>
+	
+</persistence>

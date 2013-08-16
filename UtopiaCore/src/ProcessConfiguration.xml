@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note [
+  <!ELEMENT process   (parameter+) >
+  <!ELEMENT parameter  (#PCDATA)>
+  <!ELEMENT included     (#PCDATA)>
+  <!ELEMENT process-Package	(#PCDATA)>
+  
+  <!ATTLIST process name CDATA "">
+  <!ATTLIST process usecase CDATA "">
+  <!ATTLIST process subSystemAbriviation CDATA "">
+  
+  <!ATTLIST parameter name CDATA "">
+  <!ATTLIST parameter type (PersistentObject|ContextVariable|PropertyArray|PropertyValueArray|PagingArray|NotDefined) "NotDefined">
+  <!ATTLIST parameter index CDATA #REQUIRED>
+  
+  <!ATTLIST included file CDATA #REQUIRED>
+  
+  <!ATTLIST process-Package package CDATA #REQUIRED>
+]>
+<process-list>
+<process name="save" >
+	<parameter name="persistentObject" type="PersistentObject" index="0">
+</parameter>
+</process>
+
+<process name="update" >
+	<parameter name="persistentObject" type="PersistentObject" index="0">
+</parameter>
+</process>
+
+<process name="delete" >
+	<parameter name="persistentObject" type="PersistentObject" index="0">
+</parameter>
+</process>
+
+<process name="search" >
+	<parameter name="PropertyArray" type="PropertyArray" index="0"></parameter>
+	<parameter name="PropertyValueArray" type="PropertyValueArray" index="1"></parameter>
+	<parameter name="PagingArray" type="PagingArray" index="2"></parameter>
+</process>
+
+<included file="" />
+
+</process-list>
