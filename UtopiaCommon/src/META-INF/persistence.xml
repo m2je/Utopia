@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    
+	<persistence-unit name="commonResource" transaction-type="JTA">
+  		<jta-data-source>commonResource</jta-data-source>
+  		<jar-file>UtopiaCoreBasis.jar</jar-file>  
+  		    <class>ir.utopia.common.systems.subsystem.persistent.CmSubsystem</class>
+  		    <class>ir.utopia.common.systems.system.persistent.CmSystem</class>
+  		    
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmCompanyBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmPersonBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.businesspartner.persistent.CmVBpartner</class>
+  		    <class>ir.utopia.common.basicinformation.fiscalyear.persistent.CmFiscalyear</class>
+  		    <class>ir.utopia.common.basicinformation.fiscalyear.persistent.CmVFiscalyear</class>
+  		    <class>ir.utopia.common.basicinformation.organization.persistent.CmOrganization</class>
+  		    <class>ir.utopia.common.basicinformation.organization.persistent.CmVOrganization</class>
+  		    <class>ir.utopia.common.basicinformation.jobtitle.persistent.CmJobTitle</class>
+  		    <class>ir.utopia.common.basicinformation.jobtitle.persistent.CmVJobTitle</class>
+  		    <class>ir.utopia.common.basicinformation.employee.persistent.CmEmployee</class>
+  		    <class>ir.utopia.common.basicinformation.employee.persistent.CmVEmployee</class>
+  		    <class>ir.utopia.common.basicinformation.location.persistent.CmLocation</class>
+  		    <class>ir.utopia.common.basicinformation.location.persistent.CmVLocation</class>
+  		    <class>ir.utopia.common.basicinformation.request.persistent.CmRequest</class>
+  		    <class>ir.utopia.common.basicinformation.request.persistent.CmVRequest</class>
+  		    <class>ir.utopia.common.basicinformation.bank.persistent.CmBank</class>
+  		    <class>ir.utopia.common.basicinformation.branch.persistent.CmBranch</class>
+  		    <class>ir.utopia.common.basicinformation.supplier.persistent.CmSupplier</class>
+  		    <class>ir.utopia.common.basicinformation.supplier.persistent.CmVSupplier</class>
+  		    <class>ir.utopia.common.locality.city.persistent.CmCity</class>
+  		    <class>ir.utopia.common.locality.city.persistent.CmVCity</class>
+  		    <class>ir.utopia.common.locality.country.persistent.CmCountry</class>
+  		    <class>ir.utopia.common.locality.country.persistent.CmVCountry</class>
+  		    <class>ir.utopia.common.locality.currency.persistent.CmCurrency</class>
+  		    <class>ir.utopia.common.locality.currency.persistent.CmVCurrency</class>
+  		    <class>ir.utopia.common.locality.province.persistent.CmProvince</class>
+  		    <class>ir.utopia.common.locality.province.persistent.CmVProvince</class>
+  		    <class>ir.utopia.common.locality.region.persistent.CmRegion</class>
+  		    <class>ir.utopia.common.locality.region.persistent.CmVRegion</class>
+  		    <class>ir.utopia.common.locality.state.persistent.CmState</class>
+  		    <class>ir.utopia.common.locality.state.persistent.CmVState</class>
+  		    <class>ir.utopia.common.systems.subsystem.persistent.CmVSubsystem</class>
+  		    <class>ir.utopia.core.basicinformation.menu.persistent.CoVMenu</class>
+  		    <class>ir.utopia.core.basicinformation.menu.persistent.CoVSystemMenu</class>
+			<class>ir.utopia.core.persistent.AbstractUtopiaPersistent</class>
+			<class>ir.utopia.common.basicinformation.notification.persistent.CmNotification</class>
+			<class>ir.utopia.common.basicinformation.notificationroles.persistent.CmNotificationRoles</class>
+			<class>ir.utopia.core.security.role.persistence.CoRole</class>
+	</persistence-unit>
+  
+</persistence>
