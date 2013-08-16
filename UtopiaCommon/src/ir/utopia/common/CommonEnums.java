@@ -4,7 +4,7 @@ public class CommonEnums {
 
 	/**
 	 * @author Arsalani
-	 * used this enum in Asset and Inventory
+	 * used this enum in Asset and Inventory 
 	 */
 	public enum AssetType {
 		ground,realEstate,medicalDevice,books,vehicle,utilitiesAndTools,assetInUsableSentence,
