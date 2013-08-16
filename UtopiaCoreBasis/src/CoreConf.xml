@@ -1,0 +1,53 @@
+<core-config version="1.0">
+<security-provider class-path="ir.utopia.security.JAASSecurityProvider">
+	<login-Page>login</login-Page>
+	<login-config>ifodAuth</login-config>
+</security-provider>
+<system name="Core" >
+<menu-bundel>ir.utopia.core.CoreMenu</menu-bundel>
+<subSystem name="BasicInformation" >
+	<usecase-Bundel>ir.utopia.core.basicinformation.basicinformation</usecase-Bundel>
+</subSystem>
+	<subSystem name="Configuration" >
+	<usecase-Bundel>ir.utopia.core.configuration.Configuration</usecase-Bundel>
+</subSystem>
+<subSystem name="Security" >
+	<usecase-Bundel>ir.utopia.core.security.security</usecase-Bundel>
+</subSystem>
+<subSystem name="ZeroConfiguration" >
+	<usecase-Bundel>ir.utopia.core.zeroconfiguration.zeroconfiguration</usecase-Bundel>
+</subSystem>
+<subSystem name="Usecase" >
+	<usecase-Bundel>ir.utopia.core.usecase.usecase</usecase-Bundel>
+</subSystem>
+<subSystem name="Utility" >
+	<usecase-Bundel>ir.utopia.core.util.utility</usecase-Bundel>
+</subSystem>
+</system>
+<system name="Common" >
+<menu-bundel>ir.utopia.common.CommonMenu</menu-bundel>
+<subSystem name="System" >
+<usecase-Bundel>ir.utopia.common.CommonUsecase</usecase-Bundel>
+</subSystem>
+<subSystem name="BasicInformation" >
+<usecase-Bundel>ir.utopia.common.CommonUsecase</usecase-Bundel>
+</subSystem>
+</system>
+<process-handler> ir.utopia.core.process.DefaultProcessHandler</process-handler>
+
+<Exeption-Bundel>ir.utopia.core.constants.CoreException</Exeption-Bundel>
+ 
+
+<DB-Constraint-Bundel>ir.utopia.common.CommonConstraints</DB-Constraint-Bundel>
+
+<DB-Constraint-Bundel>ir.utopia.core.CoreConstraint</DB-Constraint-Bundel>
+
+
+<DB-Column-Bundel>ir.utopia.core.CoreColumns</DB-Column-Bundel>
+<DB-Column-Bundel>ir.utopia.common.CommonColumns</DB-Column-Bundel>
+<Language-Patch>
+	<Language>fa</Language>
+	<Patch-Impl>ir.utopia.core.util.language.PersianLanguagePatch</Patch-Impl>
+</Language-Patch>
+<organization-support>false</organization-support>
+</core-config>
