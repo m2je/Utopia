@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module>
+	<inherits name="com.google.gwt.user.User" />
+
+	<entry-point class="ir.utopia.core.util.tags.treeview.client.TreeView"/>
+	  	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+ 
+  	 <inherits name='com.google.gwt.user.User'/>
+  	 <inherits name='com.google.gwt.http.HTTP'/>
+	<inherits name='com.google.gwt.json.JSON'/>
+	 <inherits name="ir.utopia.core.util.tags.datainputform.UtopiaCoreUIComponents"/>
+	 <inherits name="com.gwtext.GwtExt"/>
+  	 <inherits name="com.gwtextux.GwtExtUx"/>
+  	
+  	
+	 
+
+	<inherits name="com.google.gwt.i18n.CldrLocales"/>
+  <inherits name="com.google.gwt.user.theme.standard.StandardResources"/>	
+	<inherits name="com.google.gwt.i18n.I18N"/>
+	<script src="../js/utopia/CalendarPopup.js"></script>
+	<script src="../js/utopia/UtopiaCalendarPopup.js"></script>
+	<stylesheet src="../js/resources/css/ext-all.css" />
+	<script src="../js/adapter/ext/ext-base.js" />
+	<script src="../js/ext-all.js" />
+	<inherits name='com.google.gwt.json.JSON'/>
+	<extend-property name="locale" values="fa"/>
+</module>

@@ -1,0 +1,767 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+
+.clsLabel {
+	font-family: Tahoma;
+	font-size:12px;
+	color:#2A1F55;
+}
+.clsSearchCurrentPage{
+	font-family: Tahoma;
+	font-size:12px;
+	color:#CC6600;
+}
+.clsSearchTableCell{
+	font-family: Tahoma;
+	font-size:12px;
+	color:#2A1F55;
+	text-align:center !important;
+}
+.clsErrorLabel {
+	font-family: Tahoma;
+	font-size:12px;
+	color: Red;
+}
+.clsMandatoryLabel{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsSearchButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Search_ltr.gif');
+}
+.clsConfirmButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_process_ltr.gif');
+}
+.clsSearchButton_disabled{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Search_ltr_disabled.gif');
+}
+.clsButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+}
+.clsGoSaveButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Add_ltr.gif');
+}
+.clsSaveButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Save_ltr.gif');
+}
+.clsCancelButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Cancel_ltr.gif');
+}
+.clsSaveNewRecordButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_process_ltr.gif');
+}
+.clsNewRecordButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Add_ltr.gif');
+}
+.clsProcessButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_process_ltr.gif');
+}
+.clsReportButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Print_ltr.gif');
+}
+.clsImportButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_process_ltr.gif');
+}
+.clsReloadButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Refresh_ltr.gif');
+}
+.clsDeleteButton{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Delete_ltr.gif');
+}
+.clsDeleteButton_disabled{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 106px; 
+	height: 22px;
+	border: 0px none ;
+	background-image:url('../images/buttons/btn_Delete_ltr_disabled.gif');
+}
+.clsDisabledButton{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsEditRecrod{
+	background-image:url('../images/buttons/edit.gif');
+	width: 16px; 
+	height: 16px
+}
+.clsDeleteRecrod{
+	background-image:url('../images/buttons/delete.gif');
+	width: 16px; 
+	height: 16px
+}
+.clsViewRecrod{
+	background-image:url('../images/buttons/view.gif');
+	width: 16px; 
+	height: 16px
+}
+.clsEditRecrod_Disabled{
+	background-image:url('../images/buttons/edit_disabled.gif');
+	width: 16px; 
+	height: 16px
+}
+.clsDeleteRecrod_Disabled{
+	background-image:url('../images/buttons/delete_disabled.gif');
+	width: 16px; 
+	height: 16px
+}
+.clsViewRecrod_Disabled{
+	background-image:url('../images/buttons/view_disabled.gif');
+	width: 16px; 
+	height: 16px
+}
+
+.clsImageButton{	
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px ;
+}
+.clsAscSortButton{
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px none ;
+	width: 16px; 
+	height: 16px;
+	background-image: url('../images/buttons/btn_SortAsc.gif');
+}
+.clsDescSortButton{
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px none ;
+	width: 16px; 
+	height: 16px;
+	background-image: url('../images/buttons/btn_SortDesc.gif');
+}
+.clsNextPage{	
+	width: 22px; 
+	height: 22px;
+	background-image:url('../images/buttons/btn_Next.gif');
+}
+.clsPreviousPage{
+	width: 22px; 
+	height: 22px;
+	background-image:url('../images/buttons/btn_Prev.gif');
+}
+.clsLastPage{
+	width: 22px; 
+	height: 22px;
+	background-image:url('../images/buttons/btn_Last.gif');
+}
+.clsFirstPage{
+	width: 22px; 
+	height: 22px;
+	background-image:url('../images/buttons/btn_First.gif');
+}
+.clsText{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+	width: 97%;
+}
+.clsInvisible{
+	visibility: hidden;
+}
+
+.clsDisabledText{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsTextArea{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+	width: 100%;
+}
+.clsDisabledTextArea{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsSelect{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 100%;
+}
+.clsDisabledSelect{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsCheckBox{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsDisabledCheckBox{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+
+.clsDateField{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsDisabledDateField{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsTableBody{
+	width:100%;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	background-color:#EFEFEF;
+	CellPadding:20;
+}
+
+.clsLOVTable{
+	width:100%;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	background-color:#D2D1CC;
+	CellPadding:20;
+}
+.clsLOVTable tr:hover{
+            background:none ;
+            background-color: #21DD78;
+ }
+.clsTableHeader{
+	border-left:2px solid #CFDDE8; border-right:2px solid #AFBDD8; border-top:1px solid #F8FFFF; border-bottom:1px solid #7BA7CE; font-family: Tahoma;
+	font-family:Tahoma;
+	font-size:12px;
+	vertical-align:center;
+	background-image: url('../images/table_head.jpg');
+	background-repeat:repeat-x;
+	background-color: #D5E3F0l;
+	text-align:center;
+}
+.clsHeaderCell{
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	CellPadding:0;
+}
+
+.clsTableOddRow{
+ 
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #AFBDD8;
+	border-bottom-color: #7BA7CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #F9FAFF;
+	padding: 1px 4px;
+}
+.clsTableOddRow-unread{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #AFBDD8;
+	border-bottom-color: #7BA7CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #F9FAFF;
+	padding: 1px 4px;
+	font-weight:bold;
+}
+
+
+.clsTableEvenRow{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #9FADD8;
+	border-bottom-color: #6B97CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #E9EAFF;
+	padding: 1px 4px;
+}
+
+.clsTableEvenRow-unread{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #9FADD8;
+	border-bottom-color: #6B97CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #E9EAFF;
+	padding: 1px 4px;
+	font-weight:bold;
+}
+
+.clsTableOddRow-LOV{
+ 
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #AFBDD8;
+	border-bottom-color: #7BA7CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #F9FAFF;
+	padding: 1px 4px;
+	hover:background-color: #21DD78;
+}
+.clsTableEvenRow-LOV{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #9FADD8;
+	border-bottom-color: #6B97CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #E9EAFF;
+	padding: 1px 4px;
+	hover:background-color: #21DD78;
+}
+.clsPageHeader{
+	font-family: Tahoma;
+	font-size:12px;
+	background-color:#5F6494;
+	color:#FFFFFF;
+	margin:  0px 0px 0px 0px;
+	padding:2px 0px 2px 0px;
+	border-width: 0px 0px 0px 0px;
+	text-align:center;
+}
+
+body{
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px none;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-top:0px;
+	padding-left:0px;
+	padding-right:0px;
+	width:100%;
+	border: 0px none ;
+	background-color: #EFEFEF;
+	direction: rtl;
+	height: 100%;
+}
+html {
+height: 100%;
+}
+
+.clsPageFooter{
+	font-family: Tahoma;
+	font-size:12px;
+	background-color:#5F6494;
+	color:#FFFFFF;
+	margin:  1px 2px 1px 2px;
+	border-width: 0px 0px 0px 0px;
+	text-align:center;
+}
+
+.clsInputPageCell{
+	font-family:Tahoma;
+	font-size:12px;
+	background-color:#D0D9FC;
+	color:#000000;
+	vertical-align:middle;
+	background-color: #EFEFEF;
+}
+
+.clsErrorMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color: Red;
+}
+.clsWarningMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color:  Yellow;
+}
+.clsInfoMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color:  Blue;
+}
+.clsSuccessMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color: Green;
+}
+
+.clsListRoot{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsListChild{
+	font-family: Tahoma;
+	font-size:12px;
+	background-color:#EFEFEF;
+}
+
+a {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+	text-decoration: none;
+	text-shadow: silver;
+	
+}
+
+a:hover {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+	text-decoration: none;
+	color: yellow;
+	
+}
+
+a:link {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+	text-decoration: none;
+	
+}
+
+a:active {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+	text-decoration: none;
+	
+}
+
+body{
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px none;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-top:0px;
+	padding-left:0px;
+	padding-right:0px;
+	width:100%;
+	border: 0px none ;
+	background-color: #D2D1CC;
+	direction: rtl;
+}
+
+.pagebanner{
+	font-family: Tahoma;
+	font-size: 12px;
+}
+
+.clsMandatory{
+	background-color:#FE6600;
+
+}.clsSelectNotFixed {
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsTextNotFixed {
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsApplicationTitle{
+	border: 0px none #FFFFFF;
+	font-family: Arial;
+	font-weight:bold ; 
+	font-size:20px;
+	color:#EFEFEF;
+}
+.clsHeaderPageLink {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+	color:#FFFFFF;
+	
+}
+.clsSimpleTable{
+	width:80%;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	cellspacing=5;
+}
+
+.clsBorderedBody{
+	width:100%;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	background-color:#EFEFEF;
+	CellPadding:20;
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+}
+.clsRadioButtonGroup{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+}
+.clsRadioButton{
+	font-family: Tahoma;
+	font-size:12px;
+	color:#2A1F55;
+}
+.gwt-Tree .gwt-TreeItem {
+  padding: 1px 0px;
+  margin: 0px;
+  white-space: nowrap;
+  cursor: hand;
+  cursor: pointer;
+  font-family: Tahoma;
+  font-size:12px;
+  color:#2A1F55;
+}
+
+.gwt-Selected-TreeItem {
+  padding: 1px 0px;
+  margin: 0px;
+  white-space: nowrap;
+  cursor: hand;
+  cursor: pointer;
+  font-family: Tahoma;
+  font-size:12px;
+  color:#E65646;
+}
+.gridRowInvalidData {
+    background-color: #FFB0C4;
+    color:red;
+}
+.popup {
+  background-color: white;
+  border-color: white white white white;
+  border-width: 1px 3px 3px 1px;
+  border-style: solid solid solid solid;
+  font-family: Tahoma;
+}
+ 
+.popup-item {
+  font-weight: normal;
+  font-size: 80%;
+  font-family: Tahoma;
+}
+.deleteMenuItem{
+	background-image: url('../images/buttons/delete.gif');
+	background-repeat: no-repeat;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+	display: block;  /* may not need this, but I've found I do */
+}
+.editMenuItem{
+	background-image: url('../images/buttons/edit.gif');
+	background-repeat: no-repeat;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+	display: block;  /* may not need this, but I've found I do */
+}
+.gwt-MenuItem-selected{
+	 background-color: #66CCFF;
+  	 border-color: #66CCFF #66CCFF #66CCFF #66CCFF;
+}
+.warningMessageCapital{
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Tahoma;
+  color:#EC550D;
+}
+.bubble{
+	background:#e2e6f0;
+	border:1px solid #9daccc;
+	border-radius:2px;
+	color:#1c2a47;
+	cursor:default;
+	display:block;
+	float:left;
+	height:20px;
+	margin:0 4px 4px 0;
+	padding:0 3px;
+	position:relative;
+	white-space:nowrap
+	}
+.bubble .remove{margin:2px 0 -2px 1px;outline:none}

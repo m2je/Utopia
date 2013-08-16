@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.1.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.1.0/distro-source/core/src/gwt-module.dtd">
+<module>
+
+  	  <inherits name="com.google.gwt.core.Core"/>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  <inherits name="com.google.gwt.i18n.CldrLocales"/>
+  <inherits name="com.google.gwt.user.theme.standard.StandardResources"/>	
+	<entry-point class="ir.utopia.core.util.tags.utilitypanel.client.UtilityPanel"/>
+  
+  	<inherits name='ir.utopia.core.util.tags.datainputform.UtopiaCoreUIComponents'/>
+  	<inherits name='ir.utopia.core.util.tags.process.UtopiaProcessHandler'/>
+  	<inherits name="com.gwtext.GwtExt"/>
+  	
+  	
+  	<stylesheet src="../js/resources/css/ext-all.css"/>
+	<script src="../js/adapter/ext/ext-base.js"/>
+	<script src="../js/ext-all.js"/>
+
+	<script src="../js/utopia/CalendarPopup.js"></script>
+	<script src="../js/utopia/UtopiaCalendarPopup.js"></script>
+  	<extend-property name="locale" values="fa"/>
+  	
+  	<!--  <set-property-fallback name="locale" value="fa"/> -->
+  	
+  	
+
+</module>
+
+

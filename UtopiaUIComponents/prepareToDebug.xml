@@ -1,0 +1,77 @@
+<!-- ============================================= -->
+<!--                                          -->
+<!-- ============================================= -->
+
+
+<project name="Nejat2" default="prepareDebug" basedir=".">
+
+  <description>
+    This buildfile is used to build the Nejat2 subproject within 
+    the Utopia project.
+  </description>
+
+	  <property name="Nejat2Lib.dir" value="../UtopiaLib/projectJars/nejat2"/>
+	  <property name="UtopiaCore.dir" value="../UtopiaLib/projectJars/core"/>
+	  <property name="UtopiaCommon.dir" value="../UtopiaLib/projectJars/common"/>
+
+	<path id="project.class.path">
+	    <fileset dir="${Struts.dir}">    	
+	    	<include name="*.jar"/>
+	    </fileset>   	   
+	    <fileset dir="${ThirdParty.dir}">    	
+	        	<include name="*.jar"/>
+	      </fileset>
+	 <fileset dir="${J2EE.dir}">    	
+		        <include name="*.jar"/>
+		      </fileset>
+		<fileset dir="${GlassFishLibDir.dir}">    	
+			        	<include name="toplink-essentials.jar"/>
+			      </fileset>
+		
+  </path>
+
+	
+	 <target name="compileOthers" >
+	 	<subant >
+ 				 <!-- <fileset dir="./" includes="build.xml"  />-->	
+	 	  	 	  <fileset dir="../UtopiaCoreBasis" includes="build.xml"  />
+	 	  	 	  <fileset dir="../UtopiaCore" includes="build.xml"/>
+	 	  	 	  <fileset dir="../UtopiaCommon" includes="build.xml"/>
+	 	  	 	  <fileset dir="../UtopiaSecurityHandler" includes="build.xml"/>
+	 	  	 	  <fileset dir="../UtopiaUI" includes="build.xml"/>
+	 			  <fileset dir="../UtopiaCommonUI" includes="build.xml"/>
+	 		      <fileset dir="../Nejat2UIComponents" includes="build.xml"/>
+	 	  	 	  <fileset dir="../Accounting" includes="build.xml"/>
+	 			  <fileset dir="../Inventory" includes="build.xml"/>
+	 		      <fileset dir="../Asset" includes="build.xml"/>
+	 			  <fileset dir="../Nejat2UI" includes="build.xml"/>
+	 		 	  <fileset dir="../Payroll" includes="build.xml"/>
+	 			  <fileset dir="../Budget" includes="build.xml"/>
+	 			  <fileset dir="../treasury" includes="build.xml"/>	
+	 			  <fileset dir="../Credit" includes="build.xml"/>
+	 			  <fileset dir="../Revenue" includes="build.xml"/>
+	 	  	  </subant>
+
+	</target>
+
+	
+	 <target name="prepareDebug" depends="compileOthers,copyJars">
+	    
+	</target>
+
+	<target name="copyJars" >
+		    <copy todir="./war/WEB-INF/lib">
+		       <fileset dir="${Nejat2Lib.dir}">
+		        	<include name="*.jar"/>
+		       	</fileset>
+		    	<fileset dir="${UtopiaCore.dir}">
+		        	<include name="*.jar"/>
+		    		<exclude name="UtopiaUIComponents*.jar"/>
+		       	</fileset>
+		    	<fileset dir="${UtopiaCommon.dir}">
+		        	<include name="*.jar"/>
+		       	</fileset>
+		  	</copy>
+		</target>
+
+</project>

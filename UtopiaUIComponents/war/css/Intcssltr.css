@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clsLabel {
+	font-family: Tahoma;
+	font-size:12px;
+	color:#2A1F55;
+}
+
+.clsMandatoryLabel{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsButton{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsDisabledButton{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsImageButton{	
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px ;
+}
+
+.clsText{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+	width: 97%;
+}
+
+.clsInvisible{
+	visibility: hidden;
+}
+
+.clsDisabledText{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsTextArea{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsDisabledTextArea{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsSelect{
+	font-family: Tahoma;
+	font-size:12px;
+	width: 100%;
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+}
+.clsDisabledSelect{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsCheckBox{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsDisabledCheckBox{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+
+.clsDateField{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsDisabledDateField{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+.clsTableBody{
+	width:100%;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	background-color:#F9F9FF;
+}
+.clsLOVTable{
+	width:100%;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:center;
+	background-color:#D2D1CC;
+	CellPadding:20;
+}
+.clsLOVTable tr:hover{
+            background:none ;
+            background-color: #21DD78;
+ }
+
+.clsTableHeader{
+	border-left:2px solid #CFDDE8; border-right:2px solid #AFBDD8; border-top:1px solid #F8FFFF; border-bottom:1px solid #7BA7CE; font-family: Tahoma;
+	font-size:12px;
+	vertical-align:middle;
+	background-image: url('../images/table_head.jpg');
+	background-repeat:repeat-x;
+	background-color: #D5E3F0
+}
+.clsTableOddRow{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #AFBDD8;
+	border-bottom-color: #7BA7CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #F9FAFF;
+	padding: 1px 4px;
+}
+.clsTableEvenRow{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #9FADD8;
+	border-bottom-color: #6B97CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #E9EAFF;
+	padding: 1px 4px;
+}
+.clsTableOddRow-LOV{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #AFBDD8;
+	border-bottom-color: #7BA7CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #F9FAFF;
+	padding: 1px 4px;
+	hover:background-color: #21DD78;
+}
+.clsTableEvenRow-LOV{
+	font-family: Tahoma;
+	font-size:12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FBFFFF;
+	border-right-color: #9FADD8;
+	border-bottom-color: #6B97CE;
+	border-left-color: #CFDDE8;
+	vertical-align:middle;
+	background-color: #E9EAFF;
+	padding: 1px 4px;
+	hover:background-color: #21DD78;
+}
+.clsPageHeader{
+	font-family: Tahoma;
+	font-size:12px;
+	background-color:#003466;
+	color:#FFFFFF;
+	margin:  1px 2px 1px 2px;
+	border-width: 0px 0px 0px 0px;
+	text-align:center;
+}
+
+.clsPageBody{
+	font-family: Tahoma;
+	font-size:12px;
+	border: 0px none;
+		margin-left: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	width:100%;
+	border: 0px none ;
+	background-color: #FFFFFF;
+		direction: ltr;
+}
+
+.clsPageFooter{
+	font-family: Tahoma;
+	font-size:12px;
+	background-color:#003466;
+	color:#FFFFFF;
+	margin:  1px 2px 1px 2px;
+	border-width: 0px 0px 0px 0px;
+	text-align:center;
+}
+
+.clsInputPage{
+	font-family: Tahoma;
+	font-size:12px;
+	background-color:#D0D9FC;
+	color:#000000;
+}
+
+.clsInputPageCell{
+	font-family:Tahoma;
+	font-size:12px;
+	background-color:#D0D9FC;
+	color:#000000;
+	vertical-align:middle;
+}
+
+.clsErrorMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color: Red;
+}
+.clsWarningMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color:  Yellow;
+}
+.clsSuccessMessage{
+	font-family: Tahoma;
+	font-size:12px;
+	color: Green;
+}
+
+.clsListRoot{
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsListChild{
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+a {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+a:hover {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+a:link {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+a:active {
+	border: 0px none #FFFFFF;
+	font-family: Tahoma;
+	font-size:12px;
+}
+
+body{
+	direction:ltr;
+	background-color:#FFFFFF;
+}
+
+.pagebanner{
+	font-family: Tahoma;
+	font-size: 12px;
+}
+
+.clsMandatory{
+	background-color:#FE6600;
+
+}.clsSelectNotFixed {
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsTextNotFixed {
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+	font-family: Tahoma;
+	font-size:12px;
+}
+.clsRadioButtonGroup{
+	border-bottom: 1px solid #035C96;
+	border-top: 1px solid #065F99;
+	border-left: 1px solid #065F99;
+	border-right: 1px solid #035C96;
+}
+.clsRadioButton{
+	font-family: Tahoma;
+	font-size:12px;
+	color:#2A1F55;
+}
