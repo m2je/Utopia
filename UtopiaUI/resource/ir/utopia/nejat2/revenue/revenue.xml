@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ************************************************************<< Revenue Type >>********************************************************* -->
+	<package name="RevenueType" 	extends="UtopiaAuthorized">
+		<action name="search_Rv_Bd_RevenueType" class="ir.utopia.nejat2.revenue.basicinformation.revenuetype.action.RevenueTypeAction">
+			<result>/WEB-INF/pages/nejat2/revenue/revenuetype/Search_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Rv_Bd_RevenueType">
+			<result>/WEB-INF/pages/nejat2/revenue/revenuetype/Save_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Rv_Bd_RevenueType">
+			<result>/WEB-INF/pages/nejat2/revenue/revenuetype/View_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Rv_Bd_RevenueType" class="ir.utopia.nejat2.revenue.basicinformation.revenuetype.action.RevenueTypeAction">
+			<result >/WEB-INF/pages/nejat2/revenue/revenuetype/Search_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/revenue/revenuetype/Save_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/revenue/revenuetype/Save_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action> 
+		<action name="go-update_Rv_Bd_RevenueType">
+			<result>/WEB-INF/pages/nejat2/revenue/revenuetype/Save_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Rv_Bd_RevenueType" class="ir.utopia.nejat2.revenue.basicinformation.revenuetype.action.RevenueTypeAction">
+ 			<result >/WEB-INF/pages/nejat2/revenue/revenuetype/Search_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/revenue/revenuetype/Save_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/revenue/revenuetype/Save_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+			<result name="json" type="json" >
+        		<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+		    	  </param>
+			</result>
+  		 </action>
+   		<action name="delete_Rv_Bd_RevenueType" class="ir.utopia.nejat2.revenue.basicinformation.revenuetype.action.RevenueTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/revenue/revenuetype/Search_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/revenue/revenuetype/Search_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/revenue/revenuetype/Search_Rv_Bd_RevenueType.jsp?locale=${locale}</result>
+   			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+<!-- ************************************************************<< Revenue Master >>********************************************************* -->	
+	<package name="RevenueMaster" 	extends="UtopiaAuthorized">
+		<action name="search_Rv_Pr_RevenueMaster" class="ir.utopia.nejat2.revenue.process.revenuemaster.action.RevenueMasterAction">
+			<result>/WEB-INF/pages/nejat2/revenue/revenueMaster/Search_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Rv_Pr_RevenueMaster">
+			<result>/WEB-INF/pages/nejat2/revenue/revenueMaster/Save_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Rv_Pr_RevenueMaster">
+			<result>/WEB-INF/pages/nejat2/revenue/revenueMaster/View_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Rv_Pr_RevenueMaster" class="ir.utopia.nejat2.revenue.process.revenuemaster.action.RevenueMasterAction">
+			<result >/WEB-INF/pages/nejat2/revenue/revenueMaster/Search_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/revenue/revenueMaster/Save_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/revenue/revenueMaster/Save_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Rv_Pr_RevenueMaster">
+			<result>/WEB-INF/pages/nejat2/revenue/revenueMaster/Save_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Rv_Pr_RevenueMaster" class="ir.utopia.nejat2.revenue.process.revenuemaster.action.RevenueMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/revenue/revenueMaster/Search_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/revenue/revenueMaster/Save_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/revenue/revenueMaster/Save_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Rv_Pr_RevenueMaster" class="ir.utopia.nejat2.revenue.process.revenuemaster.action.RevenueMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/revenue/revenueMaster/Search_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/revenue/revenueMaster/Search_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/revenue/revenueMaster/Search_Rv_Pr_RevenueMaster.jsp?locale=${locale}</result>
+   		</action>
+	</package>		
+</struts>

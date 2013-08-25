@@ -16,7 +16,6 @@ import javax.ejb.Stateless;
 /**
  * Session Bean implementation class ImportTransactional
  */
-@Stateless
 public abstract class AbstractImportTransactionalBean<P extends UtopiaPersistent,S extends UtopiaPersistent> extends AbstractBasicUsecaseBean<P,S> 
 implements ImportTransactionalRemote{
 	

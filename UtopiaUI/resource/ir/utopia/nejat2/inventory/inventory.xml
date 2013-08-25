@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ************************************************************<< Inventory Type >>********************************************************* -->
+	<package name="InventoryType" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_InventoryType" class="ir.utopia.nejat2.inventory.inventorytype.action.InventoryTypeAction">
+			<result>/WEB-INF/pages/nejat2/inventory/inventoryType/Search_In_Bd_InventoryType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_InventoryType">
+			<result>/WEB-INF/pages/nejat2/inventory/inventoryType/Save_In_Bd_InventoryType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_InventoryType">
+			<result>/WEB-INF/pages/nejat2/inventory/inventoryType/View_In_Bd_InventoryType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_InventoryType" class="ir.utopia.nejat2.inventory.inventorytype.action.InventoryTypeAction">
+			<result >/WEB-INF/pages/nejat2/inventory/inventoryType/Search_In_Bd_InventoryType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/inventoryType/Save_In_Bd_InventoryType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/inventoryType/Save_In_Bd_InventoryType.jsp?locale=${locale}</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action> 
+		<action name="go-update_In_Bd_InventoryType">
+			<result>/WEB-INF/pages/nejat2/inventory/inventoryType/Save_In_Bd_InventoryType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_InventoryType" class="ir.utopia.nejat2.inventory.inventorytype.action.InventoryTypeAction">
+ 			<result >/WEB-INF/pages/nejat2/inventory/inventoryType/Search_In_Bd_InventoryType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/inventoryType/Save_In_Bd_InventoryType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/inventoryType/Save_In_Bd_InventoryType.jsp?locale=${locale}</result>
+			<result name="json" type="json" >
+        		<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+		    	  </param>
+			</result>
+  		 </action>
+   		<action name="delete_In_Bd_InventoryType" class="ir.utopia.nejat2.inventory.inventorytype.action.InventoryTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/inventoryType/Search_In_Bd_InventoryType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/inventoryType/Search_In_Bd_InventoryType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/inventoryType/Search_In_Bd_InventoryType.jsp?locale=${locale}</result>
+   			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+	
+<!-- ************************************************************<< Inventory >>********************************************************* -->
+	<package name="Inventory" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_Inventory" class="ir.utopia.nejat2.inventory.inventory.action.InventoryAction">
+			<result>/WEB-INF/pages/nejat2/inventory/inventory/Search_In_Bd_Inventory.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_Inventory">
+			<result>/WEB-INF/pages/nejat2/inventory/inventory/Save_In_Bd_Inventory.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_Inventory">
+			<result>/WEB-INF/pages/nejat2/inventory/inventory/View_In_Bd_Inventory.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_Inventory" class="ir.utopia.nejat2.inventory.inventory.action.InventoryAction">
+			<result >/WEB-INF/pages/nejat2/inventory/inventory/Search_In_Bd_Inventory.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/inventory/Save_In_Bd_Inventory.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/inventory/Save_In_Bd_Inventory.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_Inventory">
+			<result>/WEB-INF/pages/nejat2/inventory/inventory/Save_In_Bd_Inventory.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_Inventory" class="ir.utopia.nejat2.inventory.inventory.action.InventoryAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/inventory/Search_In_Bd_Inventory.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/inventory/Save_In_Bd_Inventory.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/inventory/Save_In_Bd_Inventory.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_Inventory" class="ir.utopia.nejat2.inventory.inventory.action.InventoryAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/inventory/Search_In_Bd_Inventory.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/inventory/Search_In_Bd_Inventory.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/inventory/Search_In_Bd_Inventory.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+<!-- ************************************************************<< MerchanReqDetail >>********************************************************* -->
+	<package name="MerchanReqDetail" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_MerchanReqDetail" class="ir.utopia.nejat2.inventory.merchanreqdetail.action.MerchanReqDetailAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Search_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_MerchanReqDetail">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Save_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_MerchanReqDetail">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqDetail/View_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_MerchanReqDetail" class="ir.utopia.nejat2.inventory.merchanreqdetail.action.MerchanReqDetailAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Search_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Save_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Save_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_MerchanReqDetail">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Save_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_MerchanReqDetail" class="ir.utopia.nejat2.inventory.merchanreqdetail.action.MerchanReqDetailAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Search_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Save_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Save_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_MerchanReqDetail" class="ir.utopia.nejat2.inventory.merchanreqdetail.action.MerchanReqDetailAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Search_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Search_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanReqDetail/Search_In_Bd_MerchanReqDetail.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+<!-- ************************************************************<< MerchanReqMaster >>********************************************************* -->
+	<package name="MerchanReqMaster" 	extends="UtopiaAuthorized">
+	    <action name="redirect_In_Bd_MerchanReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Redirect_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="search_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_MerchanReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Save_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_MerchanReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqMaster/View_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Redirect_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Save_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Save_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_MerchanReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Update_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Save_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Save_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   				<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+  		 </action>
+   		<action name="delete_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="go-report_In_Bd_MerchanReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="updateFromDashboard_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+  	 			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+  		</action>
+	    <action name="Cancel_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerConfirm_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerReject_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerConfirm_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerReject_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="ITManagerConfirm_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="ITManagerReject_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+   	<!-- 	<action name="go-follow_In_Bd_MerchanReqMaster" class="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterAction" method="ChangeType">
+			<result >/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanReqMaster/Search_In_Bd_MerchanReqMaster.jsp?locale=${locale}</result>
+   		</action> -->
+	</package>	
+<!-- ************************************************************<< MerchanRecptMaster >>********************************************************* -->
+    <package name="MerchanRecptMasterJSONS" namespace="/" extends="json-default">
+		<action name="loadFromRequest_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction" method="loadDataFromRequest">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="loadFromDraft_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction" method="loadDataFromDraft">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="payableAmount_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction" method="payableAmount">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="MerchanRecptMaster" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Search_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_MerchanRecptMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Save_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_MerchanRecptMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/View_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Search_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Save_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Save_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_MerchanRecptMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Update_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Search_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Update_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Update_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Search_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Search_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanRecptMaster/Search_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="go-report_In_Bd_MerchanRecptMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Bd_MerchanRecptMaster.jsp?locale=${locale}</result>
+		</action>
+   		<action name="updateFromDashboard_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+  	 			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+  		</action>
+	    <action name="Cancel_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerConfirm_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerReject_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerConfirm_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerReject_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="Pricing_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DeliveryConfirm_In_Bd_MerchanRecptMaster" class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>		
+
+<!-- ************************************************************<< MerchanDraftMaster >>********************************************************* -->
+	
+	<package name="MerchanDraftMasterJSONS" namespace="/" extends="json-default">
+		<action name="loadFromRequest_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction" method="loadDataFromRequest">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="loadFromReceipt_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction" method="loadDataFromReceipt">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="payableAmount_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction" method="payableAmount">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="MerchanDraftMaster" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Search_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_MerchanDraftMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Save_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_MerchanDraftMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/View_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Search_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Save_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Save_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_MerchanDraftMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Update_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Search_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Update_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Update_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Search_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Search_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchanDraftMaster/Search_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="go-report_In_Bd_MerchanDraftMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Bd_MerchanDraftMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="updateFromDashboard_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+  	 			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+  		</action>
+	    <action name="Cancel_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerConfirm_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerReject_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerConfirm_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerReject_In_Bd_MerchanDraftMaster" class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>	
+	<package name="MerchanDraftDetailJSONS" namespace="/" extends="json-default">
+		<action name="loadStock_In_Bd_MerchanDraftDetail" class="ir.utopia.nejat2.inventory.merchandraftdetail.action.MerchanDraftDetailAction" method="loadStock">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+<!-- ************************************************************<< Document Type >>********************************************************* -->
+	<package name="DocumentType" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_DocumentType" class="ir.utopia.nejat2.inventory.documenttype.action.DocumentTypeAction">
+			<result>/WEB-INF/pages/nejat2/inventory/documentType/Search_In_Bd_DocumentType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_DocumentType">
+			<result>/WEB-INF/pages/nejat2/inventory/documentType/Save_In_Bd_DocumentType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_DocumentType">
+			<result>/WEB-INF/pages/nejat2/inventory/documentType/View_In_Bd_DocumentType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_DocumentType" class="ir.utopia.nejat2.inventory.documenttype.action.DocumentTypeAction">
+			<result >/WEB-INF/pages/nejat2/inventory/documentType/Search_In_Bd_DocumentType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/documentType/Save_In_Bd_DocumentType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/documentType/Save_In_Bd_DocumentType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_DocumentType">
+			<result>/WEB-INF/pages/nejat2/inventory/documentType/Save_In_Bd_DocumentType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_DocumentType" class="ir.utopia.nejat2.inventory.documenttype.action.DocumentTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/documentType/Search_In_Bd_DocumentType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/documentType/Save_In_Bd_DocumentType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/documentType/Save_In_Bd_DocumentType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_DocumentType" class="ir.utopia.nejat2.inventory.documenttype.action.DocumentTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/documentType/Search_In_Bd_DocumentType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/documentType/Search_In_Bd_DocumentType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/documentType/Search_In_Bd_DocumentType.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< Merchandise Kardks >>********************************************************* -->
+	<package name="MerchandiseKardks" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_MerchandiseKardks">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_Kardks.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_MerchandiseKardks">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_Kardks.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+<!-- ************************************************************<< Inventory Tag >>********************************************************* -->
+		<package name="InventoryTag" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_InventoryTag">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_InventoryTag.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_InventoryTag">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_InventoryTag.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+<!-- *******************************************************<< Taking Of Inventory Period >>************************************************* -->
+	<package name="TakingOfInventoryPeriod" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_TakingOfInventoryPeriod" class="ir.utopia.nejat2.inventory.takingofinventoryperiod.action.TakingOfInventoryPeriodAction">
+			<result>/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Search_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_TakingOfInventoryPeriod">
+			<result>/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Save_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_TakingOfInventoryPeriod">
+			<result>/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/View_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_TakingOfInventoryPeriod" class="ir.utopia.nejat2.inventory.takingofinventoryperiod.action.TakingOfInventoryPeriodAction">
+			<result >/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Search_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Save_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Save_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_TakingOfInventoryPeriod">
+			<result>/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Save_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_TakingOfInventoryPeriod" class="ir.utopia.nejat2.inventory.takingofinventoryperiod.action.TakingOfInventoryPeriodAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Search_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Save_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Save_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_TakingOfInventoryPeriod" class="ir.utopia.nejat2.inventory.takingofinventoryperiod.action.TakingOfInventoryPeriodAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Search_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Search_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/takingOfInventoryPeriod/Search_In_Bd_TakingOfInventoryPeriod.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+	<!-- ************************************************************** Merchandise	************************************************************** -->
+	<package name="MerchandiseJSONS" namespace="/" extends="json-default">
+		<action name="loadCode_In_Bd_Merchandise" class="ir.utopia.nejat2.inventory.merchandise.action.MerchandiseAction" method="loadCode">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="Merchandise" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_Merchandise" class="ir.utopia.nejat2.inventory.merchandise.action.MerchandiseAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandise/Search_In_Bd_Merchandise.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_Merchandise">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandise/Save_In_Bd_Merchandise.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_Merchandise">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandise/View_In_Bd_Merchandise.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_Merchandise" class="ir.utopia.nejat2.inventory.merchandise.action.MerchandiseAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchandise/Search_In_Bd_Merchandise.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandise/Save_In_Bd_Merchandise.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchandise/Save_In_Bd_Merchandise.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_Merchandise">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandise/Save_In_Bd_Merchandise.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_Merchandise" class="ir.utopia.nejat2.inventory.merchandise.action.MerchandiseAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchandise/Search_In_Bd_Merchandise.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchandise/Save_In_Bd_Merchandise.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchandise/Save_In_Bd_Merchandise.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_Merchandise" class="ir.utopia.nejat2.inventory.merchandise.action.MerchandiseAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchandise/Search_In_Bd_Merchandise.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandise/Search_In_Bd_Merchandise.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchandise/Search_In_Bd_Merchandise.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** Unit	************************************************************** -->
+	<package name="Unit" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_Unit" class="ir.utopia.nejat2.inventory.unit.action.UnitAction">
+			<result>/WEB-INF/pages/nejat2/inventory/unit/Search_In_Bd_Unit.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_Unit">
+			<result>/WEB-INF/pages/nejat2/inventory/unit/Save_In_Bd_Unit.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_Unit">
+			<result>/WEB-INF/pages/nejat2/inventory/unit/View_In_Bd_Unit.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_Unit" class="ir.utopia.nejat2.inventory.unit.action.UnitAction">
+			<result >/WEB-INF/pages/nejat2/inventory/unit/Search_In_Bd_Unit.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/unit/Save_In_Bd_Unit.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/unit/Save_In_Bd_Unit.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_Unit">
+			<result>/WEB-INF/pages/nejat2/inventory/unit/Save_In_Bd_Unit.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_Unit" class="ir.utopia.nejat2.inventory.unit.action.UnitAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/unit/Search_In_Bd_Unit.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/unit/Save_In_Bd_Unit.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/unit/Save_In_Bd_Unit.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_Unit" class="ir.utopia.nejat2.inventory.unit.action.UnitAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/unit/Search_In_Bd_Unit.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/unit/Search_In_Bd_Unit.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/unit/Search_In_Bd_Unit.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** Merchandise Group	************************************************************** -->
+	<package name="MerchandiseGroup" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_MerchandiseGroup" class="ir.utopia.nejat2.inventory.merchandisegroup.action.MerchandiseGroupAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Search_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_MerchandiseGroup">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Save_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_MerchandiseGroup">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseGroup/View_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_MerchandiseGroup" class="ir.utopia.nejat2.inventory.merchandisegroup.action.MerchandiseGroupAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Search_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Save_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Save_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action> 
+		<action name="go-update_In_Bd_MerchandiseGroup">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Save_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_MerchandiseGroup" class="ir.utopia.nejat2.inventory.merchandisegroup.action.MerchandiseGroupAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Search_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Save_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Save_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+   				<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+  		 </action>
+   		<action name="delete_In_Bd_MerchandiseGroup" class="ir.utopia.nejat2.inventory.merchandisegroup.action.MerchandiseGroupAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Search_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Search_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchandiseGroup/Search_In_Bd_MerchandiseGroup.jsp?locale=${locale}</result>
+   			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************** Merchandise	Threshold************************************************************** -->
+	<package name="MerchandiseThreshold" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_MerchandiseThreshold" class="ir.utopia.nejat2.inventory.merchandisethreshold.action.MerchandiseThresholdAction">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_MerchandiseThreshold">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Save_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_MerchandiseThreshold">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/View_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_MerchandiseThreshold" class="ir.utopia.nejat2.inventory.merchandisethreshold.action.MerchandiseThresholdAction">
+			<result >/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Save_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Save_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_MerchandiseThreshold">
+			<result>/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Save_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_MerchandiseThreshold" class="ir.utopia.nejat2.inventory.merchandisethreshold.action.MerchandiseThresholdAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Save_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Save_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_MerchandiseThreshold" class="ir.utopia.nejat2.inventory.merchandisethreshold.action.MerchandiseThresholdAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< BuyReqMaster >>********************************************************* -->
+	<package name="BuyReqMaster" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/buyReqMaster/Search_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Bd_BuyReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/buyReqMaster/Save_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Bd_BuyReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/buyReqMaster/View_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result >/WEB-INF/pages/nejat2/inventory/buyReqMaster/Search_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/buyReqMaster/Save_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/buyReqMaster/Save_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Bd_BuyReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/buyReqMaster/Update_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/buyReqMaster/Search_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/buyReqMaster/Update_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/buyReqMaster/Update_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/buyReqMaster/Search_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/buyReqMaster/Search_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/buyReqMaster/Search_In_Bd_BuyReqMaster.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="go-report_In_Bd_BuyReqMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Bd_BuyRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="updateFromDashboard_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+  	 			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+  		</action>
+	    <action name="Cancel_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerConfirm_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="UnitManagerReject_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerConfirm_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="DevelopmentManagerReject_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="PriceEstimate_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="FinanceRequest_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+   	</package>	
+   	<package name="BuyReqMasterJSONS" namespace="/" extends="json-default">
+     	<action name="loadRequest_In_Bd_BuyReqMaster" class="ir.utopia.nejat2.inventory.buyreqmaster.action.BuyReqMasterAction" method="loadRequest">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+   	<package name="BuyReqDetailJSONS" namespace="/" extends="json-default">
+		<action name="loadStock_In_Bd_BuyReqDetail" class="ir.utopia.nejat2.inventory.buyreqdetail.action.BuyReqDetailAction" method="loadStock">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>	
+	</package>
+   	<!-- ************************************************************<< Buy Request Report >>********************************************************* -->
+	<package name="BuyRequestReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_BuyRequestReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_BuyRequestReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_BuyRequestReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_BuyRequestReport.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	<!-- ********************************************************<< Merchandise Receipt Report >>****************************************************** -->
+	<package name="MerchanRecptReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_MerchanRecptReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_MerchanRecptReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_MerchanRecptReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_MerchanRecptReport.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	<!-- ********************************************************<< Organizations Usage Report >>********************************************************* -->
+	<package name="OrganizationsUsageReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_OrganizationsUsageReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_OrganizationsUsageReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_OrganizationsUsageReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_OrganizationsUsageReport.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	<!-- *********************************************************<< Delivery Info Report >>********************************************************* -->
+	<package name="DeliveryInfoReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_DeliveryInfoReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_DeliveryInfoReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_DeliveryInfoReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_DeliveryInfoReport.jsp?locale=${locale}</result>
+		</action>
+	</package>		
+	<!-- *********************************************************<< Merchandise Request Report >>********************************************************* -->
+	<package name="MerchanRequestReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_MerchanRequestReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_MerchanRequestReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_MerchanRequestReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_MerchanRequestReport.jsp?locale=${locale}</result>
+		</action>
+	</package>		
+	<!-- *********************************************************<< Stock Report >>********************************************************* -->
+	<package name="StockReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_StockReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_StockReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_StockReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_StockReport.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	<!-- *********************************************************<< Delivery Minute >>********************************************************* -->
+	<package name="DeliveryMinute" 	extends="UtopiaAuthorized">
+		<action name="go-report_In_Rp_DeliveryMinute">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_DeliveryMinute.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	
+	<!-- *********************************************************<< Accounting Document  >>********************************************************* -->
+	
+	<package name="AccDocumentMaster" 	extends="UtopiaAuthorized">
+		<action name="search_In_Pr_AccDocumentMaster" class="ir.utopia.nejat2.inventory.accdocumentmaster.action.InPrVAccDocumentMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/accDocumentMaster/Search_In_Pr_AccDocumentMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Pr_AccDocumentMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/accDocumentMaster/View_In_Pr_AccDocumentMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="process_In_Pr_AccDocumentMaster" class="ir.utopia.nejat2.inventory.accdocumentmaster.action.InPrVAccDocumentMasterAction" method="createDocument">
+			<result>/WEB-INF/pages/nejat2/inventory/accDocumentMaster/Search_In_Pr_AccDocumentMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/merchandiseThreshold/Search_In_Bd_MerchandiseThreshold.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/accDocumentMaster/Search_In_Pr_AccDocumentMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="DocumentInventory" 	extends="UtopiaAuthorizedGWT">
+		<action name="load_In_Pr_AccDocumentMaster"
+			class="ir.utopia.nejat2.inventory.accdocumentmaster.action.InPrVAccDocumentMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/accDocumentMaster/Search_In_Pr_AccDocumentMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="inventoryDimOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_In_Bd_InventoryType"
+			class="ir.utopia.nejat2.inventory.inventorytype.action.InventoryTypeAction"
+			method="loadForAccountDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>		
+	<!-- *********************************************************<< Stock >>********************************************************* -->
+	<package name="Stock" 	extends="UtopiaAuthorized">
+		<action name="search_In_Bd_Stock">
+			<result>/WEB-INF/pages/nejat2/inventory/stock/Search_In_Bd_Stock.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	
+	<package name="AccountingDraftDocType" extends="UtopiaAuthorizedGWT">
+		<action name="loadAllTypes_In_Bd_MerchanDraftMaster"
+			class="ir.utopia.nejat2.inventory.merchandraftmaster.action.MerchanDraftMasterAction"
+			method="loadAllTypes">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	
+	<package name="AccountingrecpDocType" extends="UtopiaAuthorizedGWT">
+		<action name="loadAllTypes_In_Bd_MerchanRecptMaster"
+			class="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterAction"
+			method="loadAllTypes">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	
+	<!-- *********************************************************<< RequestTracking Report >>********************************************************* -->
+	<package name="RequestTrackingReport" 	extends="UtopiaAuthorized">
+		<action name="search_In_Rp_RequestTrackingReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Search_In_Rp_RequestTrackingReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_In_Rp_RequestTrackingReport">
+			<result>/WEB-INF/pages/nejat2/inventory/Reports/Report_In_Rp_RequestTrackingReport.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+<!-- *******************************************************<< Tag Issue Master >>************************************************* -->
+	<package name="TagIssueMaster" 	extends="UtopiaAuthorized">
+		<action name="search_In_Pr_TagIssueMaster" class="ir.utopia.nejat2.inventory.tagissuemaster.action.TagIssueMasterAction">
+			<result>/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Search_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_In_Pr_TagIssueMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Save_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_In_Pr_TagIssueMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/tagIssueMaster/View_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_In_Pr_TagIssueMaster" class="ir.utopia.nejat2.inventory.tagissuemaster.action.TagIssueMasterAction">
+			<result >/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Search_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Save_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Save_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_In_Pr_TagIssueMaster">
+			<result>/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Save_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_In_Pr_TagIssueMaster" class="ir.utopia.nejat2.inventory.tagissuemaster.action.TagIssueMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Search_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Save_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Save_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_In_Pr_TagIssueMaster" class="ir.utopia.nejat2.inventory.tagissuemaster.action.TagIssueMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Search_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Search_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/inventory/tagIssueMaster/Search_In_Pr_TagIssueMaster.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<package name="TagIssueProcess" extends="gwt-default">
+		<action name="go-tagIssue_In_Pr_TagIssueProcess" class="ir.utopia.nejat2.inventory.tagissuemaster.process.TagIssueProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="tagIssue_In_Pr_TagIssueProcess" class="ir.utopia.nejat2.inventory.tagissuemaster.process.TagIssueProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+	</package>
+</struts>

@@ -1,5 +1,4 @@
 <%@page import="ir.utopia.core.constants.Constants"%>
-<!-- <%@page import="com.google.gwt.i18n.client.Constants"%> -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@page import="ir.utopia.core.security.SecurityProvider" %>

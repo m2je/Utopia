@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- ************************************************************< Identification >********************************************************* -->
+ 	<package name="Identification" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_Identification" class="ir.utopia.nejat2.asset.identification.action.IdentificationAction">
+			<result>/WEB-INF/pages/nejat2/asset/identification/Search_As_Pr_Identification.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Pr_Identification">
+			<result>/WEB-INF/pages/nejat2/asset/identification/View_As_Pr_Identification.jsp?locale=${locale}</result>
+		</action>
+<!-- 		<action name="go-save_As_Pr_Identification">
+			<result>/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Pr_Identification" class="ir.utopia.nejat2.asset.identification.action.IdentificationAction">
+			<result >/WEB-INF/pages/nejat2/asset/identification/Search_As_Pr_Identification.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_As_Pr_Identification">
+			<result>/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Pr_Identification" class="ir.utopia.nejat2.asset.identification.action.IdentificationAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Pr_Identification" class="ir.utopia.nejat2.asset.identification.action.IdentificationAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/identification/Save_As_Pr_Identification.jsp?locale=${locale}</result>
+   		</action> -->
+	</package>
+<!-- ************************************************************< Transaction >*********************************************************-->
+	<package name="Transaction" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_Transaction" class="ir.utopia.nejat2.asset.transaction.action.TransactionAction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Search_As_Pr_Transaction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Pr_Transaction" >
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Save_As_Pr_Transaction.jsp?locale=${locale}</result> 						
+		</action>
+		<action name="go-view_As_Pr_Transaction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/View_As_Pr_Transaction.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Pr_Transaction" class="ir.utopia.nejat2.asset.transaction.action.TransactionAction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Search_As_Pr_Transaction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/transaction/Save_As_Pr_Transaction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/transaction/Save_As_Pr_Transaction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_As_Pr_Transaction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Save_As_Pr_Transaction.jsp?locale=${locale}</result>
+		</action> 
+		 <action name="update_As_Pr_Transaction" class="ir.utopia.nejat2.asset.transaction.action.TransactionAction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Search_As_Pr_Transaction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/transaction/Save_As_Pr_Transaction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/transaction/Save_As_Pr_Transaction.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_As_Pr_Transaction" class="ir.utopia.nejat2.asset.transaction.action.TransactionAction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Search_As_Pr_Transaction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/transaction/Search_As_Pr_Transaction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/transaction/Search_As_Pr_Transaction.jsp?locale=${locale}</result>
+		</action>
+		<action name="goNextStep_As_Pr_Transaction" class="ir.utopia.nejat2.asset.transaction.action.TransactionAction"  method="nextStep">
+			<result type="redirectAction" name="realEstate">
+	            <param name="actionName">go-save_As_Bd_RealEstate</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+			<result type="redirectAction" name="ground">
+	            <param name="actionName">go-save_As_Bd_Ground</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+			<result type="redirectAction" name="vehicle">
+	            <param name="actionName">go-save_As_Bd_Vehicle</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+			<result type="redirectAction" name="medicalDevice">
+	            <param name="actionName">go-save_As_Bd_MedicalDevice</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="furnishing">
+	            <param name="actionName">go-save_As_Bd_Furnishings</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="assetInUsableSentence">
+	            <param name="actionName">go-save_As_Bd_AssetInUsableSentence</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="utilitiesAndTools">
+	            <param name="actionName">go-save_As_Bd_UtilitiesAndTools</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="intangibleAsset">
+	            <param name="actionName">go-save_As_Bd_IntangibleAsset</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="cameraAndParaphernalia">
+	            <param name="actionName">go-save_As_Bd_CameraAndParaphernalia</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="carpet">
+	            <param name="actionName">go-save_As_Bd_Carpet</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+	        <result type="redirectAction" name="books">
+	            <param name="actionName">go-save_As_Bd_Books</param>
+	            <param name="transactionId">${transactionId}</param>
+	        </result>
+		</action>
+	</package>
+	 <package name="TransactionReports" extends="UtopiaAuthorized">
+		<action name="go-report_As_Pr_Transaction">
+			<result>/WEB-INF/pages/nejat2/asset/transaction/Report_As_Pr_Barcode.jsp?locale=${locale}</result>
+		</action>
+	</package>
+<!-- ************************************************************ASSET TYPE********************************************************* -->
+	<package name="AssetType" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_AssetType" class="ir.utopia.nejat2.asset.assettype.action.AssetTypeAction">
+			<result>/WEB-INF/pages/nejat2/asset/assetType/Search_As_Bd_AssetType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_AssetType">
+			<result>/WEB-INF/pages/nejat2/asset/assetType/Save_As_Bd_AssetType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_AssetType">
+			<result>/WEB-INF/pages/nejat2/asset/assetType/View_As_Bd_AssetType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_AssetType" class="ir.utopia.nejat2.asset.assettype.action.AssetTypeAction">
+			<result >/WEB-INF/pages/nejat2/asset/assetType/Search_As_Bd_AssetType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/assetType/Save_As_Bd_AssetType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/assetType/Save_As_Bd_AssetType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_As_Bd_AssetType">
+			<result>/WEB-INF/pages/nejat2/asset/assetType/Save_As_Bd_AssetType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_AssetType" class="ir.utopia.nejat2.asset.assettype.action.AssetTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/assetType/Search_As_Bd_AssetType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/assetType/Save_As_Bd_AssetType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/assetType/Save_As_Bd_AssetType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_AssetType" class="ir.utopia.nejat2.asset.assettype.action.AssetTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/assetType/Search_As_Bd_AssetType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/assetType/Search_As_Bd_AssetType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/assetType/Search_As_Bd_AssetType.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+<!-- ************************************************************REAL ESTATE********************************************************* -->
+	 <package name="RealEstate" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_RealEstate" class="ir.utopia.nejat2.asset.realestate.action.RealEstateAction">
+			<result>/WEB-INF/pages/nejat2/asset/realEstate/Search_As_Bd_RealEstate.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_RealEstate">
+			<result>/WEB-INF/pages/nejat2/asset/realEstate/Save_As_Bd_RealEstate.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_RealEstate">
+			<result>/WEB-INF/pages/nejat2/asset/realEstate/View_As_Bd_RealEstate.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_RealEstate" class="ir.utopia.nejat2.asset.realestate.action.RealEstateAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/realEstate/Save_As_Bd_RealEstate.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/realEstate/Save_As_Bd_RealEstate.jsp?locale=${locale}</result> 
+		</action> 
+		<action name="go-update_As_Bd_RealEstate">
+			<result>/WEB-INF/pages/nejat2/asset/realEstate/Save_As_Bd_RealEstate.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_RealEstate" class="ir.utopia.nejat2.asset.realestate.action.RealEstateAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/realEstate/Search_As_Bd_RealEstate.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/realEstate/Save_As_Bd_RealEstate.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/realEstate/Save_As_Bd_RealEstate.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_RealEstate" class="ir.utopia.nejat2.asset.realestate.action.RealEstateAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/realEstate/Search_As_Bd_RealEstate.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/realEstate/Search_As_Bd_RealEstate.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/realEstate/Search_As_Bd_RealEstate.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<package name="RealEstateReport" extends="UtopiaAuthorized">
+		<action name="go_As_Bd_RealEstateReport">
+			<result>/WEB-INF/pages/nejat2/asset/realEstate/Report_As_Bd_RealEstate.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+	
+<!-- ************************************************************Ground********************************************************* -->
+	<package name="Ground" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_Ground" class="ir.utopia.nejat2.asset.ground.action.GroundAction">
+			<result>/WEB-INF/pages/nejat2/asset/ground/Search_As_Bd_Ground.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_Ground">
+			<result>/WEB-INF/pages/nejat2/asset/ground/Save_As_Bd_Ground.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_Ground">
+			<result>/WEB-INF/pages/nejat2/asset/ground/View_As_Bd_Ground.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_Ground" class="ir.utopia.nejat2.asset.ground.action.GroundAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<!-- <result >/WEB-INF/pages/nejat2/asset/ground/Search_As_Bd_Ground.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/ground/Save_As_Bd_Ground.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/ground/Save_As_Bd_Ground.jsp?locale=${locale}</result> -->
+		</action> 
+		<action name="go-update_As_Bd_Ground">
+			<result>/WEB-INF/pages/nejat2/asset/ground/Save_As_Bd_Ground.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_Ground" class="ir.utopia.nejat2.asset.ground.action.GroundAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/ground/Search_As_Bd_Ground.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/ground/Save_As_Bd_Ground.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/ground/Save_As_Bd_Ground.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_Ground" class="ir.utopia.nejat2.asset.ground.action.GroundAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/ground/Search_As_Bd_Ground.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/ground/Search_As_Bd_Ground.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/ground/Search_As_Bd_Ground.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<package name="GroundReport" extends="UtopiaAuthorized">
+		<action name="go_As_Bd_GroundReport">
+			<result>/WEB-INF/pages/nejat2/asset/ground/Report_As_Bd_Ground.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************Vehicle********************************************************* -->
+	<package name="Vehicle" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_Vehicle" class="ir.utopia.nejat2.asset.vehicle.action.VehicleAction">
+			<result>/WEB-INF/pages/nejat2/asset/vehicle/Search_As_Bd_Vehicle.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_Vehicle">
+			<result>/WEB-INF/pages/nejat2/asset/vehicle/Save_As_Bd_Vehicle.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_Vehicle">
+			<result>/WEB-INF/pages/nejat2/asset/vehicle/View_As_Bd_Vehicle.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_Vehicle" class="ir.utopia.nejat2.asset.vehicle.action.VehicleAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<!-- <result >/WEB-INF/pages/nejat2/asset/vehicle/Search_As_Bd_Vehicle.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/vehicle/Save_As_Bd_Vehicle.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/vehicle/Save_As_Bd_Vehicle.jsp?locale=${locale}</result> -->
+		</action> 
+		<action name="go-update_As_Bd_Vehicle">
+			<result>/WEB-INF/pages/nejat2/asset/vehicle/Save_As_Bd_Vehicle.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_Vehicle" class="ir.utopia.nejat2.asset.vehicle.action.VehicleAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/vehicle/Search_As_Bd_Vehicle.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/vehicle/Save_As_Bd_Vehicle.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/vehicle/Save_As_Bd_Vehicle.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_Vehicle" class="ir.utopia.nejat2.asset.vehicle.action.VehicleAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/vehicle/Search_As_Bd_Vehicle.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/vehicle/Search_As_Bd_Vehicle.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/vehicle/Search_As_Bd_Vehicle.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<package name="VehicleReport" extends="UtopiaAuthorized">
+		<action name="go_As_Bd_VehicleReport">
+			<result>/WEB-INF/pages/nejat2/asset/vehicle/Report_As_Bd_Vehicle.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************Medical Device********************************************************* -->
+	<package name="MedicalDevice" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_MedicalDevice" class="ir.utopia.nejat2.asset.medicaldevice.action.MedicalDeviceAction">
+			<result>/WEB-INF/pages/nejat2/asset/medicalDevice/Search_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_MedicalDevice">
+			<result>/WEB-INF/pages/nejat2/asset/medicalDevice/Save_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_MedicalDevice">
+			<result>/WEB-INF/pages/nejat2/asset/medicalDevice/View_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_MedicalDevice" class="ir.utopia.nejat2.asset.medicaldevice.action.MedicalDeviceAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<!-- <result >/WEB-INF/pages/nejat2/asset/medicalDevice/Search_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/medicalDevice/Save_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/medicalDevice/Save_As_Bd_MedicalDevice.jsp?locale=${locale}</result> -->
+		</action> 
+		<action name="go-update_As_Bd_MedicalDevice">
+			<result>/WEB-INF/pages/nejat2/asset/medicalDevice/Save_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_MedicalDevice" class="ir.utopia.nejat2.asset.medicaldevice.action.MedicalDeviceAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/medicalDevice/Search_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/medicalDevice/Save_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/medicalDevice/Save_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_MedicalDevice" class="ir.utopia.nejat2.asset.medicaldevice.action.MedicalDeviceAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/medicalDevice/Search_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/medicalDevice/Search_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/medicalDevice/Search_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<package name="MedicalDeviceReport" extends="UtopiaAuthorized">
+		<action name="go_As_Bd_MedicalDevice">
+			<result>/WEB-INF/pages/nejat2/asset/medicalDevice/Report_As_Bd_MedicalDevice.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************Furnishings********************************************************* -->
+	<package name="Furnishings" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_Furnishings" class="ir.utopia.nejat2.asset.furnishings.action.FurnishingsAction">
+			<result>/WEB-INF/pages/nejat2/asset/furnishings/Search_As_Bd_Furnishings.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_Furnishings">
+			<result>/WEB-INF/pages/nejat2/asset/furnishings/Save_As_Bd_Furnishings.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_Furnishings">
+			<result>/WEB-INF/pages/nejat2/asset/furnishings/View_As_Bd_Furnishings.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_Furnishings" class="ir.utopia.nejat2.asset.furnishings.action.FurnishingsAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_Furnishings</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+			<!-- <result >/WEB-INF/pages/nejat2/asset/furnishings/Search_As_Bd_Furnishings.jsp?locale=${locale}</result> -->
+			<!-- <result name="error">/WEB-INF/pages/nejat2/asset/furnishings/Save_As_Bd_Furnishings.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/furnishings/Save_As_Bd_Furnishings.jsp?locale=${locale}</result> -->
+		</action> 
+		<action name="go-update_As_Bd_Furnishings">
+			<result>/WEB-INF/pages/nejat2/asset/furnishings/Save_As_Bd_Furnishings.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_Furnishings" class="ir.utopia.nejat2.asset.furnishings.action.FurnishingsAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/furnishings/Search_As_Bd_Furnishings.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/furnishings/Save_As_Bd_Furnishings.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/furnishings/Save_As_Bd_Furnishings.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_Furnishings" class="ir.utopia.nejat2.asset.furnishings.action.FurnishingsAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/furnishings/Search_As_Bd_Furnishings.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/furnishings/Search_As_Bd_Furnishings.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/furnishings/Search_As_Bd_Furnishings.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<package name="FurnishingsReport" extends="UtopiaAuthorized">
+		<action name="go_As_Bd_Furnishings">
+			<result>/WEB-INF/pages/nejat2/asset/furnishings/Report_As_Bd_Furnishings.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************< Configuration >********************************************************* -->
+	<package name="Configuration" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_Configuration" class="ir.utopia.nejat2.asset.configuration.action.ConfigurationAction">
+			<result>/WEB-INF/pages/nejat2/asset/configuration/Search_As_Bd_Configuration.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_Configuration">
+			<result>/WEB-INF/pages/nejat2/asset/configuration/Save_As_Bd_Configuration.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_Configuration">
+			<result>/WEB-INF/pages/nejat2/asset/configuration/View_As_Bd_Configuration.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_Configuration" class="ir.utopia.nejat2.asset.configuration.action.ConfigurationAction">
+			<result >/WEB-INF/pages/nejat2/asset/configuration/Search_As_Bd_Configuration.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/configuration/Save_As_Bd_Configuration.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/configuration/Save_As_Bd_Configuration.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_As_Bd_Configuration">
+			<result>/WEB-INF/pages/nejat2/asset/configuration/Save_As_Bd_Configuration.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_Configuration" class="ir.utopia.nejat2.asset.configuration.action.ConfigurationAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/configuration/Search_As_Bd_Configuration.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/configuration/Save_As_Bd_Configuration.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/configuration/Save_As_Bd_Configuration.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_Configuration" class="ir.utopia.nejat2.asset.configuration.action.ConfigurationAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/configuration/Search_As_Bd_Configuration.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/configuration/Search_As_Bd_Configuration.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/configuration/Search_As_Bd_Configuration.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************< Inventory Receipt >********************************************************* -->
+	<package name="InventoryReceipt" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_InventoryReceipt" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptAction">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_As_Pr_InventoryReceipt">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/View_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminConfirm_As_Pr_InventoryReceipt" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptAction" method="aminConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminReject_As_Pr_InventoryReceipt" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptAction" method="aminReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerConfirm_As_Pr_InventoryReceipt" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptAction" method="managerConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerReject_As_Pr_InventoryReceipt" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptAction" method="managerReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceipt.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+	<!-- ************************************************************< Inventory Receipt Organization >********************************************************* -->
+	<package name="InventoryReceiptOrg" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_InventoryReceiptOrg" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptOrgAction">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_As_Pr_InventoryReceiptOrg">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/View_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminConfirm_As_Pr_InventoryReceiptOrg" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptOrgAction" method="aminConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminReject_As_Pr_InventoryReceiptOrg" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptOrgAction" method="aminReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerConfirm_As_Pr_InventoryReceiptOrg" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptOrgAction" method="managerConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerReject_As_Pr_InventoryReceiptOrg" class="ir.utopia.nejat2.asset.inventoryreceipt.action.InventoryReceiptOrgAction" method="managerReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryReceipt/Search_As_Pr_InventoryReceiptOrg.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+	<!-- ************************************************************< Inventory Draft >********************************************************* -->
+	<package name="InventoryDraft" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_InventoryDraft" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftAction">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Pr_InventoryDraft">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/View_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminConfirm_As_Pr_InventoryDraft" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftAction" method="aminConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminReject_As_Pr_InventoryDraft" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftAction" method="aminReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerConfirm_As_Pr_InventoryDraft" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftAction" method="managerConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerReject_As_Pr_InventoryDraft" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftAction" method="managerReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraft.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************< Inventory Draft Organization >********************************************************* -->
+	<package name="InventoryDraftOrg" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_InventoryDraftOrg" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftOrgAction">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Pr_InventoryDraftOrg">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/View_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminConfirm_As_Pr_InventoryDraftOrg" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftOrgAction" method="aminConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="AminReject_As_Pr_InventoryDraftOrg" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftOrgAction" method="aminReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerConfirm_As_Pr_InventoryDraftOrg" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftOrgAction" method="managerConfirm">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+		</action>
+		<action name="ManagerReject_As_Pr_InventoryDraftOrg" class="ir.utopia.nejat2.asset.inventorydraft.action.InventoryDraftOrgAction" method="managerReject">
+			<result>/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/inventoryDraft/Search_As_Pr_InventoryDraftOrg.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************<< Forms >>********************************************************* -->
+	<package name="FormReport1" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form1">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form1.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport2" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form2">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form2.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport3" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form3">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form3.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport4" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form4">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form4.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport5" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form5">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form5.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport6" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form6">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form6.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport7" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form7">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form7.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport8" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form8">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form8.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport9" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form9">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form9.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport10" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form10">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form10.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport11" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form11">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form11.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport12" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form12">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form12.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport13" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form13">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form13.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport14" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form14">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form14.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport15" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form15">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form15.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport16" extends="UtopiaAuthorized">
+		<action name="search_As_Rp_Form16">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Search_As_Rp_Form16.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_As_Rp_Form16">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form16.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport17" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form17">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form17.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport18" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form18">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form18.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport19" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form19">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form19.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport20" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form20">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form20.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<package name="FormReport21" extends="UtopiaAuthorized">
+		<action name="go-report_As_Rp_Form21">
+			<result>/WEB-INF/pages/nejat2/asset/forms/Report_As_Rp_Form21.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+	<!-- ************************************************************< Accountancy Property >********************************************************* -->
+	<package name="AccountancyProperty" 	extends="UtopiaAuthorized">
+		<action name="search_As_Pr_AccountancyProperty" class="ir.utopia.nejat2.asset.accountancyproperty.action.AccountancyPropertyAction">
+			<result>/WEB-INF/pages/nejat2/asset/accountancyProperty/Search_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Pr_AccountancyProperty">
+			<result>/WEB-INF/pages/nejat2/asset/accountancyProperty/Save_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Pr_AccountancyProperty" >
+		
+			<result >/WEB-INF/pages/nejat2/asset/accountancyProperty/View_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Pr_AccountancyProperty" class="ir.utopia.nejat2.asset.accountancyproperty.action.AccountancyPropertyAction">
+			<result >/WEB-INF/pages/nejat2/asset/accountancyProperty/Search_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/asset/accountancyProperty/Save_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/asset/accountancyProperty/Save_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_As_Pr_AccountancyProperty">
+			<result>/WEB-INF/pages/nejat2/asset/accountancyProperty/Save_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Pr_AccountancyProperty" class="ir.utopia.nejat2.asset.accountancyproperty.action.AccountancyPropertyAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/accountancyProperty/Search_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/accountancyProperty/Save_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/accountancyProperty/Save_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Pr_AccountancyProperty" class="ir.utopia.nejat2.asset.accountancyproperty.action.AccountancyPropertyAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/accountancyProperty/Search_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/accountancyProperty/Search_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/accountancyProperty/Search_As_Pr_AccountancyProperty.jsp?locale=${locale}</result>
+   		</action>
+   		
+	</package>
+<!-- ************************************************************ Asset in Usable Sentence ********************************************************* -->
+	<package name="AssetInUsableSentence" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_AssetInUsableSentence" class="ir.utopia.nejat2.asset.assetinusablesentence.action.AssetInUsableSentenceAction">
+			<result>/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Search_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_AssetInUsableSentence">
+			<result>/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Save_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_AssetInUsableSentence">
+			<result>/WEB-INF/pages/nejat2/asset/assetInUsableSentence/View_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_AssetInUsableSentence" class="ir.utopia.nejat2.asset.assetinusablesentence.action.AssetInUsableSentenceAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_AssetInUsableSentence</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+		</action> 
+		<action name="go-update_As_Bd_AssetInUsableSentence">
+			<result>/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Save_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_AssetInUsableSentence" class="ir.utopia.nejat2.asset.assetinusablesentence.action.AssetInUsableSentenceAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Search_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Save_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Save_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_AssetInUsableSentence" class="ir.utopia.nejat2.asset.assetinusablesentence.action.AssetInUsableSentenceAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Search_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Search_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/assetInUsableSentence/Search_As_Bd_AssetInUsableSentence.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ************************************************************ Utilities and Tools ********************************************************* -->
+	<package name="UtilitiesAndTools" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_UtilitiesAndTools" class="ir.utopia.nejat2.asset.utilitiesandtools.action.UtilitiesAndToolsAction">
+			<result>/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Search_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_UtilitiesAndTools">
+			<result>/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Save_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_UtilitiesAndTools">
+			<result>/WEB-INF/pages/nejat2/asset/utilitiesAndTools/View_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_UtilitiesAndTools" class="ir.utopia.nejat2.asset.utilitiesandtools.action.UtilitiesAndToolsAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_UtilitiesAndTools</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+		</action> 
+		<action name="go-update_As_Bd_UtilitiesAndTools">
+			<result>/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Save_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_UtilitiesAndTools" class="ir.utopia.nejat2.asset.utilitiesandtools.action.UtilitiesAndToolsAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Search_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Save_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Save_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_UtilitiesAndTools" class="ir.utopia.nejat2.asset.utilitiesandtools.action.UtilitiesAndToolsAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Search_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Search_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/utilitiesAndTools/Search_As_Bd_UtilitiesAndTool.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ************************************************************ Intangible Asset ********************************************************* -->
+	<package name="IntangibleAsset" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_IntangibleAsset" class="ir.utopia.nejat2.asset.intangibleasset.action.IntangibleAssetAction">
+			<result>/WEB-INF/pages/nejat2/asset/intangibleAsset/Search_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_IntangibleAsset">
+			<result>/WEB-INF/pages/nejat2/asset/intangibleAsset/Save_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_IntangibleAsset">
+			<result>/WEB-INF/pages/nejat2/asset/intangibleAsset/View_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_IntangibleAsset" class="ir.utopia.nejat2.asset.intangibleasset.action.IntangibleAssetAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_IntangibleAsset</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+		</action> 
+		<action name="go-update_As_Bd_IntangibleAsset">
+			<result>/WEB-INF/pages/nejat2/asset/intangibleAsset/Save_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_IntangibleAsset" class="ir.utopia.nejat2.asset.intangibleasset.action.IntangibleAssetAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/intangibleAsset/Search_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/intangibleAsset/Save_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/intangibleAsset/Save_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_IntangibleAsset" class="ir.utopia.nejat2.asset.intangibleasset.action.IntangibleAssetAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/intangibleAsset/Search_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/intangibleAsset/Search_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/intangibleAsset/Search_As_Bd_IntangibleAsset.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ************************************************************ Camera And Paraphernalia ********************************************************* -->
+	<package name="CameraAndParaphernalia" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_CameraAndParaphernalia" class="ir.utopia.nejat2.asset.cameraandparaphernalia.action.CameraAndParaphernaliaAction">
+			<result>/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Search_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_CameraAndParaphernalia">
+			<result>/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Save_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_CameraAndParaphernalia">
+			<result>/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/View_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_CameraAndParaphernalia" class="ir.utopia.nejat2.asset.cameraandparaphernalia.action.CameraAndParaphernaliaAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_CameraAndParaphernalia</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+		</action> 
+		<action name="go-update_As_Bd_CameraAndParaphernalia">
+			<result>/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Save_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_CameraAndParaphernalia" class="ir.utopia.nejat2.asset.cameraandparaphernalia.action.CameraAndParaphernaliaAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Search_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Save_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Save_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_CameraAndParaphernalia" class="ir.utopia.nejat2.asset.cameraandparaphernalia.action.CameraAndParaphernaliaAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Search_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Search_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/cameraAndParaphernalia/Search_As_Bd_CameraAndParaphernalia.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ************************************************************ Carpet ********************************************************* -->
+	<package name="Carpet" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_Carpet" class="ir.utopia.nejat2.asset.carpet.action.CarpetAction">
+			<result>/WEB-INF/pages/nejat2/asset/carpet/Search_As_Bd_Carpet.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_Carpet">
+			<result>/WEB-INF/pages/nejat2/asset/carpet/Save_As_Bd_Carpet.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_Carpet">
+			<result>/WEB-INF/pages/nejat2/asset/carpet/View_As_Bd_Carpet.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_Carpet" class="ir.utopia.nejat2.asset.carpet.action.CarpetAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_Carpet</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+		</action> 
+		<action name="go-update_As_Bd_Carpet">
+			<result>/WEB-INF/pages/nejat2/asset/carpet/Save_As_Bd_Carpet.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_Carpet" class="ir.utopia.nejat2.asset.carpet.action.CarpetAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/carpet/Search_As_Bd_Carpet.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/carpet/Save_As_Bd_Carpet.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/carpet/Save_As_Bd_Carpet.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_Carpet" class="ir.utopia.nejat2.asset.carpet.action.CarpetAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/carpet/Search_As_Bd_Carpet.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/carpet/Search_As_Bd_Carpet.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/carpet/Search_As_Bd_Carpet.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ************************************************************ Books ********************************************************* -->
+	<package name="Books" 	extends="UtopiaAuthorized">
+		<action name="search_As_Bd_Books" class="ir.utopia.nejat2.asset.books.action.BooksAction">
+			<result>/WEB-INF/pages/nejat2/asset/books/Search_As_Bd_Books.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_As_Bd_Books">
+			<result>/WEB-INF/pages/nejat2/asset/books/Save_As_Bd_Books.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_As_Bd_Books">
+			<result>/WEB-INF/pages/nejat2/asset/books/View_As_Bd_Books.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_As_Bd_Books" class="ir.utopia.nejat2.asset.books.action.BooksAction">
+			<result type="redirectAction" name="success">
+				<param name="actionName">search_As_Pr_Transaction</param>
+			</result>
+			<result type="redirectAction" name="error">
+				<param name="actionName">go-save_As_Bd_Books</param>
+				<param name="transactionId">${transactionId}</param>
+			</result>
+		</action> 
+		<action name="go-update_As_Bd_Books">
+			<result>/WEB-INF/pages/nejat2/asset/books/Save_As_Bd_Books.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_As_Bd_Books" class="ir.utopia.nejat2.asset.books.action.BooksAction">
+  	 			<result >/WEB-INF/pages/nejat2/asset/books/Search_As_Bd_Books.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/asset/books/Save_As_Bd_Books.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/asset/books/Save_As_Bd_Books.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_As_Bd_Books" class="ir.utopia.nejat2.asset.books.action.BooksAction">
+  	 		<result >/WEB-INF/pages/nejat2/asset/books/Search_As_Bd_Books.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/asset/books/Search_As_Bd_Books.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/asset/books/Search_As_Bd_Books.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+</struts>

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
 
-<!-- The web.xml, also known as the deployment descriptor, defines a Java Servlet web application. 
-		 This document is a mandatory element of any web application and must reside within WEB-INF.  The 
-		 deployment descriptor defines all the servlets and servlet filters that belong to this web
-		 application. -->
-
-<web-app >
+<!-- 
 	<taglib>
 		<taglib-uri>menuTld</taglib-uri>
 		<taglib-location>/WEB-INF/tlds/menu.tld
@@ -21,34 +17,37 @@
 		<taglib-location>/WEB-INF/tlds/UtilityTags.tld
 		</taglib-location>
 	</taglib>
-
+ -->
 	<display-name>UtopiaUI</display-name>
 	
 	
 	<!-- 
-	<filter>
+		 <filter>
         <filter-name>struts2</filter-name>
-          <filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class> 
+        	 <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class> 	
         		<init-param>
   			<param-name>actionPackages</param-name>
  			<param-value>ir.utopia</param-value>
 		</init-param>   
-		  <init-param>
-  			<param-name>actionPackages</param-name>
- 			<param-value>manning.chapterTwo</param-value>
-		</init-param>   
+		  
     </filter>
-	 -->
-	
-	<filter>
-        <filter-name>struts2</filter-name>
-          <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class> 
-        		<init-param>
-  			<param-name>actionPackages</param-name>
- 			<param-value>ir.utopia</param-value>
-		</init-param>   
-    </filter>
+   
     
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	 -->
+	<filter>
+	    <filter-name>UrlRewriteFilter</filter-name>
+	    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>UrlRewriteFilter</filter-name>
+	    <url-pattern>/api/*</url-pattern>
+	    <dispatcher>REQUEST</dispatcher>
+	    <dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
    
 	 	
     
@@ -61,7 +60,7 @@
 		<exception-type>
 			ir.utopia.core.security.exception.NonAuthorizedActionException
 		</exception-type>
-		<location>/templates/errorPages/authorizationFail.jsp
+		<location>/WEB-INF/templates/errorPages/authorizationFail.jsp
 		</location>
 	</error-page>
 
@@ -69,13 +68,13 @@
 		<exception-type>
 			ir.utopia.core.security.exception.NotAuthenticatedException
 		</exception-type>
-		<location>/pages/security/login.jsp
+		<location>/WEB-INF/pages/security/login.jsp
 		</location>
 	</error-page>
 
 	<error-page>
 		<exception-type>java.lang.Exception	</exception-type>
-		<location>/pages/UnderConstruction.jsp</location>
+		<location>/WEB-INF/pages/UnderConstruction.jsp</location>
 	</error-page>
 <!-- 
 	<servlet>

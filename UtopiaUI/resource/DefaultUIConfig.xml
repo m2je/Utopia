@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIConfig>
+	<!-- coreUI config -->
+	<usecase name="Menu" system="Co" subsystem="Bi" form="ir.utopia.core.basicinformation.menu.action.MenuForm" />
+	<usecase name="Action" system="Co" subsystem="Bi" form="ir.utopia.core.basicinformation.action.action.ActionForm" />
+	<usecase name="UserUsecaseAcss" system="Co" subsystem="Sc"
+		form="ir.utopia.core.security.userusecaseacss.action.UserUsecaseAcssForm" />
+	<usecase name="UserUsecaseActnAcss" system="Co" subsystem="Sc"
+		form="ir.utopia.core.security.usruscsactnaccs.action.UsrUscsActnAccsForm" />
+	<usecase name="UserRoles" system="Co" subsystem="Sc" form="ir.utopia.core.security.userroles.action.UserRolesForm" />
+	<usecase name="User" system="Co" subsystem="Sc" form="ir.utopia.core.security.user.action.UserForm" />
+	<usecase name="RoleUsecaseAcss" system="Co" subsystem="Sc"
+		form="ir.utopia.core.security.roleusecaseacss.action.RoleUsecaseAcssForm" />
+	<usecase name="RoleUscsActnAccs" system="Co" subsystem="Sc"
+		form="ir.utopia.core.security.roleuscsactnaccs.action.RoleUscsActnAccsForm" />
+	<usecase name="RoleSubsystemAcss" system="Co" subsystem="Sc"
+		form="ir.utopia.core.security.rolesubsystemacss.action.RoleSubsystemAcssForm" />
+	<usecase name="Role" system="Co" subsystem="Sc" form="ir.utopia.core.security.role.action.RoleForm" />
+	<usecase name="UsecaseAction" system="Co" subsystem="Uc" form="ir.utopia.core.usecase.usecase.action.UseCaseActionForm" />
+	<usecase name="UserLogAction" system="Co" subsystem="Se" form="ir.utopia.core.security.userlog.action.UserLogForm" />
+	<!-- <usecase name="ActionParameters" system="Co" subsystem="Bi" form=""/> <usecase name="Usecase" system="Co" subsystem="Uc" 
+		form=""/> <usecase name="SystemMenu" system="Co" subsystem="Ut" form=""/> <usecase name="Sequence" system="Co" subsystem="Zc" 
+		form=""/> -->
+	<!-- END CoreUI config -->
+	<!-- CommonUI config -->
+	<usecase name="FiscalYear" system="Cm" subsystem="Bi"
+		form="ir.utopia.common.basicinformation.fiscalyear.action.FiscalYearForm" />
+	<usecase name="Organization" system="Cm" subsystem="Bi"
+		form="ir.utopia.common.basicinformation.organization.action.OrganizationForm" />
+	<usecase name="Region" system="Cm" subsystem="Lc" form="ir.utopia.common.locality.region.action.RegionForm" />
+	<usecase name="Currency" system="Cm" subsystem="Lc" form="ir.utopia.common.locality.currency.action.CurrencyForm" />
+	<usecase name="Province" system="Cm" subsystem="Lc" form="ir.utopia.common.locality.province.action.ProvinceForm" />
+	<usecase name="City" system="Cm" subsystem="Lc" form="ir.utopia.common.locality.city.action.CityForm" />
+	<usecase name="Country" system="Cm" subsystem="Lc" form="ir.utopia.common.locality.country.action.CountryForm" />
+	<usecase name="SubSystem" system="Cm" subsystem="Sy" form="ir.utopia.common.systems.subsystem.action.SubSystemForm" />
+	<usecase name="System" system="Cm" subsystem="Sy" form="ir.utopia.common.systems.system.action.SystemForm" />
+	<usecase name="Employee" system="Cm" subsystem="Bi" form="ir.utopia.common.basicinformation.employee.action.EmployeeForm" />
+	<!-- <usecase name="BusinessPartner" system="Cm" subsystem="Bi" form=""/> -->
+	<!-- CommonUI config -->
+</UIConfig>

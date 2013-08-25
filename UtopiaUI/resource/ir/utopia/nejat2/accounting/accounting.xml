@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- ***************************************************SystemDimension****************************************************************************** -->
+	<package name="AccountingSystemDimension" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_SystemDimension"
+			class="ir.utopia.nejat2.accounting.basicinformation.systemdimension.action.SystemDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/Search_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_SystemDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/Save_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		
+		<action name="go-view_Cm_Bi_SystemDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/View_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_SystemDimension"
+			class="ir.utopia.nejat2.accounting.basicinformation.systemdimension.action.SystemDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/Search_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/systemdimension/Save_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/systemdimension/Save_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_SystemDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/Save_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_SystemDimension"
+			class="ir.utopia.nejat2.accounting.basicinformation.systemdimension.action.SystemDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/Search_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/systemdimension/Save_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/systemdimension/Save_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_SystemDimension"
+			class="ir.utopia.nejat2.accounting.basicinformation.systemdimension.action.SystemDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/systemdimension/Search_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/systemdimension/Search_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/systemdimension/Search_Ac_Bd_SystemDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************************<<Tree 
+		Accounting >>********************************************************* -->
+	<package name="accountingTree" extends="UtopiaAuthorized">
+		<action name="go-loadTree_Ac_Bd_AccountingTree"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.AccountingTreeAction" method="">
+			<result>/WEB-INF/pages/nejat2/accounting/account/Account_Tree.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="accountingTreeOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadChildren_Ac_Bd_AccountingTree"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.AccountingTreeAction">
+		</action>
+		<action name="save_Ac_Bd_AccountingTree"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.AccountingTreeAction">
+			<result>/WEB-INF/pages/nejat2/accounting/account/Account_Tree.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_AccountingTree"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.AccountingTreeAction">
+		</action>
+	</package>
+
+	<!-- ************************************************************<<AccountGroup 
+		>>********************************************************* -->
+	<package name="AccountGroup" extends="UtopiaAuthorized">
+		<action name="search_Ac_Bd_GroupAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.accountgroup.action.AccountGroupAction">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/Search_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Ac_Bd_GroupAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/Save_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Ac_Bd_GroupAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/View_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Ac_Bd_GroupAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.accountgroup.action.AccountGroupAction">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/Search_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/accountGroup/Save_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/accountGroup/Save_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_GroupAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/Save_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Ac_Bd_GroupAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.accountgroup.action.AccountGroupAction">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/Search_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/accountGroup/Save_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/accountGroup/Save_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_GroupAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.accountgroup.action.AccountGroupAction">
+			<result>/WEB-INF/pages/nejat2/accounting/accountGroup/Search_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/accountGroup/Search_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/accountGroup/Search_Ac_Bd_AccountGroup.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************************<<LedgerAccount 
+		>>********************************************************* -->
+	<package name="LedgerAccount" extends="UtopiaAuthorized">
+		<action name="search_Ac_Bd_TotalAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.LedgerAction">
+			<result>/WEB-INF/pages/nejat2/accounting/ledger/Search_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Ac_Bd_TotalAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/ledger/Save_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Ac_Bd_TotalAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/ledger/View_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Ac_Bd_TotalAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.LedgerAction">
+			<result>/WEB-INF/pages/nejat2/accounting/ledger/Search_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/ledger/Save_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/ledger/Save_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_TotalAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/ledger/Save_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Ac_Bd_TotalAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.LedgerAction">
+			<result>/WEB-INF/pages/nejat2/accounting/ledger/Search_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/ledger/Save_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/ledger/Save_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_TotalAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.ledger.action.LedgerAction">
+			<result>
+				/WEB-INF/pages/nejat2/accounting/ledger/Search_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/ledger/Search_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/ledger/Search_Ac_Bd_Ledger.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ************************************************************<<SubsidiaryLedgerAccount 
+		>>********************************************************* -->
+
+	<package name="SubsidiaryLedgerAccount" extends="UtopiaAuthorized">
+		<action name="search_Ac_Bd_MoeinAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.subsidiaryledger.action.SubLedgerAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Search_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Ac_Bd_MoeinAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Save_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Ac_Bd_MoeinAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/View_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Ac_Bd_MoeinAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.subsidiaryledger.action.SubLedgerAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Search_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Save_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Save_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_MoeinAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Save_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Ac_Bd_MoeinAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.subsidiaryledger.action.SubLedgerAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Search_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Save_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Save_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_MoeinAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.subsidiaryledger.action.SubLedgerAction">
+			<result>
+				/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Search_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Search_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/subsidiaryLedger/Search_Ac_Bd_SubsidaryLedger.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************************<<detailedaccount 
+		>>********************************************************* -->
+
+	<package name="detailedAccount" extends="UtopiaAuthorized">
+		<action name="search_Ac_Bd_DetailedAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.detailedaccount.action.DetailedAccountAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Search_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Ac_Bd_DetailedAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Save_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Ac_Bd_DetailedAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/View_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Ac_Bd_DetailedAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.detailedaccount.action.DetailedAccountAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Search_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Save_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Save_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_DetailedAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Save_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Ac_Bd_DetailedAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.detailedaccount.action.DetailedAccountAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Search_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Save_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Save_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_DetailedAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.detailedaccount.action.DetailedAccountAction">
+			<result>/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Search_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Search_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/subsidiaryLedgerDimension/Search_Ac_Bd_SubsidiaryLedgerDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************************<<CostCenter 
+		>>********************************************************* -->
+
+	<package name="CostCenter" extends="UtopiaAuthorized">
+		<action name="search_Ac_Bd_CostCenter"
+			class="ir.utopia.nejat2.accounting.basicinformation.costcenter.action.CostCenterAction">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/Search_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Ac_Bd_CostCenter">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/Save_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Ac_Bd_CostCenter">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/View_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Ac_Bd_CostCenter"
+			class="ir.utopia.nejat2.accounting.basicinformation.costcenter.action.CostCenterAction">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/Search_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/costCenter/Save_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/costCenter/Save_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_CostCenter">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/Save_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Ac_Bd_CostCenter"
+			class="ir.utopia.nejat2.accounting.basicinformation.costcenter.action.CostCenterAction">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/Search_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/costCenter/Save_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/costCenter/Save_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_CostCenter"
+			class="ir.utopia.nejat2.accounting.basicinformation.costcenter.action.CostCenterAction">
+			<result>/WEB-INF/pages/nejat2/accounting/costCenter/Search_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/costCenter/Search_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/costCenter/Search_Ac_Bd_CostCenter.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="costCenterDimOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_Ac_Bd_CostCenter"
+			class="ir.utopia.nejat2.accounting.basicinformation.costcenter.action.CostCenterAction"
+			method="loadForAccountDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************************<<DocType 
+		>>********************************************************* -->
+
+	<package name="AccountingDocType" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_DocType"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctype.action.DocTypeAction">
+			<result>/WEB-INF/pages/nejat2/accounting/doctype/Search_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+		</action>
+		 <action name="go-save_Cm_Bi_DocType">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_DocType">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		 <action name="save_Cm_Bi_DocType"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctype.action.DocTypeAction">
+			<result>/WEB-INF/pages/nejat2/accounting/doctype/Search_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_DocType">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_DocType"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctype.action.DocTypeAction">
+			<result>/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+		</action> 
+		<!-- <action name="update_Cm_Bi_DocType"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctype.action.DocTypeAction">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_DocType"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctype.action.DocTypeAction">
+			<result>/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+		</action> -->
+	</package>
+
+
+
+
+	<!-- ************************************************************<<DOCUMENTCONFIG 
+		>>********************************************************* -->
+	<package name="DocumentConfiguration" extends="UtopiaAuthorized">
+		<action name="search_Ac_Bd_DocumentConfiguration"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctypedimension.action.DocTypeDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/Search_Ac_Bd_DocumentConfiguration.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Ac_Bd_DocumentConfiguration">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_DocumentConfiguration">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="DocumentConfigurationeOperation" extends="UtopiaAuthorizedGWT">
+		<action name="config_Ac_Bd_DocumentConfiguration"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctypedimension.action.DocTypeDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Ac_Bd_DocumentConfiguration"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctypedimension.action.DocTypeDimensionAction">
+			<result>/WEB-INF/pages/nejat2/accounting/doctype/Save_Ac_Bd_DocType.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ************************************************************<<PROCCESS 
+		DOCUMENT >>********************************************************* -->
+
+	<package name="AccountingDocument" extends="UtopiaAuthorized">
+		<action name="search_Ac_Pr_AcDocuments"
+			class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+			<result>/WEB-INF/pages/nejat2/accounting/document/Search_Ac_Pr_Document.jsp?locale=${locale}
+			</result>
+		</action>
+		<!-- <action name="go-save_Ac_Pr_AccountingDocuments"> <result>/WEB-INF/pages/nejat2/accounting/document/save_Ac_Pr_Document.jsp?locale=${locale} 
+			</result> </action> -->
+		<action name="go-save_Ac_Pr_AcDocuments">
+			<result>/WEB-INF/pages/nejat2/accounting/document/Save_Ac_Pr_Document.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Ac_Pr_AcDocuments">
+			<result>/WEB-INF/pages/nejat2/accounting/document/View_Ac_Pr_Document.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Ac_Pr_AcDocuments">
+			<result>/WEB-INF/pages/nejat2/accounting/document/Save_Ac_Pr_Document.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="saveCustom_Ac_Pr_AcDocuments" method="saveDocument"
+		class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+			<result>/WEB-INF/pages/nejat2/accounting/document/Search_Ac_Pr_Document.jsp?locale=${locale}
+			</result>
+		</action>
+		
+	</package>
+	<package name="AccountingDocumentOperation" extends="UtopiaAuthorizedGWT">
+		<action name="view_Ac_Pr_AcDocuments"
+			class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+		</action>
+		<action name="save_Ac_Pr_AcDocuments" 
+			class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+		</action>  
+	</package>
+
+	<package name="detailedAccountDimOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_Ac_Bd_DetailedAccounts" 
+			class="ir.utopia.nejat2.accounting.basicinformation.detailedaccount.action.DetailedAccountAction"
+			method="loadForAccountDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	
+		<!-- ************************************************************<< AccDocumentReport>>********************************************************* -->
+	   <package name="AccDocumentReport" 	extends="UtopiaAuthorized">
+		<action name="search_Ac_Rp_AccDocumentReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Search_Ac_Rp_AccDocumentReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Ac_Rp_AccDocumentReportReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Report_Ac_Rp_AccDocumentReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************************<< JournalOfficeReport>>********************************************************* -->
+	   <package name="JournalOfficeReport" 	extends="UtopiaAuthorized">
+		<action name="search_Ac_Rp_JournalOfficeReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Search_Ac_Rp_JournalOfficeReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Ac_Rp_JournalOfficeReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Report_Ac_Rp_JournalOfficeReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+		<!-- ************************************************************<< LedgerDimentionReport >>********************************************************* -->
+	 <package name="LedgerDimentionReport" 	extends="UtopiaAuthorized">
+		<action name="go-report_Ac_Rp_LedgerDimentionReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Report_Ac_Rp_LedgerDimentionReport.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+    
+		<!-- ************************************************************<< AccountsBalanceReport>>********************************************************* -->
+	    <package name="AccountsBalanceReport" 	extends="UtopiaAuthorized">
+		<action name="search_Ac_Rp_AccountsBalanceReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Search_Ac_Rp_AccountsBalanceReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Ac_Rp_AccountsBalanceReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Report_Ac_Rp_AccountsBalanceReport.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+	
+		<!-- ************************************************************<< AccountsListReport>>********************************************************* -->
+	 <package name="AccountsListReport" 	extends="UtopiaAuthorized">
+		<action name="go-report_Ac_Rp_AccountsListReport">
+			<result>/WEB-INF/pages/nejat2/accounting/Reports/Report_Ac_Rp_AccountsListReport.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+	
+	   <package name="AccountsReview" 	extends="UtopiaAuthorized">
+		<action name="go-reviewAccount_Ac_Pr_AccountsReview"
+			class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+			<result>/WEB-INF/pages/nejat2/accounting/accountsReview/accountsReview.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="AccountsReviewOperation" extends="UtopiaAuthorizedGWT">
+		<action name="reviewAccount_Ac_Pr_AccountsReview"
+			class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+		</action>
+		</package>
+		
+		<package name="organizationTree" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_Cm_Bi_Organization"
+			class="ir.utopia.nejat2.accounting.basicinformation.doctypedimension.action.DocTypeDimensionAction"
+			method="getChildren">
+			<result>/WEB-INF/pages/nejat2/accounting/accountsReview/accountsReview.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	
+ <package name="DocumentsJSONS" namespace="/" extends="json-default">
+        <action name="Draft_Ac_Pr_AcDocuments" class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+            <result type="json" name="success" >
+                <param name="ignoreHierarchy">false</param>
+                <param name="excludeProperties">
+                    metaData
+                  </param>
+            </result>
+        </action>
+        <action name="Temporary_Ac_Pr_AcDocuments" class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+            <result type="json" name="success" >
+                <param name="ignoreHierarchy">false</param>
+                <param name="excludeProperties">
+                    metaData
+                  </param>
+            </result>
+        </action>
+         <action name="FinalConfirm_Ac_Pr_AcDocuments" class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+            <result type="json" name="success" >
+                <param name="ignoreHierarchy">false</param>
+                <param name="excludeProperties">
+                    metaData
+                  </param>
+            </result>
+        </action>
+          <action name="Revised_Ac_Pr_AcDocuments" class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+            <result type="json" name="success" >
+                <param name="ignoreHierarchy">false</param>
+                <param name="excludeProperties">
+                    metaData
+                  </param>
+            </result>
+        </action>
+           <action name="Permanent_Ac_Pr_AcDocuments" class="ir.utopia.nejat2.accounting.process.document.action.DocumentAction">
+            <result type="json" name="success" >
+                <param name="ignoreHierarchy">false</param>
+                <param name="excludeProperties">
+                    metaData
+                  </param>
+            </result>
+        </action>
+    </package>
+<!-- **************************************************** Independent Accounts **************************************************** -->
+	<package name="IndependentAccounts" extends="UtopiaAuthorized">
+
+		<action name="search_Ac_Bd_IndependentAccounts" class="ir.utopia.nejat2.accounting.basicinformation.independentAccounts.action.IndependentAccountsAction">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/Search_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+		</action>
+		<!-- <action name="go-save_Ac_Bd_IndependentAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/Save_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+		</action> -->
+		<action name="go-view_Ac_Bd_IndependentAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/View_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+		</action>
+		<!-- <action name="save_Ac_Bd_IndependentAccounts" class="ir.utopia.nejat2.accounting.basicinformation.independentAccounts.action.IndependentAccountsAction">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/Search_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/independentAccounts/Save_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/independentAccounts/Save_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Ac_Bd_IndependentAccounts">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/Save_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Ac_Bd_IndependentAccounts" class="ir.utopia.nejat2.accounting.basicinformation.independentAccounts.action.IndependentAccountsAction">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/Search_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/independentAccounts/Save_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/independentAccounts/Save_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Ac_Bd_IndependentAccounts" class="ir.utopia.nejat2.accounting.basicinformation.independentAccounts.action.IndependentAccountsAction">
+			<result>/WEB-INF/pages/nejat2/accounting/independentAccounts/Search_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/accounting/independentAccounts/Search_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/accounting/independentAccounts/Search_Ac_Bd_IndependentAccounts.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action> -->
+	</package>
+<!-- ********************************************************************************************************************************** -->	
+
+<package name="independentAccountsDimOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_Ac_Bd_IndependentAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.independentAccounts.action.IndependentAccountsAction"
+			method="loadIndependAccountDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="loadDimensionTree_Ac_Bd_IndependentAccounts"
+			class="ir.utopia.nejat2.accounting.basicinformation.independentAccounts.action.IndependentAccountsAction"
+			method="getChildrenByAccount">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+</struts>
+
+

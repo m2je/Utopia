@@ -1,0 +1,22 @@
+<module>
+  <!-- Inherit the core Web Toolkit stuff. -->
+  <inherits name="com.google.gwt.core.Core"/>
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  <inherits name="com.google.gwt.user.theme.standard.StandardResources"/>
+	<inherits name="com.gwtext.GwtExt"/>
+  	
+  <!-- Enable debug ID. -->
+
+  <!-- Use a generator to create the source code -->
+ 
+
+  <!-- Specify the app entry point class. -->
+	<entry-point class='ir.utopia.core.util.tags.controlpanel.client.ControlPanel'/>
+  <!-- Internationalization support. -->
+  <inherits name="ir.utopia.core.util.tags.datainputform.UtopiaCoreUIComponents"/>
+  <stylesheet src="../js/resources/css/ext-all.css" />
+	<script src="../js/adapter/ext/ext-base.js" />
+	<script src="../js/ext-all.js" />
+ <extend-property name="locale" values="fa"/>
+</module>

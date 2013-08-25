@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core-config version="1.0">
+	<!-- <global-Bundel>ir.utopia.nejat2.Nejat2GlobalBundle</global-Bundel> -->
+	<system name="Accounting">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.accounting.AccountingUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.accounting.AccountingUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.accounting.AccountingUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.accounting.AccountingConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Asset">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.asset.AssetUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.asset.AssetUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.asset.AssetUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.asset.AssetConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Budget">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.budget.BudgetUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.budget.BudgetUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.budget.BudgetUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.budget.BudgetConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Credit">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.credit.CreditUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.credit.CreditUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.credit.CreditUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.credit.CreditConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Inventory">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.inventory.InventoryUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.inventory.InventoryUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.inventory.InventoryUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.inventory.InventoryConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Payroll">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.payroll.PayrollUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.payroll.PayrollUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.payroll.PayrollUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.payroll.PayrollConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Revenue">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.revenue.RevenueUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.revenue.RevenueUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.revenue.RevenueUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.revenue.RevenueConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="Treasury">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="BasicData">
+			<usecase-Bundel>ir.utopia.nejat2.treasury.TreasuryUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Processes">
+			<usecase-Bundel>ir.utopia.nejat2.treasury.TreasuryUsecase</usecase-Bundel>
+		</subSystem>
+		<subSystem name="Reports">
+			<usecase-Bundel>ir.utopia.nejat2.treasury.TreasuryUsecase</usecase-Bundel>
+		</subSystem>
+		<DB-Constraint-Bundel>ir.utopia.nejat2.treasury.TreasuryConstraint</DB-Constraint-Bundel>
+	</system>
+	<system name="ManagementReports">
+		<menu-bundel>ir.utopia.nejat2.Nejat2Menu</menu-bundel>
+		<subSystem name="Statistical">
+			<usecase-Bundel>ir.utopia.nejat2.managementreports.Statistical</usecase-Bundel>
+		</subSystem>
+	</system>
+	<Exeption-Bundel>ir.utopia.core.constants.CoreException</Exeption-Bundel>
+	<!-- 
+	<security-provider>
+		<after-login-process> ir.utopia.nejat2.security.Nejat2AfterLoginProcess
+		</after-login-process>
+	</security-provider>
+	 -->
+	<organization-support>true</organization-support>
+	<fiscalYear-support>true</fiscalYear-support>
+</core-config>

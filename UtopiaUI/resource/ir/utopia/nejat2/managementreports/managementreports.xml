@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- ************************************************************<< Statistical >>********************************************************* -->
+	<package name="Statistical" 	extends="struts-default">
+		<action name="search_Mr_St_Statistical">
+			<result>/WEB-INF/pages/nejat2/ManagementReports/statistical/Search_Mr_St_Statistical.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Mr_St_Statistical">
+			<result>/WEB-INF/pages/nejat2/ManagementReports/statistical/Report_Mr_St_Statistical.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+	
+
+<!-- ************************************************************<< SysPerformance >>********************************************************* -->
+	
+	<package name="SysPerformance" 	extends="struts-default">
+		<action name="go-report_Mr_St_SysPerformance">
+			<result>/WEB-INF/pages/nejat2/ManagementReports/SysPerformance/Report_Mr_St_SysPerformance.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+    
+<!-- ************************************************************<< Nejat1Reports>>********************************************************* -->
+
+	<package name="Nejat1Reports" 	extends="struts-default">
+		<action name="go-report_Mr_St_Nejat1Reports">
+			<result>/WEB-INF/pages/nejat2/ManagementReports/Nejat1Reports/Report_Mr_St_Nejat1Reports.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+
+
+	
+</struts>

@@ -16,7 +16,6 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.sun.tools.xjc.Language;
 
 public class DateUtil {
 	private static final Logger logger;
@@ -922,46 +921,9 @@ public class DateUtil {
 	}
 
 	
-	public static String getDisplay(Timestamp timestamp,int displayType,Language language){		 
-//		if(timestamp==null )return "";		
-//		switch (displayType) {
-//		case DisplayType.Date:				
-//			return getDateDisplay(timestamp,language);
-//		case DisplayType.Time:
-//			return getTimeDisplay(timestamp,language);				
-//		case DisplayType.DateTime:
-//			 return getDataTimeDisplay(timestamp,language);
-//		default:
-//			return "";
-//		}
-		return timestamp.toString();
-	}	
-	
 		
 	
-	
-	public static String getDateDisplay(Timestamp timestamp){
-		return  getDateDisplay(timestamp,null);
-	}
-	public static String getDateDisplay(Timestamp timestamp,Language language){
-		DateFormat format =SimpleDateFormat.getDateInstance();//DisplayType.getDateFormat(DisplayType.Date);		
-		 String timeStr=format.format(timestamp);
-		String str = timeStr;
-		if (false){
-			if(str==null|| str.trim().length()<=0){
-				return str;				
-			}		
-			String solarStr = DateUtil.ConvertToSolarFromGregorianDateString(str);
-			if(solarStr!=null){						
-				str = solarStr;	
-				str = "\u202b" + getUnicodeFromMixNumberAndString(solarStr);
-			}
-			else{
-				str="";
-			}	
-		}
-		return str;
-	}
+		
 	
 	
 	

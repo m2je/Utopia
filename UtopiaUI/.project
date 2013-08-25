@@ -3,6 +3,11 @@
 	<name>UtopiaUI</name>
 	<comment></comment>
 	<projects>
+		<project>UtopiaUIComponents</project>
+		<project>UtopiaCore</project>
+		<project>UtopiaCommonUI</project>
+		<project>UtopiaCommon</project>
+		<project>UtopiaSecurityHandler</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

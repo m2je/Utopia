@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	
+	<package name="UtopiaBasic"  extends="struts-default">
+			
+			   
+	</package>
+	
+	<package name="core" extends="UtopiaAuthorized">
+ 		
+		<action name="AsyncAction"  >
+			<result  type="chain">
+				<param name="locale">${locale}</param>
+				<param name="actionName">${forwardUrl}</param>
+			</result>
+			
+		</action>
+
+   
+	</package>
+	<package name="UtopiaGlobalPages" extends="struts-default" namespace="/">
+		<action name="ImportExportDefinition">
+			<result  >
+						<param name="location">/WEB-INF/pages/core/importer/ImportExportDefinition.jsp</param>
+						<param name="formClass">${formClass}</param>
+						<param name="useCase">${useCase}</param>
+			</result>
+		</action>
+		<action name="ImportPage">
+			<result >/WEB-INF/pages/core/importer/ImportPage.jsp</result>
+		</action>
+			
+	</package>
+<!-- **************************************************Utopia UI services proxy********************************************************* -->
+	 <package name="UtopiaUIProxy"  extends="UtopiaAuthorizedGWT" >
+		<action name="DataInput-service" class="ir.utopia.core.util.tags.datainputform.server.UtopiaUIServiceProxy" >
+		</action>
+		<action name="Process-Service" class="ir.utopia.core.util.tags.datainputform.server.UtopiaUIServiceProxy" >
+		</action>
+	</package>	
+<!-- **************************************************USECASE********************************************************* -->
+	<package name="CoreBasicInformationUsecase"  extends="UtopiaAuthorized">
+ 		
+ 		<action name="search_Co_Uc_Usecase" class="ir.utopia.core.usecase.usecase.action.UseCaseActionAction" >
+				<result>/WEB-INF/pages/core/usecase/usecase/Search_Co_Uc_Usecase.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Uc_Usecase">
+				<result>/WEB-INF/pages/core/usecase/usecase/Save_Co_Uc_Usecase.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Uc_Usecase">
+				<result>/WEB-INF/pages/core/usecase/usecase/Save_Co_Uc_Usecase.jsp?locale=${locale}</result>
+		</action>
+  		 <action name="save_Co_Uc_Usecase" class="ir.utopia.core.usecase.usecase.action.UseCaseActionAction">
+	   			<result >/WEB-INF/pages/core/usecase/usecase/Search_Co_Uc_Usecase.jsp?locale=${locale}</result>
+	   			<result name="error"> /WEB-INF/pages/core/usecase/usecase/Save_Co_Uc_Usecase.jsp?locale=${locale}</result>
+	   			<result name="input"> /WEB-INF/pages/core/usecase/usecase/Save_Co_Uc_Usecase.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="update_Co_Uc_Usecase" class="ir.utopia.core.usecase.usecase.action.UseCaseActionAction">
+	   			<result >/WEB-INF/pages/core/usecase/usecase/Search_Co_Uc_Usecase.jsp?locale=${locale}</result>
+	   			<result name="error"> /WEB-INF/pages/core/usecase/usecase/Save_Co_Uc_Usecase.jsp?locale=${locale}</result>
+	   			<result name="input"> /WEB-INF/pages/core/usecase/usecase/Save_Co_Uc_Usecase.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="delete_Co_Uc_Usecase" class="ir.utopia.core.usecase.usecase.action.UseCaseActionAction">
+	   			<result >/WEB-INF/pages/core/usecase/usecase/Search_Co_Uc_Usecase.jsp?locale=${locale}</result>
+	   			<result name="error"> /WEB-INF/pages/core/usecase/usecase/Search_Co_Uc_Usecase.jsp?locale=${locale}</result>
+	   			<result name="input"> /WEB-INF/pages/core/usecase/usecase/Search_Co_Uc_Usecase.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="go-view_Co_Uc_Usecase">
+			<result>/WEB-INF/pages/core/usecase/usecase/View_Co_Uc_Usecase.jsp?locale=${locale}</result>
+   		</action>
+   		
+	</package>
+<!-- **************************************************USECASEACTION********************************************************* -->
+	<package name="CoreBasicInformationUsecaseAction"  extends="UtopiaAuthorized">
+ 		
+ 		<action name="search_Co_Uc_UsecaseAction" class="ir.utopia.core.usecase.usecaseaction.action.CoUseCaseActionAction" >
+				<result>/WEB-INF/pages/core/usecase/usecaseAction/Search_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Uc_UsecaseAction">
+				<result>/WEB-INF/pages/core/usecase/usecaseAction/Save_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Uc_UsecaseAction">
+				<result>/WEB-INF/pages/core/usecase/usecaseAction/View_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Uc_UsecaseAction">
+				<result>/WEB-INF/pages/core/usecase/usecaseAction/Save_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+		</action>
+  		 <action name="save_Co_Uc_UsecaseAction" class="ir.utopia.core.usecase.usecaseaction.action.CoUseCaseActionAction">
+	   			<result >/WEB-INF/pages/core/usecase/usecaseAction/Search_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+	   			<result name="error"> /WEB-INF/pages/core/usecase/usecaseAction/Save_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+	   			<result name="input"> /WEB-INF/pages/core/usecase/usecaseAction/Save_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="update_Co_Uc_UsecaseAction" class="ir.utopia.core.usecase.usecaseaction.action.CoUseCaseActionAction">
+	   			<result >/WEB-INF/pages/core/usecase/usecaseAction/Search_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+	   			<result name="error"> /WEB-INF/pages/core/usecase/usecaseAction/Save_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+	   			<result name="input"> /WEB-INF/pages/core/usecase/usecaseAction/Save_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="delete_Co_Uc_UsecaseAction" class="ir.utopia.core.usecase.usecaseaction.action.CoUseCaseActionAction">
+	   			<result >/WEB-INF/pages/core/usecase/usecaseAction/Search_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+	   			<result name="error"> /WEB-INF/pages/core/usecase/usecaseAction/Search_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+	   			<result name="input"> /WEB-INF/pages/core/usecase/usecaseAction/Search_Co_Uc_UsecaseAction.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************USER********************************************************* -->
+	<!-- <package name="CoreSecurityUser"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_User" class="ir.utopia.core.security.user.action.UserAction">
+				<result>/WEB-INF/pages/core/security/user/Search_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_User">
+				<result>/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_User">
+				<result>/WEB-INF/pages/core/security/user/View_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_User">
+				<result>/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+  		 <action name="save_Co_Sc_User" class="ir.utopia.core.security.user.action.UserAction">
+		  		 <result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_User</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="update_Co_Sc_User" class="ir.utopia.core.security.user.action.UserAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_User</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="delete_Co_Sc_User" class="ir.utopia.core.security.user.action.UserAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_User</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/user/Search_Co_Sc_User.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/user/Search_Co_Sc_User.jsp?locale=${locale}</result>
+   		</action>
+	</package> -->
+<!-- ***************************************************ROLE********************************************************* -->
+	<package name="CoreSecurityRole"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_Role" class="ir.utopia.core.security.role.action.RoleAction">
+				<result>/WEB-INF/pages/core/security/role/Search_Co_Sc_Role.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_Role">
+				<result>/WEB-INF/pages/core/security/role/Save_Co_Sc_Role.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_Role">
+				<result>/WEB-INF/pages/core/security/role/View_Co_Sc_Role.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_Role">
+				<result>/WEB-INF/pages/core/security/role/Save_Co_Sc_Role.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_Role" class="ir.utopia.core.security.role.action.RoleAction">
+  				<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_Role</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/role/Save_Co_Sc_Role.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/role/Save_Co_Sc_Role.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_Role" class="ir.utopia.core.security.role.action.RoleAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_Role</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/role/Save_Co_Sc_Role.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/role/Save_Co_Sc_Role.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_Role" class="ir.utopia.core.security.role.action.RoleAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_Role</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/role/Search_Co_Sc_Role.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/role/Search_Co_Sc_Role.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************MENU********************************************************* -->
+	<package name="CoreBasicInformationMenu"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Bi_Menu" class="ir.utopia.core.basicinformation.menu.action.MenuAction">
+				<result>/WEB-INF/pages/core/basicInformation/menu/Search_Co_Bi_Menu.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Bi_Menu">
+				<result>/WEB-INF/pages/core/basicInformation/menu/Save_Co_Bi_Menu.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Bi_Menu">
+				<result>/WEB-INF/pages/core/basicInformation/menu/View_Co_Bi_Menu.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Bi_Menu">
+				<result>/WEB-INF/pages/core/basicInformation/menu/Save_Co_Bi_Menu.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Bi_Menu" class="ir.utopia.core.basicinformation.menu.action.MenuAction">
+	   			<result >/WEB-INF/pages/core/basicInformation/menu/Search_Co_Bi_Menu.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/basicInformation/menu/Save_Co_Bi_Menu.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/basicInformation/menu/Save_Co_Bi_Menu.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Bi_Menu" class="ir.utopia.core.basicinformation.menu.action.MenuAction">
+	   			<result >/WEB-INF/pages/core/basicInformation/menu/Search_Co_Bi_Menu.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/basicInformation/menu/Save_Co_Bi_Menu.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/basicInformation/menu/Save_Co_Bi_Menu.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Bi_Menu" class="ir.utopia.core.basicinformation.menu.action.MenuAction">
+	   			<result >/WEB-INF/pages/core/basicInformation/menu/Search_Co_Bi_Menu.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/basicInformation/menu/Search_Co_Bi_Menu.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/basicInformation/menu/Search_Co_Bi_Menu.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************ACTION********************************************************* -->
+	<package name="CoreBasicInformationAction"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Bi_Action" class="ir.utopia.core.basicinformation.action.action.ActionAction">
+				<result>/WEB-INF/pages/core/basicInformation/action/Search_Co_Bi_Action.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Bi_Action">
+				<result>/WEB-INF/pages/core/basicInformation/action/Save_Co_Bi_Action.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Bi_Action">
+				<result>/WEB-INF/pages/core/basicInformation/action/View_Co_Bi_Action.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Bi_Action">
+				<result>/WEB-INF/pages/core/basicInformation/action/Save_Co_Bi_Action.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Bi_Action" class="ir.utopia.core.basicinformation.action.action.ActionAction">
+	   			<result >/WEB-INF/pages/core/basicInformation/action/Search_Co_Bi_Action.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/basicInformation/action/Save_Co_Bi_Action.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/basicInformation/action/Save_Co_Bi_Action.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Bi_Action" class="ir.utopia.core.basicinformation.action.action.ActionAction">
+	   			<result >/WEB-INF/pages/core/basicInformation/action/Search_Co_Bi_Action.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/basicInformation/action/Save_Co_Bi_Action.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/basicInformation/action/Save_Co_Bi_Action.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Bi_Action" class="ir.utopia.core.basicinformation.action.action.ActionAction">
+	   			<result >/WEB-INF/pages/core/basicInformation/action/Search_Co_Bi_Action.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/basicInformation/action/Search_Co_Bi_Action.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/basicInformation/action/Search_Co_Bi_Action.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************USER_ROLES********************************************************* -->
+	<package name="CoreSecurityUserRoles"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_UserRoles" class="ir.utopia.core.security.userroles.action.UserRolesAction">
+				<result>/WEB-INF/pages/core/security/userRoles/Search_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_UserRoles">
+				<result>/WEB-INF/pages/core/security/userRoles/Save_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_UserRoles">
+				<result>/WEB-INF/pages/core/security/userRoles/View_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_UserRoles">
+				<result>/WEB-INF/pages/core/security/userRoles/Save_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_UserRoles" class="ir.utopia.core.security.userroles.action.UserRolesAction">
+  				<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserRoles</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/userRoles/Save_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/userRoles/Save_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_UserRoles" class="ir.utopia.core.security.userroles.action.UserRolesAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserRoles</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/userRoles/Save_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/userRoles/Save_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_UserRoles" class="ir.utopia.core.security.userroles.action.UserRolesAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserRoles</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/userRoles/Search_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/userRoles/Search_Co_Sc_UserRoles.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************ROLE_SUBSYSTEM_ACSS********************************************************* -->
+	<package name="CoreSecurityRoleSubsystemAcss"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_RoleSubsystemAcss" class="ir.utopia.core.security.rolesubsystemacss.action.RoleSubsystemAcssAction">
+				<result>/WEB-INF/pages/core/security/roleSubsystemAcss/Search_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_RoleSubsystemAcss">
+				<result>/WEB-INF/pages/core/security/roleSubsystemAcss/Save_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_RoleSubsystemAcss">
+				<result>/WEB-INF/pages/core/security/roleSubsystemAcss/View_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_RoleSubsystemAcss">
+				<result>/WEB-INF/pages/core/security/roleSubsystemAcss/Save_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_RoleSubsystemAcss" class="ir.utopia.core.security.rolesubsystemacss.action.RoleSubsystemAcssAction">
+  				<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleSubsystemAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleSubsystemAcss/Save_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleSubsystemAcss/Save_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_RoleSubsystemAcss" class="ir.utopia.core.security.rolesubsystemacss.action.RoleSubsystemAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleSubsystemAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleSubsystemAcss/Save_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleSubsystemAcss/Save_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_RoleSubsystemAcss" class="ir.utopia.core.security.rolesubsystemacss.action.RoleSubsystemAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleSubsystemAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleSubsystemAcss/Search_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleSubsystemAcss/Search_Co_Sc_RoleSubsystemAcss.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************ROLE_USCSACTN_ACSS********************************************************* -->
+	<package name="CoreSecurityRoleUscsActnAcss"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_RoleUscsActnAccs" class="ir.utopia.core.security.roleuscsactnaccs.action.RoleUscsActnAccsAction">
+				<result>/WEB-INF/pages/core/security/roleUscsActnAccs/Search_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_RoleUscsActnAccs">
+				<result>/WEB-INF/pages/core/security/roleUscsActnAccs/Save_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_RoleUscsActnAccs">
+				<result>/WEB-INF/pages/core/security/roleUscsActnAccs/View_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_RoleUscsActnAccs">
+				<result>/WEB-INF/pages/core/security/roleUscsActnAccs/Save_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_RoleUscsActnAccs" class="ir.utopia.core.security.roleuscsactnaccs.action.RoleUscsActnAccsAction">
+  				<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleUscsActnAccs</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleUscsActnAccs/Save_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleUscsActnAccs/Save_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_RoleUscsActnAccs" class="ir.utopia.core.security.roleuscsactnaccs.action.RoleUscsActnAccsAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleUscsActnAccs</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleUscsActnAccs/Save_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleUscsActnAccs/Save_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_RoleUscsActnAccs" class="ir.utopia.core.security.roleuscsactnaccs.action.RoleUscsActnAccsAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleUscsActnAccs</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleUscsActnAccs/Search_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleUscsActnAccs/Search_Co_Sc_RoleUscsActnAccs.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************ROLE_USECASE_ACSS********************************************************* -->
+	<package name="CoreSecurityRoleUsecaseAcss"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_RoleUsecaseAcss" class="ir.utopia.core.security.roleusecaseacss.action.RoleUsecaseAcssAction">
+				<result>/WEB-INF/pages/core/security/roleUsecaseAcss/Search_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_RoleUsecaseAcss">
+				<result>/WEB-INF/pages/core/security/roleUsecaseAcss/Save_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_RoleUsecaseAcss">
+				<result>/WEB-INF/pages/core/security/roleUsecaseAcss/View_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_RoleUsecaseAcss">
+				<result>/WEB-INF/pages/core/security/roleUsecaseAcss/Save_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_RoleUsecaseAcss" class="ir.utopia.core.security.roleusecaseacss.action.RoleUsecaseAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleUsecaseAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleUsecaseAcss/Save_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleUsecaseAcss/Save_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_RoleUsecaseAcss" class="ir.utopia.core.security.roleusecaseacss.action.RoleUsecaseAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleUsecaseAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleUsecaseAcss/Save_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleUsecaseAcss/Save_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_RoleUsecaseAcss" class="ir.utopia.core.security.roleusecaseacss.action.RoleUsecaseAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_RoleUsecaseAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/roleUsecaseAcss/Search_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/roleUsecaseAcss/Search_Co_Sc_RoleUsecaseAcss.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************USER_USECASE_ACSS********************************************************* -->
+	<package name="CoreSecurityUserUsecaseAcss"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_UserUsecaseAcss" class="ir.utopia.core.security.userusecaseacss.action.UserUsecaseAcssAction">
+				<result>/WEB-INF/pages/core/security/userUsecaseAcss/Search_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_UserUsecaseAcss">
+				<result>/WEB-INF/pages/core/security/userUsecaseAcss/Save_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_UserUsecaseAcss">
+				<result>/WEB-INF/pages/core/security/userUsecaseAcss/View_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_UserUsecaseAcss">
+				<result>/WEB-INF/pages/core/security/userUsecaseAcss/Save_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_UserUsecaseAcss" class="ir.utopia.core.security.userusecaseacss.action.UserUsecaseAcssAction">
+  				<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserUsecaseAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/userUsecaseAcss/Save_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/userUsecaseAcss/Save_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_UserUsecaseAcss" class="ir.utopia.core.security.userusecaseacss.action.UserUsecaseAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserUsecaseAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/userUsecaseAcss/Save_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/userUsecaseAcss/Save_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_UserUsecaseAcss" class="ir.utopia.core.security.userusecaseacss.action.UserUsecaseAcssAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserUsecaseAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/userUsecaseAcss/Search_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/userUsecaseAcss/Search_Co_Sc_UserUsecaseAcss.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************USER_USECASE_ACTION_ACSS********************************************************* -->
+	<package name="CoreSecurityUserUsecaseActionAcss"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_UserUsecaseActnAcss" class="ir.utopia.core.security.usruscsactnaccs.action.UsrUscsActnAccsAction">
+				<result>/WEB-INF/pages/core/security/usrUscsActnAccs/Search_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_UserUsecaseActnAcss">
+				<result>/WEB-INF/pages/core/security/usrUscsActnAccs/Save_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_UserUsecaseActnAcss">
+				<result>/WEB-INF/pages/core/security/usrUscsActnAccs/View_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_UserUsecaseActnAcss">
+				<result>/WEB-INF/pages/core/security/usrUscsActnAccs/Save_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Sc_UserUsecaseActnAcss" class="ir.utopia.core.security.usruscsactnaccs.action.UsrUscsActnAccsAction">
+  				<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserUsecaseActnAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/usrUscsActnAccs/Save_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/usrUscsActnAccs/Save_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Sc_UserUsecaseActnAcss" class="ir.utopia.core.security.usruscsactnaccs.action.UsrUscsActnAccsAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserUsecaseActnAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/usrUscsActnAccs/Save_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/usrUscsActnAccs/Save_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Sc_UserUsecaseActnAcss" class="ir.utopia.core.security.usruscsactnaccs.action.UsrUscsActnAccsAction">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_UserUsecaseActnAcss</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/usrUscsActnAccs/Search_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/usrUscsActnAccs/Search_Co_Sc_UserUsecaseActnAcss.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************SEQUENCE********************************************************* -->
+	<package name="CoreZeroConfigurationSequence"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Zc_Sequence" class="ir.utopia.core.zeroconfiguration.sequence.action.SequenceAction">
+				<result>/WEB-INF/pages/core/zeroConfiguration/sequence/Search_Co_Zc_Sequence.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Zc_Sequence">
+				<result>/WEB-INF/pages/core/zeroConfiguration/sequence/Save_Co_Zc_Sequence.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Zc_Sequence">
+				<result>/WEB-INF/pages/core/zeroConfiguration/sequence/View_Co_Zc_Sequence.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Zc_Sequence">
+				<result>/WEB-INF/pages/core/zeroConfiguration/sequence/Save_Co_Zc_Sequence.jsp?locale=${locale}</result>
+		</action>
+  		<action name="save_Co_Zc_Sequence" class="ir.utopia.core.zeroconfiguration.sequence.action.SequenceAction">
+  				<result type="redirectAction">
+		            <param name="actionName">Search_Co_Zc_Sequence</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/zeroConfiguration/sequence/Save_Co_Zc_Sequence.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/zeroConfiguration/sequence/Save_Co_Zc_Sequence.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="update_Co_Zc_Sequence" class="ir.utopia.core.zeroconfiguration.sequence.action.SequenceAction">
+	   			<result>/WEB-INF/pages/core/zeroConfiguration/sequence/Search_Co_Zc_Sequence.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/zeroConfiguration/sequence/Save_Co_Zc_Sequence.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/zeroConfiguration/sequence/Save_Co_Zc_Sequence.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="delete_Co_Zc_Sequence" class="ir.utopia.core.zeroconfiguration.sequence.action.SequenceAction">
+	   			<result>/WEB-INF/pages/core/zeroConfiguration/sequence/Search_Co_Zc_Sequence.jsp?locale=${locale}</result>
+	   			<result name="error">/WEB-INF/pages/core/zeroConfiguration/sequence/Search_Co_Zc_Sequence.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/zeroConfiguration/sequence/Search_Co_Zc_Sequence.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- ***************************************************ImporterSetting********************************************************* -->
+	<package name="CoreImpoterSetting"  extends="gwt-default">	
+ 		<action name="save-Co_Bi_Configuration" class="ir.utopia.core.importer.setting.action.ImporterSettingAction">
+				<interceptor-ref name="gwt"/>
+				<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="update-Co_Bi_Configuration" class="ir.utopia.core.importer.setting.action.ImporterSettingAction">
+				<interceptor-ref name="gwt"/>
+				<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="delete-Co_Bi_Configuration" class="ir.utopia.core.importer.setting.action.ImporterSettingAction">
+				<interceptor-ref name="gwt"/>
+				<interceptor-ref name="defaultStack"/>
+		</action>
+		
+	</package>
+<!-- ***************************************************Import/export configuration********************************************************* -->
+	<package name="ImportExportConfiguration"  extends="UtopiaAuthorized">
+			<action name="save_Co_Ut_ImportExportConfiguration" class="ir.utopia.core.importer.setting.action.ImportExportConfigurationAction">
+			<result type="json" name="success">
+			 <param name="ignoreHierarchy">false</param>
+			</result>
+			<result type="json" name="error">
+			 <param name="ignoreHierarchy">false</param>
+			</result>
+			</action>
+			<action name="update_Co_Ut_ImportExportConfiguration" class="ir.utopia.core.importer.setting.action.ImportExportConfigurationAction">
+			<result type="json" name="success">
+			 <param name="ignoreHierarchy">false</param>
+			</result>
+			<result type="json" name="error">
+			 <param name="ignoreHierarchy">false</param>
+			</result>
+			</action>
+			
+	</package>
+	<package name="ImportExportConfigurationGWT"  extends="UtopiaAuthorizedGWT">
+		<action name="delete_Co_Ut_ImportExportConfiguration" class="ir.utopia.core.importer.setting.action.ImportExportConfigurationAction">
+				<interceptor-ref name="gwt"/>
+				<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="load_Co_Ut_ImportInstance" class="ir.utopia.core.importer.setting.action.ImportSettingInstanceAction">
+				<interceptor-ref name="gwt"/>
+				<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="delete_Co_Ut_ImportInstance" class="ir.utopia.core.importer.setting.action.ImportSettingInstanceAction">
+				<interceptor-ref name="gwt"/>
+				<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="load_Co_Ut_ImportExportConfiguration" class="ir.utopia.core.importer.setting.action.ImportExportConfigurationAction">
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>	
+	</package>
+	
+<!-- *************************************************** core Import Log ********************************************************* -->
+<package name="CoreUtilityImportLog"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Ut_ImportLog" class="ir.utopia.core.importer.importlog.action.ImportLogAction">
+				<result>/WEB-INF/pages/core/basicInformation/oprational/importlog/Search_Co_Ut_ImportLog.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Co_Ut_ImportLog">
+				<result>/WEB-INF/pages/core/basicInformation/oprational/importlog/View_Co_Ut_ImportLog.jsp?locale=${locale}</result>
+		</action>
+	</package>
+<!-- *************************************************** core utilities ********************************************************* -->
+	<package name="CoreUtilityProcess" extends="gwt-default">
+		<action name="changePassword_Co_Sc_User" class="ir.utopia.core.security.user.action.ChangePasswordAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="changeOrganization_Co_Sc_User" class="ir.utopia.core.security.user.action.ChangeOrganizationAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		</package>
+<!-- *************************************************** core control Panel ********************************************************* -->
+	<package name="ControlPanel" 	extends="UtopiaAuthorized">
+		
+   		<action name="search_Co_Cf_ControlPanel">
+   		<result >/WEB-INF/pages/core/configuration/Co_Cf_ControlPanel.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="save_Co_Cf_LogCofiguration" class="ir.utopia.core.controlpanel.log.action.LogConfigurationAction">
+  	 		<result >/WEB-INF/pages/core/configuration/Co_Cf_ControlPanel.jsp?locale=${locale}</result>
+  	 		<result name="error">/WEB-INF/pages/core/configuration/Co_Cf_ControlPanel.jsp?locale=${locale}</result>
+  	 		<result name="input">/WEB-INF/pages/core/configuration/Co_Cf_ControlPanel.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- *************************************************** search report  ********************************************************* -->
+	<package name="SearchReport" 	extends="UtopiaAuthorized">
+		
+   		<action name="SearchReport">
+   		<result >/templates/co_generalReportPage.jsp?locale=${locale}</result>
+   		</action>
+   		
+	</package>
+<!-- *************************************************** core user log  ********************************************************* -->	
+	<package name="CoreUserLog"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_UserLog" class="ir.utopia.core.security.userlog.action.UserLogAction">
+				<result>/WEB-INF/pages/core/security/userlog/Search_Co_Sc_UserLog.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Co_Sc_UserLog">
+				<result>/WEB-INF/pages/core/security/userlog/View_Co_Sc_UserLog.jsp?locale=${locale}</result>
+		</action>
+		
+	</package>
+	
+	<package name="CoreAttachment"  extends="UtopiaAuthorized">	
+ 		<action name="download_Co_Ut_Attachment" class="ir.utopia.core.util.attachment.AttachmentHandler">
+				
+		</action>
+		
+		
+	</package>
+	
+	<!-- *************************************************** smtp configuration  ********************************************************* -->
+	
+
+<package name="CoreSMTPConfiguration"  extends="UtopiaAuthorizedGWT" >	
+ 		<action name="save_Co_Ut_SmtpConfiguration" class="ir.utopia.core.util.smtpconfiguration.SMTPConfigurationAction">
+		</action>
+		
+		<action name="update_Co_Ut_SmtpConfiguration" class="ir.utopia.core.util.smtpconfiguration.SMTPConfigurationAction">
+		</action>
+		
+		<action name="delete_Co_Ut_SmtpConfiguration" class="ir.utopia.core.util.smtpconfiguration.SMTPConfigurationAction">
+		</action>
+		<action name="loadCurrentConfigurations_Co_Ut_SmtpConfiguration" class="ir.utopia.core.util.smtpconfiguration.SMTPConfigurationAction">
+		</action>
+		<action name="loadConfiguration_Co_Ut_SmtpConfiguration" class="ir.utopia.core.util.smtpconfiguration.SMTPConfigurationAction">
+		</action>
+	</package>  
+
+	<package name="CoreMailConfiguration"  extends="UtopiaAuthorizedGWT" >	
+ 		<action name="save_Co_Ut_SmtpAddresses" class="ir.utopia.core.util.mailconfig.MailConfigurationAction">
+		</action>
+		<action name="update_Co_Ut_SmtpAddresses" class="ir.utopia.core.util.mailconfig.MailConfigurationAction">
+		</action>
+		<action name="delete_Co_Ut_SmtpAddresses" class="ir.utopia.core.util.mailconfig.MailConfigurationAction">
+		</action>
+		<action name="loadMailAccounts_Co_Ut_SmtpAddresses" class="ir.utopia.core.util.mailconfig.MailConfigurationAction">
+		</action>
+		<action name="loadConfiguration_Co_Ut_SmtpAddresses" class="ir.utopia.core.util.mailconfig.MailConfigurationAction">
+		</action>
+	</package>	
+	
+	<package name="CoreMailTemplateConfiguration"  extends="UtopiaAuthorizedGWT" >	
+ 		<action name="save_Co_Ut_MailTemplate" class="ir.utopia.core.util.mailtemplate.MailTemplateAction">
+		</action>
+		<action name="update_Co_Ut_MailTemplate" class="ir.utopia.core.util.mailtemplate.MailTemplateAction">
+		</action>
+		<action name="delete_Co_Ut_MailTemplate" class="ir.utopia.core.util.mailtemplate.MailTemplateAction">
+		</action>
+		<action name="loadlookup_Co_Ut_MailTemplate" class="ir.utopia.core.util.mailtemplate.MailTemplateAction">
+		</action>
+		<action name="load_Co_Ut_MailTemplate" class="ir.utopia.core.util.mailtemplate.MailTemplateAction">
+		</action>
+	</package>	
+	
+	<package name="CoreUtiliyPanel"  extends="UtopiaAuthorized" >
+		<action name="go-config_Co_Ut_Utility" >
+		<result>/WEB-INF/pages/core/utility/Co_Ut_Utility.jsp</result>
+		</action>	
+	</package>
+	
+<package name="CoreSchedulerConfiguration"  extends="UtopiaAuthorizedGWT" >	
+ 		<action name="save_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="update_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="delete_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="load_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="loadConfigLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="loadSystemLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>		
+		<action name="loadSubSystemLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="loadUsecaseLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="loadUsecaseActionLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="loadUsernamesLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="loadMailTemplateLookup_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<action name="SearchBpartner_Co_Ut_Scheduler" class="ir.utopia.core.util.scheduler.SchedulerConfigAction">
+		</action>
+		<!-- TODO add SEARCH BPartner action -->
+	</package>	
+	
+
+<!-- *************************************************** UserActions  ********************************************************* -->
+     <package name="UserActions" 	extends="UtopiaAuthorized">
+		<action name="search_Co_Ut_UserActions">
+		  <result>/WEB-INF/pages/core/basicInformation/oprational/UserActions/Search_Co_Ut_UserActions.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Co_Ut_UserActions">
+		  <result>/WEB-INF/pages/core/basicInformation/oprational/UserActions/Report_Co_Ut_UserActions.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    
+    <!-- *************************************************** SystemActions  ********************************************************* -->
+    <package name="SystemActions" 	extends="UtopiaAuthorized">
+		<action name="go-report_Co_Ut_SystemActions">
+		   <result>/WEB-INF/pages/core/basicInformation/oprational/SystemActions/Report_Co_Ut_SystemActions.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+    <!-- *************************************************** Dashboard  ********************************************************* -->
+   <package name="Dashboard"  extends="UtopiaAuthorizedGWT" >
+		<action name="getTransitional_Co_Wf_DashBoard" class="ir.utopia.core.util.dashboard.DashboardServiceAction" >
+		</action>
+	</package>	
+    <package name="userDashboard" 	extends="UtopiaAuthorized">
+		<action name="search_Co_Wf_DashBoard">
+		   <result>/WEB-INF/pages/core/workflow/dashboard/search_Co_Wf_DashBoard.jsp?locale=${locale}</result>
+		</action>
+    </package>
+    
+
+</struts>

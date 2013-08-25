@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIConfig>
+	<usecase name="User" system="Co" subsystem="Sc" form="ir.utopia.core.security.user.action.UserFormNejat2" />
+	<!-- Inventory config -->
+	<usecase name="MerchanRecptMaster" system="In" subsystem="Bd"
+		form="ir.utopia.nejat2.inventory.merchanrecptmaster.action.MerchanRecptMasterForm" />
+	<usecase name="Merchandise" system="In" subsystem="Bd"
+		form="ir.utopia.nejat2.inventory.merchandise.action.MerchandiseForm" />
+	<usecase name="MerchandiseGroup" system="In" subsystem="Bd"
+		form="ir.utopia.nejat2.inventory.merchandisegroup.action.MerchandiseGroupForm" />
+	<usecase name="MerchanReqMaster" system="In" subsystem="Bd"
+		form="ir.utopia.nejat2.inventory.merchanreqmaster.action.MerchanReqMasterForm" />
+	<!-- END Inventory config -->
+	<!-- Asset config -->
+	<usecase name="Transaction" system="As" subsystem="Pr" form="ir.utopia.nejat2.asset.transaction.action.TransactionForm" />
+	<!-- END Asset config -->
+	<!-- Payroll config -->
+	<usecase name="KhadematInsurance" system="Pr" subsystem="Bd"
+		form="ir.utopia.nejat2.payroll.isurancededuction.action.KhadematInsuranceForm" />
+	<usecase name="InsuranceDeduction" system="Pr" subsystem="Bd"
+		form="ir.utopia.nejat2.payroll.isurancededuction.action.InsuranceDeductionForm" />
+	<usecase name="Personnel" system="Pr" subsystem="Bd" form="ir.utopia.nejat2.payroll.personnel.action.PersonnelForm" />
+	<usecase name="DeductionsDefinition" system="Pr" subsystem="Bd"
+		form="ir.utopia.nejat2.payroll.deductionsdefinition.action.DeductionsDefinitionForm" />
+		
+	<usecase name="YearCalc" system="Pr" subsystem="Pr" form="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcForm"/>	
+	<usecase name="PersonFestive" system="Pr" subsystem="Pr" form="ir.utopia.nejat2.payroll.personfestive.action.PersonFestiveForm"/>	
+	<!-- END Payroll config -->
+	<!-- Budget config -->
+	<!-- Budget Basic Data config -->
+	<usecase name="Plan" system="Bg" subsystem="Bd" form="ir.utopia.nejat2.budget.plan.action.PlanForm" />
+	<usecase name="Project" system="Bg" subsystem="Bd" form="ir.utopia.nejat2.budget.project.action.ProjectForm" />
+	<usecase name="Program" system="Bg" subsystem="Bd" form="ir.utopia.nejat2.budget.plan.action.ProgramForm" />
+	<usecase name="PlanProgram" system="Bg" subsystem="Bd" form="ir.utopia.nejat2.budget.plan.action.PlanProgramForm" />
+	<usecase name="Activity" system="Bg" subsystem="Bd" form="ir.utopia.nejat2.budget.activity.action.ActivityForm" />
+	<usecase name="Section" system="Bg" subsystem="Bd" form="ir.utopia.nejat2.budget.section.action.SectionForm" />
+	<usecase name="CreditSource" system="Bg" subsystem="Bd"
+		form="ir.utopia.nejat2.budget.creditsource.action.CreditSourceForm" />
+	<!-- Budget process config -->
+	<usecase name="AgreementDetailSubdtl" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.agreementdetail.action.AgreementDetailSubdtlForm" />
+	<!-- Budget Announce config -->
+	<usecase name="AnnounceMaster" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.announcemaster.action.AnnounceMasterForm" />
+	<usecase name="AnnounceCentral" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralForm" />
+	<usecase name="AnnounceAllocate" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateForm" />
+	<!-- Budget Allocate Data config -->
+	<usecase name="AllocateMaster" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateMasterForm" />
+	<usecase name="AllocateProprietaryRevenue" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateProprietaryRevenueForm" />
+	<usecase name="AllocateCentralizedPropritary" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedPropritaryForm" />
+	<usecase name="AllocateCentralizedDepartment" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedDepartmentForm" />
+	<usecase name="AllocateOtherResource" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateOtherResourceForm" />
+	<usecase name="AllocateCapitalAsset" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCapitalAssetForm" />
+	<usecase name="AllocateCurrent" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCurrentForm" />
+	<usecase name="AllocateAnnualSurplus" system="Bg" subsystem="Pr"
+		form="ir.utopia.nejat2.budget.allocatemaster.action.AllocateAnnualSurplusForm" />
+	<!-- END Budget config -->
+	
+<usecase name="IncomingCheque" system="Tr" subsystem="Pr"
+		form="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeForm" />
+	<usecase name="IssuedCheque" system="Tr" subsystem="Pr"
+		form="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeForm" />
+
+	
+<usecase name="CurrentConstructionCashRequest" system="Cd" subsystem="Pr"
+		form="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestForm" />
+	
+	<usecase name="ProprietaryCashRequest" system="Cd" subsystem="Pr"
+		form="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestForm" />
+
+	
+	
+	
+	
+</UIConfig>

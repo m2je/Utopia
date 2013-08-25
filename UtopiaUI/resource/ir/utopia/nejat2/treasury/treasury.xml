@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- ************************************************************<< TrBdBankAccount >>********************************************************* -->
+	<package name="BankAccount" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_BankAccount" class="ir.utopia.nejat2.treasury.bankaccount.action.BankAccountAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/bankaccount/Search_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_BankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/bankaccount/Save_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_BankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/bankaccount/View_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_BankAccount" class="ir.utopia.nejat2.treasury.bankaccount.action.BankAccountAction">
+			<result >/WEB-INF/pages/nejat2/treasury/bankaccount/Search_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/bankaccount/Save_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/bankaccount/Save_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_BankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/bankaccount/Save_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_BankAccount" class="ir.utopia.nejat2.treasury.bankaccount.action.BankAccountAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/bankaccount/Search_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/bankaccount/Save_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/bankaccount/Save_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_BankAccount" class="ir.utopia.nejat2.treasury.bankaccount.action.BankAccountAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/bankaccount/Search_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/bankaccount/Search_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/bankaccount/Search_Tr_Bd_BankAccount.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+	<!-- ************************************************************<< TrPrCheque >>********************************************************* -->
+	<package name="ChequeJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		
+	</package>
+	<package name="Cheque" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/cheque/Search_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Pr_Cheque">
+			<result>/WEB-INF/pages/nejat2/treasury/cheque/Save_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Pr_Cheque">
+			<result>/WEB-INF/pages/nejat2/treasury/cheque/View_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+			<result >/WEB-INF/pages/nejat2/treasury/cheque/Search_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/cheque/Save_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/cheque/Save_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Pr_Cheque">
+			<result>/WEB-INF/pages/nejat2/treasury/cheque/Save_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/cheque/Search_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/cheque/Save_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/cheque/Save_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Pr_Cheque" class="ir.utopia.nejat2.treasury.cheque.action.ChequeAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/cheque/Search_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/cheque/Search_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/cheque/Search_Tr_Pr_Chequet.jsp?locale=${locale}</result>
+   		</action>
+   		
+   		 <action name="go-report_Tr_Pr_Cheque">
+			<result>/WEB-INF/pages/nejat2/treasury/Reports/Report_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+   		
+   		
+   		
+	</package>	
+	
+	
+	 <!-- ************************************************************<< TrBdchequebook >>********************************************************* -->
+	 
+<package name="Chequebook" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_Chequebook" class="ir.utopia.nejat2.treasury.chequebook.action.ChequebookAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/chequebook/Search_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_Chequebook">
+			<result>/WEB-INF/pages/nejat2/treasury/chequebook/Save_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_Chequebook">
+			<result>/WEB-INF/pages/nejat2/treasury/chequebook/View_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_Chequebook" class="ir.utopia.nejat2.treasury.chequebook.action.ChequebookAction">
+			<result >/WEB-INF/pages/nejat2/treasury/chequebook/Search_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/chequebook/Save_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/chequebook/Save_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_Chequebook">
+			<result>/WEB-INF/pages/nejat2/treasury/chequebook/Save_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_Chequebook" class="ir.utopia.nejat2.treasury.chequebook.action.ChequebookAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/chequebook/Search_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/chequebook/Save_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/chequebook/Save_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_Chequebook" class="ir.utopia.nejat2.treasury.chequebook.action.ChequebookAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/chequebook/Search_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/chequebook/Search_Tr_Bd_Chequebook.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/chequebook/Search_Tr_Bd_Chequebookt.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+	
+	
+	<!-- ************************************************************<<Cardex >>********************************************************* -->	
+	
+	<package name="TreasuryCardex" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Pr_Cardex">
+			<result>/WEB-INF/pages/nejat2/treasury/cardex/Search_Td_Pr_Cardex.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	
+	 <!-- ************************************************************<< TrBdchequeType >>********************************************************* -->
+	
+<package name="ChequeType" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_ChequeType" class="ir.utopia.nejat2.treasury.chequetype.action.ChequeTypeAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/chequetype/Search_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_ChequeType">
+			<result>/WEB-INF/pages/nejat2/treasury/chequetype/Save_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_ChequeType">
+			<result>/WEB-INF/pages/nejat2/treasury/chequetype/View_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_ChequeType" class="ir.utopia.nejat2.treasury.chequetype.action.ChequeTypeAction">
+			<result >/WEB-INF/pages/nejat2/treasury/chequetype/Search_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/chequetype/Save_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/chequetype/Save_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_ChequeType">
+			<result>/WEB-INF/pages/nejat2/treasury/chequetype/Save_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_ChequeType" class="ir.utopia.nejat2.treasury.chequetype.action.ChequeTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/chequetype/Search_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/chequetype/Save_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/chequetype/Save_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_ChequeType" class="ir.utopia.nejat2.treasury.chequetype.action.ChequeTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/chequetype/Search_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/chequetype/Search_Tr_Bd_ChequeType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/chequetype/Search_Tr_Bd_ChequeTypet.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+
+ <!-- ************************************************************<< TrBdAccountType >>********************************************************* -->
+	
+<package name="AccountType" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_AccountType" class="ir.utopia.nejat2.treasury.accounttype.action.AccountTypeAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/accounttype/Search_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_AccountType">
+			<result>/WEB-INF/pages/nejat2/treasury/accounttype/Save_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_AccountType">
+			<result>/WEB-INF/pages/nejat2/treasury/accounttype/View_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_AccountType" class="ir.utopia.nejat2.treasury.accounttype.action.AccountTypeAction">
+			<result >/WEB-INF/pages/nejat2/treasury/accounttype/Search_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/accounttype/Save_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/accounttype/Save_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_AccountType">
+			<result>/WEB-INF/pages/nejat2/treasury/accounttype/Save_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_AccountType" class="ir.utopia.nejat2.treasury.accounttype.action.AccountTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/accounttype/Search_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/accounttype/Save_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/accounttype/Save_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_AccountType" class="ir.utopia.nejat2.treasury.accounttype.action.AccountTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/accounttype/Search_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/accounttype/Search_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/accounttype/Search_Tr_Bd_AccountType.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+
+	<!-- ************************************************************<< TrPrIssued >>********************************************************* -->
+	<package name="IssuedChequeJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+	<package name="IssuedCheque" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/issuedcheque/Search_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Pr_IssuedCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/issuedcheque/Save_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Pr_IssuedCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/issuedcheque/View_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+			<result >/WEB-INF/pages/nejat2/treasury/issuedcheque/Search_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/issuedcheque/Save_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/issuedcheque/Save_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Pr_IssuedCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/issuedcheque/Save_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/issuedcheque/Search_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/issuedcheque/Save_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/issuedcheque/Save_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Pr_IssuedCheque" class="ir.utopia.nejat2.treasury.cheque.action.IssuedChequeAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/issuedcheque/Search_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/issuedcheque/Search_Tr_Pr_IssuedCheque.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/issuedcheque/Search_Tr_Pr_IssuedChequet.jsp?locale=${locale}</result>
+   		</action>
+   
+   		 <action name="go-report_Tr_Pr_IssuedCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/Reports/Report_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+   		
+   		
+   	  
+   	</package>	
+   		
+   		<!-- ************************************************************<< TrPrIncoming >>********************************************************* -->
+   		<package name="IncomingChequeJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>
+	
+	<package name="IncomingCheque" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/incomingcheque/Search_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Pr_IncomingCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/incomingcheque/Save_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Pr_IncomingCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/incomingcheque/View_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+			<result >/WEB-INF/pages/nejat2/treasury/incomingcheque/Search_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/incomingcheque/Save_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/incomingcheque/Save_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Pr_IncomingCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/incomingcheque/Save_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/incomingcheque/Search_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/incomingcheque/Save_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/incoming/Save_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Pr_IncomingCheque" class="ir.utopia.nejat2.treasury.cheque.action.IncomingChequeAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/incomingcheque/Search_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/incomingcheque/Search_Tr_Pr_IncomingCheque.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/incomingcheque/Search_Tr_Pr_IncomingChequet.jsp?locale=${locale}</result>
+   		</action>
+   		
+   	 	 <action name="go-report_Tr_Pr_IncomingCheque">
+			<result>/WEB-INF/pages/nejat2/treasury/Reports/Report_Tr_Pr_Cheque.jsp?locale=${locale}</result>
+		</action>
+   		
+   	  
+	</package>	
+<!-- ************************************************************<< TrBdChequeAccessList>>********************************************************* -->
+	
+	<package name="ChequeAccessList" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_ChequeAccessList" class="ir.utopia.nejat2.treasury.chequeaccesslist.action.ChequeAccessListAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Search_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_ChequeAccessList">
+			<result>/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Save_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_ChequeAccessList">
+			<result>/WEB-INF/pages/nejat2/treasury/chequeaccesslist/View_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_ChequeAccessList" class="ir.utopia.nejat2.treasury.chequeaccesslist.action.ChequeAccessListAction">
+			<result >/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Search_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Save_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Save_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_ChequeAccessList">
+			<result>/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Save_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_ChequeAccessList" class="ir.utopia.nejat2.treasury.chequeaccesslist.action.ChequeAccessListAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Search_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Save_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Save_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_ChequeAccessList" class="ir.utopia.nejat2.treasury.chequeaccesslist.action.ChequeAccessListAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Search_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Search_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/chequeaccesslist/Search_Tr_Bd_ChequeAccessList.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+<!-- ************************************************************<< TrBdRelationshipProtocol >>********************************************************* -->
+
+	<package name="RelationshipProtocol" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_RelationshipProtocol" class="ir.utopia.nejat2.treasury.relationshipprotocol.action.RelationshipProtocolAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Search_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_RelationshipProtocol">
+			<result>/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Save_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_RelationshipProtocol">
+			<result>/WEB-INF/pages/nejat2/treasury/relationshipprotocol/View_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_RelationshipProtocol" class="ir.utopia.nejat2.treasury.relationshipprotocol.action.RelationshipProtocolAction">
+			<result >/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Search_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Save_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Save_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_RelationshipProtocol">
+			<result>/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Save_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_RelationshipProtocol" class="ir.utopia.nejat2.treasury.relationshipprotocol.action.RelationshipProtocolAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Search_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Save_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Save_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_RelationshipProtocol" class="ir.utopia.nejat2.treasury.relationshipprotocol.action.RelationshipProtocolAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Search_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Search_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/relationshipprotocol/Search_Tr_Bd_RelationshipProtocol.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+<!-- ************************************************************<< TrBdUserBankAccount >>********************************************************* -->
+
+	<package name="UserBankAccount" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_UserBankAccount" class="ir.utopia.nejat2.treasury.userbankaccount.action.UserBankAccountAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/userbankaccount/Search_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_UserBankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/userbankaccount/Save_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_UserBankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/userbankaccount/View_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_UserBankAccount" class="ir.utopia.nejat2.treasury.userbankaccount.action.UserBankAccountAction">
+			<result >/WEB-INF/pages/nejat2/treasury/userbankaccount/Search_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/userbankaccount/Save_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/userbankaccount/Save_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_UserBankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/userbankaccount/Save_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_UserBankAccount" class="ir.utopia.nejat2.treasury.userbankaccount.action.UserBankAccountAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/userbankaccount/Search_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/userbankaccount/Save_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/userbankaccount/Save_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_UserBankAccount" class="ir.utopia.nejat2.treasury.userbankaccount.action.UserBankAccountAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/userbankaccount/Search_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/userbankaccount/Search_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/userbankaccount/Search_Tr_Bd_UserBankAccount.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+<!-- ************************************************************<< TrBdUserBankAccount >>********************************************************* -->
+
+	<package name="OrgBankAccount" 	extends="UtopiaAuthorized">
+		<action name="search_Tr_Bd_OrgBankAccount" class="ir.utopia.nejat2.treasury.orgbankaccount.action.OrgBankAccountAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/treasury/orgbankaccount/Search_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Tr_Bd_OrgBankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/orgbankaccount/Save_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Tr_Bd_OrgBankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/orgbankaccount/View_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Tr_Bd_OrgBankAccount" class="ir.utopia.nejat2.treasury.orgbankaccount.action.OrgBankAccountAction">
+			<result >/WEB-INF/pages/nejat2/treasury/orgbankaccount/Search_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/treasury/orgbankaccount/Save_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/treasury/orgbankaccount/Save_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Tr_Bd_OrgBankAccount">
+			<result>/WEB-INF/pages/nejat2/treasury/orgbankaccount/Save_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Tr_Bd_OrgBankAccount" class="ir.utopia.nejat2.treasury.orgbankaccount.action.OrgBankAccountAction">
+  	 			<result >/WEB-INF/pages/nejat2/treasury/orgbankaccount/Search_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/treasury/orgbankaccount/Save_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/treasury/orgbankaccount/Save_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Tr_Bd_OrgBankAccount" class="ir.utopia.nejat2.treasury.orgbankaccount.action.OrgBankAccountAction">
+  	 		<result >/WEB-INF/pages/nejat2/treasury/orgbankaccount/Search_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/treasury/orgbankaccount/Search_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/treasury/orgbankaccount/Search_Tr_Bd_OrgBankAccount.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+
+</struts>
+
+

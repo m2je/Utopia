@@ -1,0 +1,1617 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- ************************************************************<< Hiring Type >>********************************************************* -->
+	<package name="HiringType" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_HiringType" class="ir.utopia.nejat2.payroll.hiringtype.action.HiringTypeAction">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringType/Search_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_HiringType">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringType/Save_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_HiringType">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringType/View_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_HiringType" class="ir.utopia.nejat2.payroll.hiringtype.action.HiringTypeAction">
+			<result >/WEB-INF/pages/nejat2/payroll/hiringType/Search_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/hiringType/Save_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/hiringType/Save_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_HiringType">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringType/Save_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_HiringType" class="ir.utopia.nejat2.payroll.hiringtype.action.HiringTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/hiringType/Search_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/hiringType/Save_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/hiringType/Save_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_HiringType" class="ir.utopia.nejat2.payroll.hiringtype.action.HiringTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/hiringType/Search_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/hiringType/Search_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/hiringType/Search_Pr_Bd_HiringType.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< Hiring Status >>********************************************************* -->
+	<package name="HiringStatus" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_HiringStatus" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringStatus/Search_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_HiringStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringStatus/Save_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_HiringStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringStatus/View_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_HiringStatus" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+			<result >/WEB-INF/pages/nejat2/payroll/hiringStatus/Search_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/hiringStatus/Save_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/hiringStatus/Save_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_HiringStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/hiringStatus/Save_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_HiringStatus" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/hiringStatus/Search_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/hiringStatus/Save_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/hiringStatus/Save_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_HiringStatus" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/hiringStatus/Search_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/hiringStatus/Search_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/hiringStatus/Search_Pr_Bd_HiringStatus.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< Personnel WGItem Complementarity >>********************************************************* -->
+	 <package name="PersonWgitemCompJSONS" namespace="/" extends="json-default">
+		<action name="loadFromPersonnel_Pr_Bd_PersonWgitemComp" class="ir.utopia.nejat2.payroll.personwgitemcomp.action.PersonWgitemCompAction" method="loadDataFromPersonnel">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="PersAdditionInsrancJSONS" namespace="/" extends="json-default">
+	    <action name="loadOriginalRelationData_Pr_Bd_PersAdditionInsranc" class="ir.utopia.nejat2.payroll.personadditionalinsurance.action.PersAdditionInsrancAction" method="loadOriginalRelationData">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	 <package name="PersonWgitemComp" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_PersonWgitemComp" class="ir.utopia.nejat2.payroll.personwgitemcomp.action.PersonWgitemCompAction">
+			<result>/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Search_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_PersonWgitemComp">
+			<result>/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Save_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_PersonWgitemComp">
+			<result>/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/View_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_PersonWgitemComp" class="ir.utopia.nejat2.payroll.personwgitemcomp.action.PersonWgitemCompAction">
+			<result >/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Search_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Save_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Save_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_PersonWgitemComp">
+			<result>/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Save_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_PersonWgitemComp" class="ir.utopia.nejat2.payroll.personwgitemcomp.action.PersonWgitemCompAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Search_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Save_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Save_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_PersonWgitemComp" class="ir.utopia.nejat2.payroll.personwgitemcomp.action.PersonWgitemCompAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Search_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Search_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/PersonWgitemComp/Search_Pr_Bd_PersonWgitemComp.jsp?locale=${locale}</result>
+   		</action>
+	</package>		 
+	<!-- ************************************************************<< Jobs Class >>********************************************************* -->
+	<!--<package name="JobsClass" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_JobsClass" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+			<result>/WEB-INF/pages/nejat2/payroll/jobsClass/Search_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_JobsClass">
+			<result>/WEB-INF/pages/nejat2/payroll/jobsClass/Save_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_JobsClass">
+			<result>/WEB-INF/pages/nejat2/payroll/jobsClass/View_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_JobsClass" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+			<result >/WEB-INF/pages/nejat2/payroll/jobsClass/Search_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/jobsClasss/Save_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/jobsClass/Save_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_JobsClass">
+			<result>/WEB-INF/pages/nejat2/payroll/jobsClass/Save_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_JobsClass" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/jobsClass/Search_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/jobsClass/Save_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/jobsClass/Save_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_JobsClass" class="ir.utopia.nejat2.payroll.hiringstatus.action.HiringStatusAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/jobsClass/Search_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/jobsClass/Search_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/jobsClass/Search_Pr_Bd_JobsClass.jsp?locale=${locale}</result>
+   		</action>
+	</package>		-->
+	<!-- ************************************************************<< Personnel >>********************************************************* -->
+	<package name="PersonnelJSONS" namespace="/" extends="json-default">
+		<action name="nationalCodeCheck_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction" method="nationalCodeCheck">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="Personnel" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_Personnel">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_Personnel">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/View_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+			<result >/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_Personnel">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	
+   <!-- ************************************************************<< SalaryList>>********************************************************* -->
+      <package name="SalaryList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_SalaryList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_SalaryList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_SalaryList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_SalaryList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    
+			<!-- ************************************************************<< PersonnelList>>********************************************************* -->
+	<package name="PersonnelList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PersonnelList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PersonnelList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PersonnelList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PersonnelList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+			<!-- ************************************************************<< PayStubs>>********************************************************* -->
+	   <package name="PayStubs" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PayStubs">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PayStubs.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PayStubs">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PayStubs.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    		<!-- ************************************************************<<OvertimeList>>********************************************************* -->
+
+	<package name="OvertimeList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_OvertimeList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_OvertimeList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_OvertimeList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_OvertimeList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+       	<!-- ************************************************************<< OvertimeList2>>********************************************************* -->
+
+	<package name="OvertimeList2" 	extends="struts-default">
+		<action name="go-report_Pr_Rp_OvertimeList2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_OvertimeList2.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+       		<!-- ************************************************************<<TotalOvertime>>********************************************************* -->
+
+	<package name="TotalOvertime" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TotalOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TotalOvertime.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TotalOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TotalOvertime.jsp?locale=${locale}</result>
+		</action>
+	</package>
+       	<!-- ************************************************************<< MissionList>>********************************************************* -->
+    
+    <package name="MissionList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_MissionList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_MissionList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_MissionList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_MissionList.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+    
+ 	<!-- ************************************************************<< MissionList2>>********************************************************* -->
+
+	<package name="MissionList2" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_MissionList2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_MissionList2.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_MissionList2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_MissionList2.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    	<!-- ************************************************************<< RequestInvestigate>>********************************************************* -->
+
+	<package name="RequestInvestigate" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_RequestInvestigate">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_RequestInvestigate.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_RequestInvestigate">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_RequestInvestigate.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+    	<!-- ************************************************************<< AssetRequest>>********************************************************* -->
+  
+    <package name="AssetRequest" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_AssetRequest">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_AssetRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_AssetRequest">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_AssetRequest.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************************<< TaxReport>>********************************************************* -->
+    <package name="TaxReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TaxReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TaxReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TaxReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TaxReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    		<!-- ************************************************************<< BankReport>>********************************************************* -->
+       <package name="BankReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_BankReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_BankReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_BankReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_BankReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+		<!-- ************************************************************<< RetirementList>>********************************************************* -->
+    <package name="RetirementList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_RetirementList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_RetirementList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_RetirementList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_RetirementList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    	<!-- ************************************************************<< RetirementList2>>********************************************************* -->
+
+   <package name="RetirementList2" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_RetirementList2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_RetirementList2.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_RetirementList2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_RetirementList2.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    	<!-- ************************************************************<< TaminReport>>********************************************************* -->
+ 
+       <package name="TaminReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TaminReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TaminReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TaminReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TaminReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    	<!-- ************************************************************<< TaminReport2>>********************************************************* -->
+      <package name="TaminReport2" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TaminReport2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TaminReport2.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TaminReport2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TaminReport2.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    
+				<!-- ************************************************************<< MsioReport>>********************************************************* -->
+      <package name="MsioReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_MsioReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_MsioReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_MsioReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_MsioReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+    
+    	<!-- ************************************************************<< MsioReport2>>********************************************************* -->
+   <package name="MsioReport2" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_MsioReport2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_MsioReport2.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_MsioReport2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_MsioReport2.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+	
+	  <!-- ************************************************************<< MsioReport3>>********************************************************* -->
+   <package name="MsioReport3" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_MsioReport3">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_MsioReport3.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_MsioReport3">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_MsioReport3.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+	
+		<!-- ************************************************************<< TakmiliReport>>********************************************************* -->
+ 
+    <package name="TakmiliReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TakmiliReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TakmiliReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TakmiliReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TakmiliReport.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+   	<!-- ************************************************************<< TakmiliReport2>>********************************************************* -->
+   <package name="TakmiliReport2" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TakmiliReport2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TakmiliReport2.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TakmiliReport2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TakmiliReport2.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+
+    	<!-- ************************************************************<< OmrReport>>********************************************************* -->
+	 <package name="OmrReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_OmrReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_OmrReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_OmrReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_OmrReport.jsp?locale=${locale}</result>
+		</action>
+	</package> 
+    <!-- ************************************************************<< ProcessCheckup>>********************************************************* -->
+
+	<package name="ProcessCheckup" 	extends="struts-default">
+		<action name="go-report_Pr_Rp_ProcessCheckup">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_ProcessCheckup.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+<!-- ************************************************************<< PayrollDashboard>>********************************************************* -->
+
+	<package name="PayrollDashboard" 	extends="struts-default">
+		<action name="go-report_Pr_Rp_PayrollDashboard">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PayrollDashboard.jsp?locale=${locale}</result>
+		</action>
+    </package>	
+    <!-- ************************************************************<<TotalReport>>********************************************************* -->
+    <package name="TotalReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TotalReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TotalReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TotalReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TotalReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+  <!-- ************************************************************<< ContractHistory>>********************************************************* -->
+	   <package name="ContractHistory" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_ContractHistory">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_ContractHistory.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_ContractHistory">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_ContractHistory.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+	 <!-- ************************************************************<< PaymentRequest>>********************************************************* -->
+	   <package name="PaymentRequest" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PaymentRequest">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PaymentRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PaymentRequest">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PaymentRequest.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+	 <!-- ************************************************************<< PersonConflictList>>********************************************************* -->
+	   <package name="PersonConflictList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PersonConflictList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PersonConflictList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PersonConflictList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PersonConflictList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+		 <!-- ************************************************************<< DeductionList>>********************************************************* -->
+	   <package name="DeductionList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_DeductionList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_DeductionList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_DeductionList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_DeductionList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	 <!-- ************************************************************<< AdditionalPayment>>********************************************************* -->
+	   <package name="AdditionalPayment" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_AdditionalPayment">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_AdditionalPayment.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_AdditionalPayment">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_AdditionalPayment.jsp?locale=${locale}</result>
+		</action>
+	</package>
+		 <!-- ************************************************************<< MsioControl>>********************************************************* -->
+	   <package name="MsioControl" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_MsioControl">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_MsioControl.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_MsioControl">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_MsioControl.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+		 <!-- ************************************************************<< TaxControl>>********************************************************* -->
+	   <package name="TaxControl" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TaxControl">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TaxControl.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TaxControl">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TaxControl.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+		 <!-- ************************************************************<< PaymentRequest2>>********************************************************* -->
+	   <package name="PaymentRequest2" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PaymentRequest2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PaymentRequest2.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PaymentRequest2">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PaymentRequest2.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+			 <!-- ************************************************************<< SanavatReport>>********************************************************* -->
+	   <package name="SanavatReport" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_SanavatReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_SanavatReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_SanavatReport">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_SanavatReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	   <!-- ************************************************************<< TotalSalaryList>>********************************************************* -->
+      <package name="TotalSalaryList" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_TotalSalaryList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_TotalSalaryList.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_TotalSalaryList">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_TotalSalaryList.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	   <!-- ************************************************************<< PaymentRequestAddPay>>********************************************************* -->
+      <package name="PaymentRequestAddPay" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PaymentRequestAddPay">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PaymentRequestAddPay.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PaymentRequestAddPay">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PaymentRequestAddPay.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	   <!-- ************************************************************<< PaymentRequestOvertime>>********************************************************* -->
+      <package name="PaymentRequestOvertime" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Rp_PaymentRequestOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Search_Pr_Rp_PaymentRequestOvertime.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Pr_Rp_PaymentRequestOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/Reports/Report_Pr_Rp_PaymentRequestOvertime.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	    <!-- ************************************************************<< MonthCalc >>********************************************************* -->
+	<package name="MonthClac" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_MonthCalc"  class="ir.utopia.nejat2.payroll.monthcalc.action.MonthCalcAction">
+			<result>/WEB-INF/pages/nejat2/payroll/monthCalc/Search_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Pr_MonthCalc">
+			<result>/WEB-INF/pages/nejat2/payroll/monthCalc/View_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_MonthCalc">
+			<result>/WEB-INF/pages/nejat2/payroll/monthCalc/Save_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Pr_MonthCalc" class="ir.utopia.nejat2.payroll.monthcalc.action.MonthCalcAction">
+			<result >/WEB-INF/pages/nejat2/payroll/monthCalc/Search_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/monthCalc/Save_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/monthCalc/Save_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Pr_MonthCalc">
+			<result>/WEB-INF/pages/nejat2/payroll/monthCalc/Update_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_MonthCalc" class="ir.utopia.nejat2.payroll.monthcalc.action.MonthCalcAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/monthCalc/Search_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/monthCalc/Update_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/monthCalc/Update_Pr_Pr_MonthCalc.jsp?locale=${locale}</result>
+  		 </action>
+	</package>
+	<!-- ************************************************************<< Personnel >>********************************************************* -->
+	<!-- <package name="Personnel" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_Personnel">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_Personnel">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/View_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+			<result >/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_Personnel">
+			<result>/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/personnel/Save_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_Personnel" class="ir.utopia.nejat2.payroll.personnel.action.PersonnelAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/personnel/Search_Pr_Bd_Personnel.jsp?locale=${locale}</result>
+   		</action>
+	</package> -->
+	
+	
+ 	<package name="CalculationProcess" extends="gwt-default">
+		<action name="go-process_Pr_Pr_MonthCalculation" class="ir.utopia.nejat2.payroll.monthcalc.process.SalaryCalculationProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="process_Pr_Pr_MonthCalculation" class="ir.utopia.nejat2.payroll.monthcalc.process.SalaryCalculationProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="go-monthCreation_Pr_Pr_MonthCreation" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalculationProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="monthCreation_Pr_Pr_MonthCreation" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalculationProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="go-calculateOverTime_Pr_Pr_CalculateMonthOvaertime" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcOvertimeProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="calculateOverTime_Pr_Pr_CalculateMonthOvaertime" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcOvertimeProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="go-cancelOvertime_Pr_Pr_CancelOvertime" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcCancelOvertimeProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="cancelOvertime_Pr_Pr_CancelOvertime" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcCancelOvertimeProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="go-additionalPayment_Pr_Pr_AddiionalPayment" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcAdditionalPaymentProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="additionalPayment_Pr_Pr_AddiionalPayment" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcAdditionalPaymentProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<action name="go-cancelAdditionalPayment_Pr_Pr_CancelAddiionalPayment" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcCancelAdditionalPaymentProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="cancelAdditionalPayment_Pr_Pr_CancelAddiionalPayment" class="ir.utopia.nejat2.payroll.monthcalc.process.MonthCalcCancelAdditionalPaymentProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+	</package>
+	
+	
+<!-- /** ************************************************************<< MonthCalc >>****************************************************** **/ -->
+	<package name="ConfigData" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_ConfigData"  class="ir.utopia.nejat2.payroll.configdata.action.ConfigDataAction">
+			<result>/WEB-INF/pages/nejat2/payroll/configData/Search_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_ConfigData">
+			<result>/WEB-INF/pages/nejat2/payroll/configData/View_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_ConfigData">
+			<result>/WEB-INF/pages/nejat2/payroll/configData/Save_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_ConfigData" class="ir.utopia.nejat2.payroll.configdata.action.ConfigDataAction">
+			<result >/WEB-INF/pages/nejat2/payroll/configData/Search_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/configData/Save_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/configData/Save_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_ConfigData">
+			<result>/WEB-INF/pages/nejat2/payroll/configData/Save_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_ConfigData" class="ir.utopia.nejat2.payroll.configdata.action.ConfigDataAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/configData/Search_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/configData/Save_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/configData/Save_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+  		 </action>
+  		 <action name="delete_Pr_Bd_ConfigData" class="ir.utopia.nejat2.payroll.configdata.action.ConfigDataAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/configData/Search_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/configData/Search_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/configData/Search_Pr_Bd_ConfigData.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- 	************************************************************<< Leave Type >>********************************************************* -->
+	<!-- <package name="LeaveType" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_LeaveType" class="ir.utopia.nejat2.payroll.leavetype.action.LeaveTypeAction">
+			<result>/WEB-INF/pages/nejat2/payroll/leaveType/Search_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_LeaveType">
+			<result>/WEB-INF/pages/nejat2/payroll/leaveType/Save_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_LeaveType">
+			<result>/WEB-INF/pages/nejat2/payroll/leaveType/View_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_LeaveType" class="ir.utopia.nejat2.payroll.leavetype.action.LeaveTypeAction">
+			<result >/WEB-INF/pages/nejat2/payroll/leaveType/Search_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/leaveType/Save_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/leaveType/Save_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_LeaveType">
+			<result>/WEB-INF/pages/nejat2/payroll/leaveType/Save_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_LeaveType" class="ir.utopia.nejat2.payroll.leavetype.action.LeaveTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/leaveType/Search_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/leaveType/Save_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/leaveType/Save_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_LeaveType" class="ir.utopia.nejat2.payroll.leavetype.action.LeaveTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/leaveType/Search_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/leaveType/Search_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/leaveType/Search_Pr_Bd_LeaveType.jsp?locale=${locale}</result>
+   		</action>
+	</package> -->		
+<!-- 	************************************************************<< TaminEjtemaiBranch >>********************************************************* -->
+	<package name="TaminEjtemaiBranch" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_TaminEjtemaiBranch"  class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_TaminEjtemaiBranch">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/View_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_TaminEjtemaiBranch">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_TaminEjtemaiBranch" class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+			<result >/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_TaminEjtemaiBranch">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_TaminEjtemaiBranch" class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+  		 </action>
+	</package>
+	<!-- ************************************************************<< TaxClassification >>********************************************************* -->
+	<package name="TaxClassification" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_TaxClassification"  class="ir.utopia.nejat2.payroll.taxclassification.action.TaxClassificationAction">
+			<result>/WEB-INF/pages/nejat2/payroll/taxClassification/Search_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_TaxClassification">
+			<result>/WEB-INF/pages/nejat2/payroll/taxClassification/View_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_TaxClassification">
+			<result>/WEB-INF/pages/nejat2/payroll/taxClassification/Save_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_TaxClassification" class="ir.utopia.nejat2.payroll.taxclassification.action.TaxClassificationAction">
+			<result >/WEB-INF/pages/nejat2/payroll/taxClassification/Search_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taxClassification/Save_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taxClassification/Save_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_TaxClassification">
+			<result>/WEB-INF/pages/nejat2/payroll/taxClassification/Save_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_TaxClassification" class="ir.utopia.nejat2.payroll.taxclassification.action.TaxClassificationAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/taxClassification/Search_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taxClassification/Save_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taxClassification/Save_Pr_Bd_TaxClassification.jsp?locale=${locale}</result>
+  		 </action>
+	</package>
+	<!-- ************************************************************<< TaxDefinition >>********************************************************* -->
+	<package name="TaxDefinition" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_TaxType"  class="ir.utopia.nejat2.payroll.tax.action.TaxAction">
+			<result>/WEB-INF/pages/nejat2/payroll/tax/Search_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_TaxType">
+			<result>/WEB-INF/pages/nejat2/payroll/tax/View_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_TaxType">
+			<result>/WEB-INF/pages/nejat2/payroll/tax/Save_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_TaxType" class="ir.utopia.nejat2.payroll.tax.action.TaxAction">
+			<result >/WEB-INF/pages/nejat2/payroll/tax/Search_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/tax/Save_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/tax/Save_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_TaxType">
+			<result>/WEB-INF/pages/nejat2/payroll/tax/Save_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_TaxType" class="ir.utopia.nejat2.payroll.tax.action.TaxAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/tax/Search_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/tax/Save_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/tax/Save_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+  		 </action>
+  		 <action name="delete_Pr_Bd_TaxType" class="ir.utopia.nejat2.payroll.tax.action.TaxAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/tax/Search_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/tax/Search_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/tax/Search_Pr_Bd_TaxType.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	
+	<!-- ************************************************************<< TaminWorkshop >>********************************************************* -->
+	<package name="TaminWorkshop" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_Workshop"  class="ir.utopia.nejat2.payroll.taminworkshops.action.TaminWorkshopAction">
+			<result>/WEB-INF/pages/nejat2/payroll/taminWorkshop/Search_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_Workshop">
+			<result>/WEB-INF/pages/nejat2/payroll/taminWorkshop/View_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_Workshop">
+			<result>/WEB-INF/pages/nejat2/payroll/taminWorkshop/Save_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_Workshop" class="ir.utopia.nejat2.payroll.taminworkshops.action.TaminWorkshopAction">
+			<result >/WEB-INF/pages/nejat2/payroll/taminWorkshop/Search_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taminWorkshop/Save_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taminWorkshop/Save_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_Workshop">
+			<result>/WEB-INF/pages/nejat2/payroll/taminWorkshop/Save_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_Workshop" class="ir.utopia.nejat2.payroll.taminworkshops.action.TaminWorkshopAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/taminWorkshop/Search_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taminWorkshop/Save_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taminWorkshop/Save_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+  		 </action>
+  		 <action name="delete_Pr_Bd_Workshop" class="ir.utopia.nejat2.payroll.taminworkshops.action.TaminWorkshopAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/taminWorkshop/Search_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/taminWorkshop/Search_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/taminWorkshop/Search_Pr_Bd_TaminWorkshop.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************<< Item >>********************************************************* -->
+	<package name="Item" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_ItemNonHokm" class="ir.utopia.nejat2.payroll.item.action.ItemAction">
+			<result>/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_Item.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_ItemNonHokm">
+			<result>/WEB-INF/pages/nejat2/payroll/item/Save_Pr_Bd_Item.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_ItemNonHokm">
+			<result>/WEB-INF/pages/nejat2/payroll/item/View_Pr_Bd_Item.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_ItemNonHokm" class="ir.utopia.nejat2.payroll.item.action.ItemAction">
+			<result >/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_Item.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/item/Save_Pr_Bd_Item.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/item/Save_Pr_Bd_Item.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_ItemNonHokm">
+			<result>/WEB-INF/pages/nejat2/payroll/item/Save_Pr_Bd_Item.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_ItemNonHokm" class="ir.utopia.nejat2.payroll.item.action.ItemAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_Item.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/item/Save_Pr_Bd_Item.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/item/Save_Pr_Bd_Item.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_ItemNonHokm" class="ir.utopia.nejat2.payroll.item.action.ItemAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_Item.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_Item.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_Item.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< InsuranceDeduction >>********************************************************* -->
+	<package name="InsuranceDeduction" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_InsuranceDeduction"  class="ir.utopia.nejat2.payroll.isurancededuction.action.InsuranceDeductionAction">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Search_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_InsuranceDeduction">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceDeduction/View_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_InsuranceDeduction">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Save_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_InsuranceDeduction" class="ir.utopia.nejat2.payroll.isurancededuction.action.InsuranceDeductionAction">
+			<result >/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Search_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Save_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Save_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_InsuranceDeduction">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Save_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_InsuranceDeduction" class="ir.utopia.nejat2.payroll.isurancededuction.action.InsuranceDeductionAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Search_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Save_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceDeduction/Save_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+  		 </action>
+  		 <action name="delete_Pr_Bd_InsuranceDeduction" class="ir.utopia.nejat2.payroll.isurancededuction.action.InsuranceDeductionAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/item/Search_Pr_Bd_InsuranceDeduction.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************<< InsuranceKhademat >>********************************************************* -->
+	<package name="InsuranceKhademat" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_KhadematInsurance"  class="ir.utopia.nejat2.payroll.isurancededuction.action.KhadematInsuranceAction">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Search_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_KhadematInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceKhademat/View_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_KhadematInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Save_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_KhadematInsurance" class="ir.utopia.nejat2.payroll.isurancededuction.action.KhadematInsuranceAction">
+			<result >/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Search_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Save_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Save_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_KhadematInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Save_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_KhadematInsurance" class="ir.utopia.nejat2.payroll.isurancededuction.action.KhadematInsuranceAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Search_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Save_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Save_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+  		 </action>
+  		 <action name="delete_Pr_Bd_KhadematInsurance" class="ir.utopia.nejat2.payroll.isurancededuction.action.KhadematInsuranceAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Search_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Search_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceKhademat/Search_Pr_Bd_InsuranceKhademat.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************<< FixRetirement >>********************************************************* -->
+	<package name="FixRetirement" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_FixRetirement"  class="ir.utopia.nejat2.payroll.fixretirement.action.FixRetirementDeductionAction">
+			<result>/WEB-INF/pages/nejat2/payroll/fixRetirement/Search_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="go-view_Pr_Bd_FixRetirement">
+			<result>/WEB-INF/pages/nejat2/payroll/fixRetirement/View_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_FixRetirement">
+			<result>/WEB-INF/pages/nejat2/payroll/fixRetirement/Save_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+		</action>
+		
+		<action name="save_Pr_Bd_FixRetirement" class="ir.utopia.nejat2.payroll.fixretirement.action.FixRetirementDeductionAction">
+			<result >/WEB-INF/pages/nejat2/payroll/fixRetirement/Search_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/fixRetirement/Save_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/fixRetirement/Save_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_FixRetirement">
+			<result>/WEB-INF/pages/nejat2/payroll/fixRetirement/Save_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_FixRetirement" class="ir.utopia.nejat2.payroll.fixretirement.action.FixRetirementDeductionAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/fixRetirement/Search_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/fixRetirement/Save_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/fixRetirement/Save_Pr_Bd_FixRetirement.jsp?locale=${locale}</result>
+  		 </action>
+	</package>
+	<!-- ************************************************************<< Takmili Insurance >>********************************************************* -->
+	<package name="TakmiliInsurance" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_TakmiliInsurance" class="ir.utopia.nejat2.payroll.takmiliinsurance.action.TakmiliInsuranceAction">
+			<result>/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Search_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_TakmiliInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Save_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_TakmiliInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/View_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_TakmiliInsurance" class="ir.utopia.nejat2.payroll.takmiliinsurance.action.TakmiliInsuranceAction">
+			<result >/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Search_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Save_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Save_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_TakmiliInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Save_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_TakmiliInsurance" class="ir.utopia.nejat2.payroll.takmiliinsurance.action.TakmiliInsuranceAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Search_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Save_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Save_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_TakmiliInsurance" class="ir.utopia.nejat2.payroll.takmiliinsurance.action.TakmiliInsuranceAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Search_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Search_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/TakmiliInsurance/Search_Pr_Bd_TakmiliInsurance.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< TaminEjtemaeeBranch >>********************************************************* -->
+	<package name="TaminEjtemaeeBranch" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_TaminEjtemaeeBranch" class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_TaminEjtemaeeBranch">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_TaminEjtemaeeBranch">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/View_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_TaminEjtemaeeBranch" class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+			<result >/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_TaminEjtemaeeBranch">
+			<result>/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_TaminEjtemaeeBranch" class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Save_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_TaminEjtemaeeBranch" class="ir.utopia.nejat2.payroll.taminejtemaeibranch.action.TaminEjtemaiBranchAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/taminEjtemaiBranch/Search_Pr_Bd_TaminEjtemaiBranch.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	
+	<!-- ************************************************************<< Salary Status >>********************************************************* -->
+	<package name="SalaryStatus" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_SalaryStatus" class="ir.utopia.nejat2.payroll.salarystatus.action.SalaryStatusAction">
+			<result>/WEB-INF/pages/nejat2/payroll/SalaryStatus/Search_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_SalaryStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/SalaryStatus/Save_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_SalaryStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/SalaryStatus/View_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_SalaryStatus" class="ir.utopia.nejat2.payroll.salarystatus.action.SalaryStatusAction">
+			<result >/WEB-INF/pages/nejat2/payroll/SalaryStatus/Search_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/SalaryStatus/Save_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/SalaryStatus/Save_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_SalaryStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/SalaryStatus/Save_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_SalaryStatus" class="ir.utopia.nejat2.payroll.salarystatus.action.SalaryStatusAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/SalaryStatus/Search_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/SalaryStatus/Save_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/SalaryStatus/Save_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_SalaryStatus" class="ir.utopia.nejat2.payroll.salarystatus.action.SalaryStatusAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/SalaryStatus/Search_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/SalaryStatus/Search_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/SalaryStatus/Search_Pr_Bd_SalaryStatus.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!-- ************************************************************<< Working Status >>********************************************************* -->
+	<package name="WorkingStatus" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_WorkingStatus" class="ir.utopia.nejat2.payroll.workingstatus.action.WorkingStatusAction">
+			<result>/WEB-INF/pages/nejat2/payroll/WorkingStatus/Search_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_WorkingStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/WorkingStatus/Save_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_WorkingStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/WorkingStatus/View_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_WorkingStatus" class="ir.utopia.nejat2.payroll.workingstatus.action.WorkingStatusAction">
+			<result >/WEB-INF/pages/nejat2/payroll/WorkingStatus/Search_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/WorkingStatus/Save_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/WorkingStatus/Save_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_WorkingStatus">
+			<result>/WEB-INF/pages/nejat2/payroll/WorkingStatus/Save_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_WorkingStatus" class="ir.utopia.nejat2.payroll.workingstatus.action.WorkingStatusAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/WorkingStatus/Search_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/WorkingStatus/Save_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/WorkingStatus/Save_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_WorkingStatus" class="ir.utopia.nejat2.payroll.workingstatus.action.WorkingStatusAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/WorkingStatus/Search_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/WorkingStatus/Search_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/WorkingStatus/Search_Pr_Bd_WorkingStatus.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+<!-- 	************************************************************<< Deductions Definition >>********************************************************* -->
+	<package name="DeductionsDefinition" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_DeductionsDefinition" class="ir.utopia.nejat2.payroll.deductionsdefinition.action.DeductionsDefinitionAction">
+			<result>/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Search_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_DeductionsDefinition">
+			<result>/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Save_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_DeductionsDefinition">
+			<result>/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/View_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_DeductionsDefinition" class="ir.utopia.nejat2.payroll.deductionsdefinition.action.DeductionsDefinitionAction">
+			<result >/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Search_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Save_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Save_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_DeductionsDefinition">
+			<result>/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Save_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_DeductionsDefinition" class="ir.utopia.nejat2.payroll.deductionsdefinition.action.DeductionsDefinitionAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Search_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Save_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Save_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_DeductionsDefinition" class="ir.utopia.nejat2.payroll.deductionsdefinition.action.DeductionsDefinitionAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Search_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Search_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/DeductionsDefinition/Search_Pr_Bd_DeductionsDefinition.jsp?locale=${locale}</result>
+   		</action>
+	</package>	 	
+	
+		<!-- ************************************************************<< Accounting Document >>********************************************************* -->
+	<package name="AccDocumentPayroll" extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_AccDocumentPayroll"
+			class="ir.utopia.nejat2.payroll.accDocumentMaster.action.PrPrAccDocumentMasterAction">
+			<result>/WEB-INF/pages/nejat2/payroll/payrollAccDocument/Search_Pr_Bd_AccDocumentPayroll.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Pr_Bd_AccDocumentPayroll">
+			<result>/WEB-INF/pages/nejat2/payroll/payrollAccDocument/View_Pr_Bd_AccDocumentPayroll.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="process_Pr_Bd_AccDocumentPayroll"
+			class="ir.utopia.nejat2.payroll.accDocumentMaster.action.PrPrAccDocumentMasterAction"
+			method="createDocument">
+			<result>/WEB-INF/pages/nejat2/payroll/payrollAccDocument/Search_Pr_Bd_AccDocumentPayroll.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/payrollAccDocument/Search_Pr_Bd_AccDocumentPayroll.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/payrollAccDocument/Search_Pr_Bd_AccDocumentPayroll.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="DocumentPayroll" 	extends="UtopiaAuthorizedGWT">
+		<action name="load_Pr_Bd_AccDocumentPayroll"
+			class="ir.utopia.nejat2.payroll.accDocumentMaster.action.PrPrAccDocumentMasterAction">
+			<result>/WEB-INF/pages/nejat2/payroll/payrollAccDocument/Search_Pr_Bd_AccDocumentPayroll.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="ItemDimOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_Pr_Bd_ItemNonHokm" class="ir.utopia.nejat2.payroll.item.action.ItemAction"
+			method="loadForAccountDimension">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ************************************************************<< Insurance Type >>********************************************************* -->
+	<package name="InsuranceType" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_InsuranceType" class="ir.utopia.nejat2.payroll.insurancetype.action.InsuranceTypeAction">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceType/Search_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_InsuranceType">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceType/Save_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_InsuranceType">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceTypegType/View_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_InsuranceType" class="ir.utopia.nejat2.payroll.insurancetype.action.InsuranceTypeAction">
+			<result >/WEB-INF/pages/nejat2/payroll/insuranceType/Search_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceType/Save_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceType/Save_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_InsuranceType">
+			<result>/WEB-INF/pages/nejat2/payroll/insuranceType/Save_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_InsuranceType" class="ir.utopia.nejat2.payroll.insurancetype.action.InsuranceTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/insuranceType/Search_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceType/Save_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceType/Save_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_InsuranceType" class="ir.utopia.nejat2.payroll.insurancetype.action.InsuranceTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/insuranceType/Search_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/insuranceType/Search_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/insuranceType/Search_Pr_Bd_InsuranceType.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************<< FixOmr Insurance >>********************************************************* -->
+	<package name="FixomrInsurance" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_FixomrInsurance" class="ir.utopia.nejat2.payroll.fixomrinsurance.action.FixomrInsuranceAction">
+			<result>/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Search_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_FixomrInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Save_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_FixomrInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/fixomrInsurance/View_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_FixomrInsurance" class="ir.utopia.nejat2.payroll.fixomrinsurance.action.FixomrInsuranceAction">
+			<result >/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Search_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Save_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Save_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_FixomrInsurance">
+			<result>/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Save_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_FixomrInsurance" class="ir.utopia.nejat2.payroll.fixomrinsurance.action.FixomrInsuranceAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Search_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Save_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Save_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_FixomrInsurance" class="ir.utopia.nejat2.payroll.fixomrinsurance.action.FixomrInsuranceAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Search_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Search_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/fixomrInsurance/Search_Pr_Bd_FixomrInsurance.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************<< Mission >>********************************************************* -->
+	<package name="Mission" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction">
+			<result>/WEB-INF/pages/nejat2/payroll/mission/Search_Pr_Pr_Mission.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_Mission">
+			<result>/WEB-INF/pages/nejat2/payroll/mission/Save_Pr_Pr_Mission.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_Mission">
+			<result>/WEB-INF/pages/nejat2/payroll/mission/View_Pr_Pr_Mission.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction">
+			<result >/WEB-INF/pages/nejat2/payroll/mission/Search_Pr_Pr_Mission.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/mission/Save_Pr_Pr_Mission.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/mission/Save_Pr_Pr_Mission.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Pr_Mission">
+			<result>/WEB-INF/pages/nejat2/payroll/mission/Save_Pr_Pr_Mission.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/mission/Search_Pr_Pr_Mission.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/mission/Save_Pr_Pr_Mission.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/mission/Save_Pr_Pr_Mission.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/mission/Search_Pr_Pr_Mission.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/mission/Search_Pr_Pr_Mission.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/mission/Search_Pr_Pr_Mission.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+   	<package name="MissionJSONS" namespace="/" extends="json-default">
+		<action name="loadPersonnelData_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction" method="loadPersonnelData">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="loadAmountWithBt_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction" method="loadAmountWithBt">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="loadAmountWoBt_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction" method="loadAmountWoBt">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="loadHabitationDeduction_Pr_Pr_Mission" class="ir.utopia.nejat2.payroll.mission.action.MissionAction" method="loadHabitationDeduction">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<!-- ************************************************************<< Contract >>********************************************************* -->
+	<package name="PersonContractJSONS" namespace="/" extends="json-default">
+		<action name="loadHiringType_Pr_Bd_Contract" class="ir.utopia.nejat2.payroll.contract.action.ContractAction" method="loadHiringTypeFromPersonnel">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="Contract" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Bd_Contract" class="ir.utopia.nejat2.payroll.contract.action.ContractAction">
+			<result>/WEB-INF/pages/nejat2/payroll/contract/Search_Pr_Bd_Contract.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Bd_Contract">
+			<result>/WEB-INF/pages/nejat2/payroll/contract/Save_Pr_Bd_Contract.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Bd_Contract">
+			<result>/WEB-INF/pages/nejat2/payroll/contract/View_Pr_Bd_Contract.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Bd_Contract" class="ir.utopia.nejat2.payroll.contract.action.ContractAction">
+			<result >/WEB-INF/pages/nejat2/payroll/contract/Search_Pr_Bd_Contract.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/contract/Save_Pr_Bd_Contract.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/contract/Save_Pr_Bd_Contract.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Bd_Contract">
+			<result>/WEB-INF/pages/nejat2/payroll/contract/Save_Pr_Bd_Contract.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Bd_Contract" class="ir.utopia.nejat2.payroll.contract.action.ContractAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/contract/Search_Pr_Bd_Contract.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/contract/Save_Pr_Bd_Contract.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/contract/Save_Pr_Bd_Contract.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Bd_Contract" class="ir.utopia.nejat2.payroll.contract.action.ContractAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/contract/Search_Pr_Bd_Contract.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/contract/Search_Pr_Bd_Contract.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/contract/Search_Pr_Bd_Contract.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!-- ************************************************************<< Festive-YearCalc >>********************************************************* -->
+	<package name="YearCalc" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_YearCalc" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction">
+			<result>/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_YearCalc">
+			<result>/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_YearCalc">
+			<result>/WEB-INF/pages/nejat2/payroll/yearCalc/View_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_YearCalc" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction">
+			<result >/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result> 
+			
+		</action>
+		<action name="calcFestive_Pr_Pr_YearCalc" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction" method="calculateFestive">
+			<!-- <result >/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result> -->
+			<result>/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+		</action>
+		<action name="calcYearDuration_Pr_Pr_YearCalc" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction" method="calculateYearDuration">
+			<result >/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Pr_YearCalc">
+			<result>/WEB-INF/pages/nejat2/payroll/yearCalc/Save_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_YearCalc" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/yearCalc/Update_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/yearCalc/Update_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_YearCalc" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/yearCalc/Search_Pr_Pr_YearCalc.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<package name="festive" extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_PersonFestive" class="ir.utopia.nejat2.payroll.personfestive.action.PersonFestiveAction">
+			<result>/WEB-INF/pages/nejat2/payroll/personFestive/Search_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_PersonFestive">
+			<result>/WEB-INF/pages/nejat2/payroll/personFestive/Save_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_PersonFestive">
+			<result>/WEB-INF/pages/nejat2/payroll/personFestive/View_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_PersonFestive" class="ir.utopia.nejat2.payroll.personfestive.action.PersonFestiveAction">
+			<result >/WEB-INF/pages/nejat2/payroll/personFestive/Search_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/personFestive/Save_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/personFestive/Save_Pr_Pr_PersonFestive.jsp?locale=${locale}</result> 			
+		</action>
+			
+		<action name="go-update_Pr_Pr_PersonFestive">
+			<result>/WEB-INF/pages/nejat2/payroll/personFestive/Save_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_PersonFestive" class="ir.utopia.nejat2.payroll.personfestive.action.PersonFestiveAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/personFestive/Search_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/personFestive/Update_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/personFestive/Update_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_PersonFestive" class="ir.utopia.nejat2.payroll.personfestive.action.PersonFestiveAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/personFestive/Search_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/personFestive/Search_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/personFestive/Search_Pr_Pr_PersonFestive.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	
+	 <package name="PersonYeardataJSONS" namespace="/" extends="json-default">
+		<action name="loadPersonnel_Pr_Pr_PersonYeardata" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YearcalcAction" method="loadPersons">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="PersonFestiveYeardatsJSONS" namespace="/" extends="json-default">
+		<action name="loadPersonnel_Pr_Pr_PersonFestiveYeardata" class="ir.utopia.nejat2.payroll.personfestive.action.PersonFestiveAction" method="loadPersons">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="PersonRecalFestiveYeardatsJSONS" namespace="/" extends="json-default">
+		<action name="RecalPersonnel_Pr_Pr_PersonFestiveYeardata" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YeardataAction" method="recalculatePersonFestive">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="PersonRecalSanavatYeardatsJSONS" namespace="/" extends="json-default">
+		<action name="RecalPersonnel_Pr_Pr_PersonSanavatYeardata" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YeardataAction" method="recalculatePersonSanavat">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<!-- ************************************************************<< Festive-YearData >>********************************************************* -->
+	 <package name="YearData" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_YearData" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YeardataAction">
+			<result>/WEB-INF/pages/nejat2/payroll/yearData/Search_Pr_Pr_YearData.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_YearData">
+			<result>/WEB-INF/pages/nejat2/payroll/yearData/Save_Pr_Pr_YearData.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_YearData">
+			<result>/WEB-INF/pages/nejat2/payroll/yearData/View_Pr_Pr_YearData.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_YearData" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YeardataAction">
+			<result >/WEB-INF/pages/nejat2/payroll/yearData/Search_Pr_Pr_YearData.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/yearData/Save_Pr_Pr_YearData.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/yearData/Save_Pr_Pr_YearData.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Pr_YearData">
+			<result>/WEB-INF/pages/nejat2/payroll/yearData/Save_Pr_Pr_YearData.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_YearData" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YeardataAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/yearData/Search_Pr_Pr_YearData.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/yearData/Save_Pr_Pr_YearData.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/yearData/Save_Pr_Pr_YearData.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_YearData" class="ir.utopia.nejat2.payroll.personanuallycalc.action.YeardataAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/yearData/Search_Pr_Pr_YearData.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/yearData/Search_Pr_Pr_YearData.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/yearData/Search_Pr_Pr_YearData.jsp?locale=${locale}</result>
+   		</action>
+	</package> 
+	<package name="AccountingPayrollDocType" extends="UtopiaAuthorizedGWT">
+		<action name="loadAllTypes_Pr_Bd_PayrollItem"
+			class="ir.utopia.nejat2.payroll.hiringtype.action.HiringTypeAction"
+			method="loadAllTypes">
+			<result>/WEB-INF/pages/nejat2/accounting/docTypeDimension/docTypeDimension.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	
+<!-- ************************************************************<< Cancel Calculations >>********************************************************* -->	
+	<package name="CancelCalculationsProcess" extends="gwt-default">
+		<action name="go-cancelCalculations_Pr_Pr_CancelCalculations" class="ir.utopia.nejat2.payroll.cancelcalculations.process.CancelCalculationsProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="cancelCalculations_Pr_Pr_CancelCalculations" class="ir.utopia.nejat2.payroll.cancelcalculations.process.CancelCalculationsProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+	</package>
+<!-- ************************************************************<< Closing Calculations Month >>********************************************************* -->	
+	<package name="ClosingCalculationsMonthProcess" extends="gwt-default">
+		<action name="go-closingCalculationsMonth_Pr_Pr_ClosingCalculationsMonth" class="ir.utopia.nejat2.payroll.closingcalculationsmonth.process.ClosingCalculationsMonthProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<action name="closingCalculationsMonth_Pr_Pr_ClosingCalculationsMonth" class="ir.utopia.nejat2.payroll.closingcalculationsmonth.process.ClosingCalculationsMonthProcessAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+	</package>
+<!-- ************************************************************<< Previous Overtime >>********************************************************* -->
+	<package name="PreviousOvertimeDetailJSONS" namespace="/" extends="json-default">
+		<action name="loadPreviousOvertime_Pr_Pr_PreviousOvertimeDetail" class="ir.utopia.nejat2.payroll.previousovertimedetail.action.PreviousOvertimeDetailAction" method="loadPreviousOvertime">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="PreviousOvertime" 	extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_PreviousOvertime" class="ir.utopia.nejat2.payroll.previousovertime.action.PreviousOvertimeAction">
+			<result>/WEB-INF/pages/nejat2/payroll/previousOvertime/Search_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_PreviousOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/previousOvertime/Save_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_PreviousOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/previousOvertime/View_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_PreviousOvertime" class="ir.utopia.nejat2.payroll.previousovertime.action.PreviousOvertimeAction">
+			<result >/WEB-INF/pages/nejat2/payroll/previousOvertime/Search_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/previousOvertime/Save_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/previousOvertime/Save_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Pr_Pr_PreviousOvertime">
+			<result>/WEB-INF/pages/nejat2/payroll/previousOvertime/Save_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_PreviousOvertime" class="ir.utopia.nejat2.payroll.previousovertime.action.PreviousOvertimeAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/previousOvertime/Search_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/previousOvertime/Save_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/previousOvertime/Save_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_PreviousOvertime" class="ir.utopia.nejat2.payroll.previousovertime.action.PreviousOvertimeAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/previousOvertime/Search_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/previousOvertime/Search_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/previousOvertime/Search_Pr_Pr_PreviousOvertime.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	<!--*************************************************GroupItemAssignment***********************************-->
+	<package name="GroupItemAssignment" extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_GroupItemAssignment" class="ir.utopia.nejat2.payroll.groupitem.action.GroupItemAssignmentAction">
+			<result>/WEB-INF/pages/nejat2/payroll/groupAssignment/Search_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_GroupItemAssignment">
+			<result>/WEB-INF/pages/nejat2/payroll/groupAssignment/Save_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_GroupItemAssignment">
+			<result>/WEB-INF/pages/nejat2/payroll/groupAssignment/View_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_GroupItemAssignment" class="ir.utopia.nejat2.payroll.groupitem.action.GroupItemAssignmentAction">
+			<result >/WEB-INF/pages/nejat2/payroll/groupAssignment/Search_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/groupAssignment/Save_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/groupAssignment/Save_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result> 			
+		</action>
+			
+		<action name="go-update_Pr_Pr_GroupItemAssignment">
+			<result>/WEB-INF/pages/nejat2/payroll/groupAssignment/Update_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_GroupItemAssignment" class="ir.utopia.nejat2.payroll.groupitem.action.GroupItemAssignmentAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/groupAssignment/Search_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/groupAssignment/Update_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/groupAssignment/Update_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_GroupItemAssignment" class="ir.utopia.nejat2.payroll.groupitem.action.GroupItemAssignmentAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/groupAssignment/Search_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/groupAssignment/Search_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/groupAssignment/Search_Pr_Pr_GroupItemAssignment.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<package name="PersonItemAssignmentJSONS" namespace="/" extends="json-default">
+		<action name="loadPersonnel_Pr_Pr_Item" class="ir.utopia.nejat2.payroll.groupitem.action.GroupItemAssignmentAction" method="loadPersonsItems">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+		<!--*************************************************SaveLeaving***********************************-->
+	<package name="SaveLeaving" extends="UtopiaAuthorized">
+		<action name="search_Pr_Pr_SavingLeave" class="ir.utopia.nejat2.payroll.leaveSaving.action.SavingLeaveMasterAction">
+			<result>/WEB-INF/pages/nejat2/payroll/savingLeave/Search_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Pr_Pr_SavingLeave">
+			<result>/WEB-INF/pages/nejat2/payroll/savingLeave/Save_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Pr_Pr_SavingLeave">
+			<result>/WEB-INF/pages/nejat2/payroll/savingLeave/View_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Pr_Pr_SavingLeave" class="ir.utopia.nejat2.payroll.leaveSaving.action.SavingLeaveMasterAction">
+			<result >/WEB-INF/pages/nejat2/payroll/savingLeave/Search_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/payroll/savingLeave/Save_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/payroll/savingLeave/Save_Pr_Pr_SavingLeave.jsp?locale=${locale}</result> 			
+		</action>
+			
+		<action name="go-update_Pr_Pr_SavingLeave">
+			<result>/WEB-INF/pages/nejat2/payroll/savingLeave/Save_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Pr_Pr_SavingLeave" class="ir.utopia.nejat2.payroll.leaveSaving.action.SavingLeaveMasterAction">
+  	 			<result >/WEB-INF/pages/nejat2/payroll/savingLeave/Search_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/payroll/savingLeave/Update_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/payroll/savingLeave/Update_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Pr_Pr_SavingLeave" class="ir.utopia.nejat2.payroll.leaveSaving.action.SavingLeaveMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/payroll/savingLeave/Search_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/payroll/savingLeave/Search_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/payroll/savingLeave/Search_Pr_Pr_SavingLeave.jsp?locale=${locale}</result>
+   		</action>   		
+	</package>
+	<package name="PersonRemainLeaveJSONS" namespace="/" extends="json-default">
+		<action name="loadPersonnel_Pr_Pr_PersonLeaveRemain" class="ir.utopia.nejat2.payroll.leaveSaving.action.SavingLeaveMasterAction" method="loadPersonsLeave">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="PersonRecalRemainLeaveJSONS" namespace="/" extends="json-default">
+		<action name="RecalPersonnel_Pr_Pr_PersonLeave" class="ir.utopia.nejat2.payroll.leaveSaving.action.SavingLeavePersonAction" method="recalculatePersonsLeave">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+  </struts>
+
+
+
+

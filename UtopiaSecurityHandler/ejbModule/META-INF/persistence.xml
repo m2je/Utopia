@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
     http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
     
-	<persistence-unit name="coreResource" transaction-type="JTA">
+	<persistence-unit name="UtopiaSecurityHandler" transaction-type="JTA">
   		<jta-data-source>coreResource</jta-data-source>
   		<jar-file>UtopiaCommon.jar</jar-file>
   		<jar-file>UtopiaCore.jar</jar-file>

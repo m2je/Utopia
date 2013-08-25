@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+   <!--
+   			For the purposes of the book, we will leave devMode set to true.  This
+   			allows several things to occur including provision of debugging level information
+   			on error pages as well as reloading of various resources with each request.
+   --> 
+   <constant name="struts.devMode" value="false" />
+ 				
+
+		<package name="default" namespace="/" extends="struts-default">
+			<action name="Menu"
+				class="ir.utopia.core.security.MenuAction">
+				<result>/WEB-INF/templates/co_template.jsp</result>
+				<result name="error">/WEB-INF/pages/security/login.jsp
+				</result>
+			</action>
+			
+			<action name="Login">
+				<result>/WEB-INF/pages/security/login.jsp</result>
+			</action>
+			<action name="co_main">
+				<result>/WEB-INF/templates/co_main.jsp</result>
+			</action>
+			<action name="header">
+				<result>/WEB-INF/templates/header.jsp</result>
+			</action>
+			<action name="firstPage">
+				<result>/WEB-INF/templates/firstPage.jsp</result>
+			</action>
+			<action name="deluxe-tree">
+				<result>/WEB-INF/templates/menu/deluxe-tree.jsp</result>
+			</action>
+			<action name="footer">
+				<result>/WEB-INF/templates/footer.jsp</result>
+			</action>
+		</package>	
+			
+		<package name="CoreDefault" namespace="/templates/menu" extends="struts-default">
+ 		<action name="template">
+			<result>/WEB-INF/templates/co_template.jsp</result>
+			</action>
+		</package>
+		
+	<!-- ***************************************************USER********************************************************* -->
+	<!-- 
+	<package name="CoreSecurityUser"  extends="UtopiaAuthorized">	
+ 		<action name="search_Co_Sc_User" class="ir.utopia.core.security.user.action.UserActionNejat2">
+				<result>/WEB-INF/pages/core/security/user/Search_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Co_Sc_User">
+				<result>/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Co_Sc_User">
+				<result>/WEB-INF/pages/core/security/user/View_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Co_Sc_User" >
+				<result>/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+		</action>
+  		 <action name="save_Co_Sc_User" class="ir.utopia.core.security.user.action.UserActionNejat2">
+		  		 <result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_User</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp?locale=${locale}</result>
+   		</action>
+   		 <action name="update_Co_Sc_User" class="ir.utopia.core.security.user.action.UserActionNejat2">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_User</param>
+		        </result>
+		         <result name="error" >
+			        <param name="location">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp</param>
+			        <param name="locale">${locale}</param>
+			        <param name="editItem">${coUserId}</param>
+			     </result>
+    		     <result name="input" >
+			        <param name="location">/WEB-INF/pages/core/security/user/Save_Co_Sc_User.jsp</param>
+			        <param name="locale">${locale}</param>
+			        <param name="editItem">${coUserId}</param>
+			     </result>
+   		</action>
+   		 <action name="delete_Co_Sc_User" class="ir.utopia.core.security.user.action.UserActionNejat2">
+	   			<result type="redirectAction">
+		            <param name="actionName">search_Co_Sc_User</param>
+		        </result>
+	   			<result name="error">/WEB-INF/pages/core/security/user/Search_Co_Sc_User.jsp?locale=${locale}</result>
+	   			<result name="input">/WEB-INF/pages/core/security/user/Search_Co_Sc_User.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	 -->
+	<!-- ****************************************************************************************************************** -->
+		
+   <constant name="struts.multipart.maxSize" value="100000000" />
+   <include file="ir/utopia/core/CoreStruts.xml"/>
+    <include file="ir/utopia/core/security/Security.xml"/>
+    
+    <include file="ir/utopia/common/common.xml"/>
+    <!-- 
+	<include file="ir/utopia/nejat2/asset/asset.xml"/>
+	<include file="ir/utopia/nejat2/inventory/inventory.xml"/>
+ 	<include file="ir/utopia/nejat2/budget/budget.xml"/> 
+ 	<include file="ir/utopia/nejat2/payroll/payroll.xml"/> 
+ 	<include file="ir/utopia/nejat2/revenue/revenue.xml" />
+	<include file="ir/utopia/nejat2/credit/credit.xml" />
+	<include file="ir/utopia/nejat2/treasury/treasury.xml" />
+	<include file="ir/utopia/nejat2/accounting/accounting.xml" />
+	 	  
+	<include file="ir/utopia/nejat2/managementreports/managementreports.xml"/>
+	 -->
+	<!-- 
+	<constant name="struts.action.excludePattern" value="/templates/menu/DataInput-service*?"/>
+	<constant name="struts.action.excludePattern" value="/DataInput-service*?"/>
+	 -->
+</struts>

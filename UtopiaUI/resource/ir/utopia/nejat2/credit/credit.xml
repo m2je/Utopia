@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<!-- ************************************************************<< CrBdIncomePercentage >>********************************************************* -->
+	<package name="IncomePercentage" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Bd_IncomePercentage" class="ir.utopia.nejat2.credit.incomepercentage.action.IncomePercentageAction">
+		<result>/WEB-INF/pages/nejat2/credit/incomepercentage/Search_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Cd_Bd_IncomePercentage">
+			<result>/WEB-INF/pages/nejat2/credit/incomepercentage/Save_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Cd_Bd_IncomePercentage">
+			<result>/WEB-INF/pages/nejat2/credit/incomepercentage/View_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Cd_Bd_IncomePercentage" class="ir.utopia.nejat2.credit.incomepercentage.action.IncomePercentageAction">
+			<result >/WEB-INF/pages/nejat2/credit/incomepercentage/Search_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/credit/incomepercentage/Save_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/credit/incomepercentage/Save_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Cd_Bd_IncomePercentage">
+			<result>/WEB-INF/pages/nejat2/credit/incomepercentage/Save_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Cd_Bd_IncomePercentage" class="ir.utopia.nejat2.credit.incomepercentage.action.IncomePercentageAction">
+  	 			<result >/WEB-INF/pages/nejat2/credit/incomepercentage/Search_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/credit/incomepercentage/Save_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/credit/incomepercentage/Save_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Cd_Bd_IncomePercentage" class="ir.utopia.nejat2.credit.incomepercentage.action.IncomePercentageAction">
+  	 		<result >/WEB-INF/pages/nejat2/credit/incomepercentage/Search_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/credit/incomepercentage/Search_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/credit/incomepercentage/Search_Cd_Bd_IncomePercentage.jsp?locale=${locale}</result>
+   		</action>
+	</package>	
+	
+	<!-- ************************************************************<< Request Type >>********************************************************* -->
+	<package name="RequestType" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Bd_RequestType" class="ir.utopia.nejat2.credit.requesttype.action.RequestTypeAction">
+		<result>/WEB-INF/pages/nejat2/credit/requesttype/Search_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Cd_Bd_RequestType">
+			<result>/WEB-INF/pages/nejat2/credit/requesttype/Save_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Cd_Bd_RequestType">
+			<result>/WEB-INF/pages/nejat2/credit/requesttype/View_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Cd_Bd_RequestType" class="ir.utopia.nejat2.credit.requesttype.action.RequestTypeAction">
+			<result >/WEB-INF/pages/nejat2/credit/requesttype/Search_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/credit/requesttype/Save_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/credit/requesttype/Save_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Cd_Bd_RequestType">
+			<result>/WEB-INF/pages/nejat2/credit/requesttype/Save_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Cd_Bd_RequestType" class="ir.utopia.nejat2.credit.requesttype.action.RequestTypeAction">
+  	 			<result >/WEB-INF/pages/nejat2/credit/requesttype/Search_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/credit/requesttype/Save_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/credit/requesttype/Save_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Cd_Bd_RequestType" class="ir.utopia.nejat2.credit.requesttype.action.RequestTypeAction">
+  	 		<result >/WEB-INF/pages/nejat2/credit/requesttype/Search_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/credit/requesttype/Search_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/credit/requesttype/Search_Cd_Bd_RequestType.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	<!--****************************** - Credit Config ****************************************-->
+		<package name="CreditConfiguration" extends="UtopiaAuthorized">
+		<action name="go-config_Cd_Bd_CreditConfig"
+			class="ir.utopia.nejat2.credit.creditconfig.action.CreditConfigAction">
+			<result>/WEB-INF/pages/nejat2/credit/creditconfig/crediConfig.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<package name="CreditConfigurationOperation" extends="UtopiaAuthorizedGWT">
+		<action name="config_Cd_Bd_CreditConfig"
+			class="ir.utopia.nejat2.credit.creditconfig.action.CreditConfigAction">
+			<result>/WEB-INF/pages/nejat2/credit/creditconfig/crediConfig.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cd_Bd_CreditConfig"
+			class="ir.utopia.nejat2.credit.creditconfig.action.CreditConfigAction">
+			<result>/WEB-INF/pages/nejat2/credit/creditconfig/crediConfig.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ************************************************************<< Finance Request >>********************************************************* -->
+    <package name="FinanceReqMasterJSONS" namespace="/" extends="json-default">
+		<action name="loadFromActivity_Cd_Pr_FinanceReqMaster" class="ir.utopia.nejat2.credit.financereqmaster.action.FinanceReqMasterAction" method="loadRemainFromActivity">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="FinanceReqMaster" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Pr_FinanceReqMaster" class="ir.utopia.nejat2.credit.financereqmaster.action.FinanceReqMasterAction">
+		<result>/WEB-INF/pages/nejat2/credit/financereqmaster/Search_Cd_Pr_FinanceReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-zoom_Cd_Pr_FinanceReqMaster"  class="ir.utopia.nejat2.credit.financereqmaster.action.FinanceReqMasterAction" method="loadBuyRequestView">
+			<result>/WEB-INF/pages/nejat2/credit/financereqmaster/View_Cd_Pr_FinanceReqMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="confirm_Cd_Pr_FinanceReqMaster"  class="ir.utopia.nejat2.credit.financereqmaster.action.FinanceReqMasterAction" method="confirm">
+			<result>/WEB-INF/pages/nejat2/credit/financereqmaster/Search_Cd_Pr_FinanceReqMaster.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/credit/financereqmaster/Search_Cd_Pr_FinanceReqMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	
+	<!-- ************************************************************<<Cash Request >>********************************************************* -->
+	<package name="CashRequest" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Pr_CashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CashRequestAction">								
+		<result>/WEB-INF/pages/nejat2/credit/cashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Cd_Pr_CashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/cashrequest/Save_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Cd_Pr_CashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/cashrequest/View_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Cd_Pr_CashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CashRequestAction">
+			<result >/WEB-INF/pages/nejat2/credit/cashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/credit/cashrequest/Save_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/credit/cashrequest/Save_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Cd_Pr_CashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/cashrequest/Save_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Cd_Pr_CashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CashRequestAction">
+  	 			<result >/WEB-INF/pages/nejat2/credit/cashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/credit/cashrequest/Save_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/credit/cashrequest/Save_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Cd_Pr_CashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CashRequestAction">
+  	 		<result >/WEB-INF/pages/nejat2/credit/cashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/credit/cashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/credit/cashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+   		</action>
+	</package>
+	
+	<!-- ************************************************************<<Cardex >>********************************************************* -->	
+	
+	<package name="CreditCardex" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Pr_Cardex">
+			<result>/WEB-INF/pages/nejat2/credit/cardex/Search_Cd_Pr_Cardex.jsp?locale=${locale}</result>
+		</action>
+	</package>	
+	
+		<!-- ************************************************************<<Proprietary Cash Request >>********************************************************* -->
+		
+		<package name="ProprietaryCashRequestJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+	
+	<package name="ProprietaryCashRequest" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">								
+		<result>/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Search_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Cd_Pr_ProprietaryCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Save_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Cd_Pr_ProprietaryCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/proprietarycashrequest/View_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+			<result >/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Search_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Save_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Save_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Cd_Pr_ProprietaryCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Save_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+  	 			<result >/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Search_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Save_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Save_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Cd_Pr_ProprietaryCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.ProprietaryCashRequestAction">
+  	 		<result >/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Search_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Search_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/credit/proprietarycashrequest/Search_Cd_Pr_CashRequest.jsp?locale=${locale}</result>
+   		</action>
+   		
+   		 <action name="go-report_Cd_Pr_ProprietaryCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/Reports/Report_Cd_Pr_ProprietaryCashRequest.jsp?locale=${locale}</result>
+		</action>
+   		
+	</package>
+	
+		<!-- ************************************************************<<CurrentConstructionCashRequest >>********************************************************* -->
+	<package name="CurrentConstructionCashRequestJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+	<package name="CurrentConstructionCashRequest" 	extends="UtopiaAuthorized">
+		<action name="search_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">								
+		<result>/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Search_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Cd_Pr_CurrentConstructionCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Save_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Cd_Pr_CurrentConstructionCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/View_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+			<result >/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Search_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Save_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Save_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Cd_Pr_CurrentConstructionCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Save_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+  	 			<result >/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Search_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Save_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Save_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Cd_Pr_CurrentConstructionCashRequest" class="ir.utopia.nejat2.credit.cashrequest.action.CurrentConstructionCashRequestAction">
+  	 		<result >/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Search_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Search_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/credit/currentconstructioncashrequest/Search_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+   		</action>
+   		
+   		 <action name="go-report_Cd_Pr_CurrentConstructionCashRequest">
+			<result>/WEB-INF/pages/nejat2/credit/Reports/Report_Cd_Pr_CurrentConstructionCashRequest.jsp?locale=${locale}</result>
+		</action>
+   		
+	</package>
+	
+	<!-- ************************************************* << Cd_Rp_CreditReport >> ************************************************* -->
+	<package name="CreditReport" extends="UtopiaAuthorized">
+		<action name="search_Cd_Rp_CreditReport">
+			<result>/WEB-INF/pages/nejat2/credit/Reports/Search_Cd_Rp_CreditReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Cd_Rp_CreditReport">
+			<result>/WEB-INF/pages/nejat2/credit/Reports/Report_Cd_Rp_CreditReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	
+	
+</struts>
+
+

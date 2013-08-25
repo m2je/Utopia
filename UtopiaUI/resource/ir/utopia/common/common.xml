@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- This package contains the non-secure portions of the Struts 2 Portfolio. 
+		This allows these public actions to share inheritance of things specialized 
+		to the non-secure portions of the application. Note, at this point, the Struts 
+		2 Portfolio doesn't actually have any security functionality to check credentials 
+		or restrict access, but we have already packaged in a way that anticipates 
+		these needs. -->
+	<!-- ************************************************************SYSTEM********************************************************* -->
+	<package name="CommonSystem" extends="UtopiaAuthorized">
+		<action name="search_Cm_Sy_System"
+			class="ir.utopia.common.systems.system.action.SystemAction">
+			<result>/WEB-INF/pages/common/systems/system/Search_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Sy_System">
+			<result>/WEB-INF/pages/common/systems/system/Save_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Sy_System">
+			<result>/WEB-INF/pages/common/systems/system/View_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Sy_System"
+			class="ir.utopia.common.systems.system.action.SystemAction">
+			<result>/WEB-INF/pages/common/systems/system/Search_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/systems/system/Save_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/systems/system/Save_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Sy_System">
+			<result>/WEB-INF/pages/common/systems/system/Save_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Sy_System"
+			class="ir.utopia.common.systems.system.action.SystemAction">
+			<result>/WEB-INF/pages/common/systems/system/Search_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/systems/system/Save_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/systems/system/Save_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Sy_System"
+			class="ir.utopia.common.systems.system.action.SystemAction">
+			<result>/WEB-INF/pages/common/systems/system/Search_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/systems/system/Search_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/systems/system/Search_Cm_Sy_System.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- **************************************************************SUBSYSTEM************************************************************** -->
+	<package name="CommonSubSystem" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Sy_SubSystem"
+			class="ir.utopia.common.systems.subsystem.action.SubSystemAction">
+			<result>/WEB-INF/pages/common/systems/subSystem/Search_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Sy_SubSystem">
+			<result>/WEB-INF/pages/common/systems/subSystem/Save_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Sy_SubSystem">
+			<result>/WEB-INF/pages/common/systems/subSystem/View_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Sy_SubSystem"
+			class="ir.utopia.common.systems.subsystem.action.SubSystemAction">
+			<result>/WEB-INF/pages/common/systems/subSystem/Search_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/systems/subSystem/Save_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/systems/subSystem/Save_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Sy_SubSystem">
+			<result>/WEB-INF/pages/common/systems/subSystem/Save_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Sy_SubSystem"
+			class="ir.utopia.common.systems.subsystem.action.SubSystemAction">
+			<result>/WEB-INF/pages/common/systems/subSystem/Search_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/systems/subSystem/Save_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/systems/subSystem/Save_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Sy_SubSystem"
+			class="ir.utopia.common.systems.subsystem.action.SubSystemAction">
+			<result>/WEB-INF/pages/common/systems/subSystem/Search_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/systems/subSystem/Search_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/systems/subSystem/Search_Cm_Sy_SubSystem.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** CITY************************************************************** -->
+	<package name="CommonCity" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Lc_City" class="ir.utopia.common.locality.city.action.CityAction">
+			<result>/WEB-INF/pages/common/locality/city/Search_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Lc_City">
+			<result>/WEB-INF/pages/common/locality/city/Save_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Lc_City">
+			<result>/WEB-INF/pages/common/locality/city/View_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Lc_City" class="ir.utopia.common.locality.city.action.CityAction">
+			<result>/WEB-INF/pages/common/locality/city/Search_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/city/Save_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/city/Save_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Lc_City">
+			<result>/WEB-INF/pages/common/locality/city/Save_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Lc_City" class="ir.utopia.common.locality.city.action.CityAction">
+			<result>/WEB-INF/pages/common/locality/city/Search_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/city/Save_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/city/Save_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Lc_City" class="ir.utopia.common.locality.city.action.CityAction">
+			<result>/WEB-INF/pages/common/locality/city/Search_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/city/Search_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/city/Search_Cm_Lc_City.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** COUNTRYY************************************************************** -->
+	<package name="CommonCountry" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Lc_Country"
+			class="ir.utopia.common.locality.country.action.CountryAction">
+			<result>/WEB-INF/pages/common/locality/country/Search_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Lc_Country">
+			<result>/WEB-INF/pages/common/locality/country/Save_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Lc_Country">
+			<result>/WEB-INF/pages/common/locality/country/View_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Lc_Country"
+			class="ir.utopia.common.locality.country.action.CountryAction">
+			<result>/WEB-INF/pages/common/locality/country/Search_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/country/Save_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/country/Save_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Lc_Country">
+			<result>/WEB-INF/pages/common/locality/country/Save_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Lc_Country"
+			class="ir.utopia.common.locality.country.action.CountryAction">
+			<result>/WEB-INF/pages/common/locality/country/Search_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/country/Save_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/country/Save_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Lc_Country"
+			class="ir.utopia.common.locality.country.action.CountryAction">
+			<result>/WEB-INF/pages/common/locality/country/Search_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/country/Search_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/country/Search_Cm_Lc_Country.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** CURRENCY************************************************************** -->
+	<package name="CommonCurrency" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Lc_Currency"
+			class="ir.utopia.common.locality.currency.action.CurrencyAction">
+			<result>/WEB-INF/pages/common/locality/currency/Search_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Lc_Currency">
+			<result>/WEB-INF/pages/common/locality/currency/Save_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Lc_Currency">
+			<result>/WEB-INF/pages/common/locality/currency/View_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Lc_Currency"
+			class="ir.utopia.common.locality.currency.action.CurrencyAction">
+			<result>/WEB-INF/pages/common/locality/currency/Search_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/currency/Save_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/currency/Save_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Lc_Currency">
+			<result>/WEB-INF/pages/common/locality/currency/Save_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Lc_Currency"
+			class="ir.utopia.common.locality.currency.action.CurrencyAction">
+			<result>/WEB-INF/pages/common/locality/currency/Search_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/currency/Save_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/currency/Save_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Lc_Currency"
+			class="ir.utopia.common.locality.currency.action.CurrencyAction">
+			<result>/WEB-INF/pages/common/locality/currency/Search_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/currency/Search_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/currency/Search_Cm_Lc_Currency.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** FISCALYEAR************************************************************** -->
+	<package name="CommonFiscalYear" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_FiscalYear"
+			class="ir.utopia.common.basicinformation.fiscalyear.action.FiscalYearAction">
+			<result>/WEB-INF/pages/common/basicinformation/fiscalyear/Search_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_FiscalYear">
+			<result>/WEB-INF/pages/common/basicinformation/fiscalyear/Save_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_FiscalYear">
+			<result>/WEB-INF/pages/common/basicinformation/fiscalyear/View_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_FiscalYear"
+			class="ir.utopia.common.basicinformation.fiscalyear.action.FiscalYearAction">
+			<result type="redirect">/templates/menu/search_Cm_Bi_FiscalYear.action?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/fiscalyear/Save_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/fiscalyear/Save_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_FiscalYear">
+			<result>/WEB-INF/pages/common/basicinformation/fiscalyear/Save_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_FiscalYear"
+			class="ir.utopia.common.basicinformation.fiscalyear.action.FiscalYearAction">
+			<result type="redirect">/templates/menu/search_Cm_Bi_FiscalYear.action?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/fiscalyear/Save_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/fiscalyear/Save_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_FiscalYear"
+			class="ir.utopia.common.basicinformation.fiscalyear.action.FiscalYearAction">
+			<result type="redirect">/templates/menu/search_Cm_Bi_FiscalYear.action?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/fiscalyear/Search_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/fiscalyear/Search_Cm_Bi_FiscalYear.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	
+	<package name="fiscalyearUtilityProcess" extends="gwt-default">
+		<action name="changeFiscalYear_Cm_Bi_FiscalYear" class="ir.utopia.common.basicinformation.fiscalyear.action.FiscalYearChangeAction"> 
+			<interceptor-ref name="gwt"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** PROVINCE************************************************************** -->
+	<package name="CommonProvince" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Lc_Province"
+			class="ir.utopia.common.locality.province.action.ProvinceAction">
+			<result>/WEB-INF/pages/common/locality/province/Search_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Lc_Province">
+			<result>/WEB-INF/pages/common/locality/province/Save_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Lc_Province">
+			<result>/WEB-INF/pages/common/locality/province/View_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Lc_Province"
+			class="ir.utopia.common.locality.province.action.ProvinceAction">
+			<result>/WEB-INF/pages/common/locality/province/Search_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/province/Save_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/province/Save_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Lc_Province">
+			<result>/WEB-INF/pages/common/locality/province/Save_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Lc_Province"
+			class="ir.utopia.common.locality.province.action.ProvinceAction">
+			<result>/WEB-INF/pages/common/locality/province/Search_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/province/Save_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/province/Save_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Lc_Province"
+			class="ir.utopia.common.locality.province.action.ProvinceAction">
+			<result>/WEB-INF/pages/common/locality/province/Search_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/province/Search_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/province/Search_Cm_Lc_Province.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** REGION************************************************************** -->
+	<package name="CommonRegion" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Lc_Region"
+			class="ir.utopia.common.locality.region.action.RegionAction">
+			<result>/WEB-INF/pages/common/locality/region/Search_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Lc_Region">
+			<result>/WEB-INF/pages/common/locality/region/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Lc_Region">
+			<result>/WEB-INF/pages/common/locality/region/View_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Lc_Region"
+			class="ir.utopia.common.locality.region.action.RegionAction">
+			<result>/WEB-INF/pages/common/locality/region/Search_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/region/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/region/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Lc_Region">
+			<result>/WEB-INF/pages/common/locality/region/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Lc_Region"
+			class="ir.utopia.common.locality.region.action.RegionAction">
+			<result>/WEB-INF/pages/common/locality/region/Search_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/region/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/region/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Lc_Region"
+			class="ir.utopia.common.locality.region.action.RegionAction">
+			<result>/WEB-INF/pages/common/locality/region/Search_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/region/Search_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+			<result name="iput">/WEB-INF/pages/common/locality/region/Search_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** STATE************************************************************** -->
+	<package name="CommonState" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Lc_State"
+			class="ir.utopia.common.locality.state.action.StateAction">
+			<result>/WEB-INF/pages/common/locality/state/Search_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Lc_State">
+			<result>/WEB-INF/pages/common/locality/state/Save_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Lc_State">
+			<result>/WEB-INF/pages/common/locality/state/Veiw_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Lc_State"
+			class="ir.utopia.common.locality.state.action.StateAction">
+			<result>/WEB-INF/pages/common/locality/state/Search_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/state/Save_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/state/Save_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Lc_State">
+			<result>/WEB-INF/pages/common/locality/state/Save_Cm_Lc_Region.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Lc_State"
+			class="ir.utopia.common.locality.state.action.StateAction">
+			<result>/WEB-INF/pages/common/locality/state/Search_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/state/Save_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/state/Save_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Lc_State"
+			class="ir.utopia.common.locality.state.action.StateAction">
+			<result>/WEB-INF/pages/common/locality/state/Search_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/locality/state/Search_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/locality/state/Search_Cm_Lc_State.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** ORGANIZATION************************************************************** -->
+	<package name="CommonOrganization" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Organization"
+			class="ir.utopia.common.basicinformation.organization.action.OrganizationAction">
+			<result>/WEB-INF/pages/common/basicinformation/organization/Search_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Organization">
+			<result>/WEB-INF/pages/common/basicinformation/organization/Save_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Organization">
+			<result>/WEB-INF/pages/common/basicinformation/organization/View_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Organization"
+			class="ir.utopia.common.basicinformation.organization.action.OrganizationAction">
+			<result>/WEB-INF/pages/common/basicinformation/organization/Search_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/organization/Save_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/organization/Save_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Organization">
+			<result>/WEB-INF/pages/common/basicinformation/organization/Save_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Organization"
+			class="ir.utopia.common.basicinformation.organization.action.OrganizationAction">
+			<result>/WEB-INF/pages/common/basicinformation/organization/Search_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/organization/Save_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/organization/Save_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Organization"
+			class="ir.utopia.common.basicinformation.organization.action.OrganizationAction">
+			<result>/WEB-INF/pages/common/basicinformation/organization/Search_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/organization/Search_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/organization/Search_Cm_Bi_Organization.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+			<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** Business Partner ************************************************************** -->
+	<package name="CommonBpartner" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_BusinessPartner"
+			class="ir.utopia.common.basicinformation.businesspartner.action.BusinesPartnerAction">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/Search_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_BusinessPartner">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/Save_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_BusinessPartner">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/View_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_BusinessPartner"
+			class="ir.utopia.common.basicinformation.businesspartner.action.BusinesPartnerAction">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/Search_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/businessPartner/Save_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/businessPartner/Save_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_BusinessPartner">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/Save_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_BusinessPartner"
+			class="ir.utopia.common.basicinformation.businesspartner.action.BusinesPartnerAction">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/Search_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/businessPartner/Save_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/businessPartner/Save_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_BusinessPartner"
+			class="ir.utopia.common.basicinformation.businesspartner.action.BusinesPartnerAction">
+			<result>/WEB-INF/pages/common/basicinformation/businessPartner/Search_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/businessPartner/Search_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/businessPartner/Search_Cm_Bi_BusinesPartner.jsp?locale=${locale}
+			</result>
+		</action>
+
+	</package>
+<!-- ****************************************************< Request >****************************************************************************** -->
+	<package name="CommonRequest" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Request"
+			class="ir.utopia.common.basicinformation.request.action.RequestAction">
+			<result>/WEB-INF/pages/common/basicinformation/request/Search_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Request">
+			<result>/WEB-INF/pages/common/basicinformation/request/Save_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Request">
+			<result>/WEB-INF/pages/common/basicinformation/request/View_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Request"
+			class="ir.utopia.common.basicinformation.request.action.RequestAction">
+			<result>/WEB-INF/pages/common/basicinformation/request/Search_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/request/Save_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/request/Save_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Request">
+			<result>/WEB-INF/pages/common/basicinformation/request/Save_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Request"
+			class="ir.utopia.common.basicinformation.request.action.RequestAction">
+			<result>/WEB-INF/pages/common/basicinformation/request/Search_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/request/Save_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/request/Save_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Request"
+			class="ir.utopia.common.basicinformation.request.action.RequestAction">
+			<result>/WEB-INF/pages/common/basicinformation/request/Search_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/request/Search_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/request/Search_Cm_Bi_Request.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ****************************************************< Job Title >****************************************************************************** -->
+	<package name="CommonJobTitle" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_JobTitle"
+			class="ir.utopia.common.basicinformation.jobtitle.action.JobTitleAction">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/Search_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_JobTitle">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/Save_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_JobTitle">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/View_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_JobTitle"
+			class="ir.utopia.common.basicinformation.jobtitle.action.JobTitleAction">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/Search_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/jobtitle/Save_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/jobtitle/Save_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_JobTitle">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/Save_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_JobTitle"
+			class="ir.utopia.common.basicinformation.jobtitle.action.JobTitleAction">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/Search_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/jobtitle/Save_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/jobtitle/Save_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_JobTitle"
+			class="ir.utopia.common.basicinformation.jobtitle.action.JobTitleAction">
+			<result>/WEB-INF/pages/common/basicinformation/jobtitle/Search_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/jobtitle/Search_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/jobtitle/Search_Cm_Bi_JobTitle.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ****************************************************< Employee >****************************************************************************** -->
+    <package name="CommonEmployeeJSONS" namespace="/" extends="json-default">
+		<action name="nationalCodeCheck_Cm_Bi_Employee" class="ir.utopia.common.basicinformation.employee.action.EmployeeAction" method="nationalCodeCheck">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="CommonEmployee" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Employee"
+			class="ir.utopia.common.basicinformation.employee.action.EmployeeAction">
+			<result>/WEB-INF/pages/common/basicinformation/employee/Search_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Employee">
+			<result>/WEB-INF/pages/common/basicinformation/employee/Save_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Employee">
+			<result>/WEB-INF/pages/common/basicinformation/employee/View_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Employee"
+			class="ir.utopia.common.basicinformation.employee.action.EmployeeAction">
+			<result>/WEB-INF/pages/common/basicinformation/employee/Search_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/employee/Save_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/employee/Save_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Employee">
+			<result>/WEB-INF/pages/common/basicinformation/employee/Save_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Employee"
+			class="ir.utopia.common.basicinformation.employee.action.EmployeeAction">
+			<result>/WEB-INF/pages/common/basicinformation/employee/Search_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/employee/Save_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/employee/Save_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Employee"
+			class="ir.utopia.common.basicinformation.employee.action.EmployeeAction">
+			<result>/WEB-INF/pages/common/basicinformation/employee/Search_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/employee/Search_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/employee/Search_Cm_Bi_Employee.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** Location ************************************************************** -->
+	<package name="CommonLocation" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Location"
+			class="ir.utopia.common.basicinformation.location.action.LocationAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Location">
+			<result>/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Location">
+			<result>/WEB-INF/pages/common/basicinformation/location/View_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Location"
+			class="ir.utopia.common.basicinformation.location.action.LocationAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Location">
+			<result>/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Location"
+			class="ir.utopia.common.basicinformation.location.action.LocationAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Location"
+			class="ir.utopia.common.basicinformation.location.action.LocationAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ************************************************************** LocationOrg ************************************************************** -->
+	<package name="CommonLocationOrg" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_LocationOrg"
+			class="ir.utopia.common.basicinformation.location.action.LocationOrgAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_LocationOrg">
+			<result>/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_LocationOrg">
+			<result>/WEB-INF/pages/common/basicinformation/location/View_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_LocationOrg"
+			class="ir.utopia.common.basicinformation.location.action.LocationOrgAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_LocationOrg">
+			<result>/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_LocationOrg"
+			class="ir.utopia.common.basicinformation.location.action.LocationOrgAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/location/Save_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_LocationOrg"
+			class="ir.utopia.common.basicinformation.location.action.LocationOrgAction">
+			<result>/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/location/Search_Cm_Bi_Location.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ************************************************************** Supplier ************************************************************** -->
+	<package name="CommonSupplierJSONS" namespace="/" extends="json-default">
+		<action name="personNationalCodeCheck_Cm_Bi_Supplier" class="ir.utopia.common.basicinformation.supplier.action.SupplierAction" method="personNationalCodeCheck">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="companyNationalCodeCheck_Cm_Bi_Supplier" class="ir.utopia.common.basicinformation.supplier.action.SupplierAction" method="companyNationalCodeCheck">
+			<result type="json" name="success" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<package name="CommonSupplier" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Supplier"
+			class="ir.utopia.common.basicinformation.supplier.action.SupplierAction">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/Search_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Supplier">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/Save_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Supplier">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/View_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Supplier"
+			class="ir.utopia.common.basicinformation.supplier.action.SupplierAction">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/Search_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/supplier/Save_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/supplier/Save_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Supplier">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/Save_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Supplier"
+			class="ir.utopia.common.basicinformation.supplier.action.SupplierAction">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/Search_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/supplier/Save_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/supplier/Save_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Supplier"
+			class="ir.utopia.common.basicinformation.supplier.action.SupplierAction">
+			<result>/WEB-INF/pages/common/basicinformation/supplier/Search_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/supplier/Search_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/supplier/Search_Cm_Bi_Supplier.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+	<!-- ********************************************************************************************************************************** -->
+	<!-- ************************************************************** Notification ************************************************************** -->
+	<package name="CommonNotification" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Notification" class="ir.utopia.common.basicinformation.notification.action.NotificationAction">
+			<result>/WEB-INF/pages/common/basicinformation/notification/Search_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Notification">
+			<result>/WEB-INF/pages/common/basicinformation/notification/Save_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Notification">
+			<result>/WEB-INF/pages/common/basicinformation/notification/View_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Notification" class="ir.utopia.common.basicinformation.notification.action.NotificationAction">
+			<result>/WEB-INF/pages/common/basicinformation/notification/Search_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/notification/Save_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/notification/Save_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Notification">
+			<result>/WEB-INF/pages/common/basicinformation/notification/Save_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Notification" class="ir.utopia.common.basicinformation.notification.action.NotificationAction">
+			<result>/WEB-INF/pages/common/basicinformation/notification/Search_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/notification/Save_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/notification/Save_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Notification" class="ir.utopia.common.basicinformation.notification.action.NotificationAction">
+			<result>/WEB-INF/pages/common/basicinformation/notification/Search_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/notification/Search_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/notification/Search_Cm_Bi_Notification.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ****************************************************< Bank >****************************************************************************** -->
+	<package name="CommonBank" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Bank" class="ir.utopia.common.basicinformation.bank.action.BankAction">
+			<result>/WEB-INF/pages/common/basicinformation/bank/Search_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Bank">
+			<result>/WEB-INF/pages/common/basicinformation/bank/Save_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Bank">
+			<result>/WEB-INF/pages/common/basicinformation/bank/View_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Bank" class="ir.utopia.common.basicinformation.bank.action.BankAction">
+			<result>/WEB-INF/pages/common/basicinformation/bank/Search_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/bank/Save_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/bank/Save_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Bank">
+			<result>/WEB-INF/pages/common/basicinformation/bank/Save_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Bank" class="ir.utopia.common.basicinformation.bank.action.BankAction">
+			<result>/WEB-INF/pages/common/basicinformation/bank/Search_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/bank/Save_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/bank/Save_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Bank" class="ir.utopia.common.basicinformation.bank.action.BankAction">
+			<result>/WEB-INF/pages/common/basicinformation/bank/Search_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/bank/Search_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/bank/Search_Cm_Bi_Bank.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ****************************************************< Branch >****************************************************************************** -->
+	<package name="CommonBranch" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_Branch" class="ir.utopia.common.basicinformation.branch.action.BranchAction">
+			<result>/WEB-INF/pages/common/basicinformation/branch/Search_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_Branch">
+			<result>/WEB-INF/pages/common/basicinformation/branch/Save_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_Branch">
+			<result>/WEB-INF/pages/common/basicinformation/branch/View_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_Branch" class="ir.utopia.common.basicinformation.branch.action.BranchAction">
+			<result>/WEB-INF/pages/common/basicinformation/branch/Search_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/branch/Save_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/branch/Save_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_Branch">
+			<result>/WEB-INF/pages/common/basicinformation/branch/Save_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_Branch" class="ir.utopia.common.basicinformation.branch.action.BranchAction">
+			<result>/WEB-INF/pages/common/basicinformation/branch/Search_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/branch/Save_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/branch/Save_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_Branch" class="ir.utopia.common.basicinformation.branch.action.BranchAction">
+			<result>/WEB-INF/pages/common/basicinformation/branch/Search_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/branch/Search_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/branch/Search_Cm_Bi_Branch.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+<!-- ****************************************************< Employee Signature>****************************************************************************** -->
+	<package name="CommonEmployeeSignature" extends="UtopiaAuthorized">
+
+		<action name="search_Cm_Bi_EmployeeSignature"
+			class="ir.utopia.common.basicinformation.employeesignature.action.EmployeeSignatureAction">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/Search_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Cm_Bi_EmployeeSignature">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/Save_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Cm_Bi_EmployeeSignature">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/View_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Cm_Bi_EmployeeSignature"
+			class="ir.utopia.common.basicinformation.employeesignature.action.EmployeeSignatureAction">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/Search_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/employeesignature/Save_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/employeesignature/Save_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Cm_Bi_EmployeeSignature">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/Save_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Cm_Bi_EmployeeSignature"
+			class="ir.utopia.common.basicinformation.employeesignature.action.EmployeeSignatureAction">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/Search_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/employeesignature/Save_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/employeesignature/Save_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Cm_Bi_EmployeeSignature"
+			class="ir.utopia.common.basicinformation.employeesignature.action.EmployeeSignatureAction">
+			<result>/WEB-INF/pages/common/basicinformation/employeesignature/Search_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/common/basicinformation/employeesignature/Search_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/common/basicinformation/employeesignature/Search_Cm_Bi_EmployeeSignature.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+<!-- ********************************************************************************************************************************** -->
+</struts>

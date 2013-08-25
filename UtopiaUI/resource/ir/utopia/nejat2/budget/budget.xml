@@ -1,0 +1,1458 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- ************************************************* << Department >> ************************************************* -->
+	<package name="Department" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Department" class="ir.utopia.nejat2.budget.department.action.DepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/department/Search_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Department">
+			<result>/WEB-INF/pages/nejat2/budget/department/Save_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Department">
+			<result>/WEB-INF/pages/nejat2/budget/department/View_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Department" class="ir.utopia.nejat2.budget.department.action.DepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/department/Search_Bg_Bd_Department.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/department/Save_Bg_Bd_Department.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/department/Save_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Bd_Department">
+			<result>/WEB-INF/pages/nejat2/budget/department/Save_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Department" class="ir.utopia.nejat2.budget.department.action.DepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/department/Search_Bg_Bd_Department.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/department/Save_Bg_Bd_Department.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/department/Save_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Bd_Department" class="ir.utopia.nejat2.budget.department.action.DepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/department/Search_Bg_Bd_Department.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/department/Search_Bg_Bd_Department.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/department/Search_Bg_Bd_Department.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Department-FiscalYear >> ************************************************* -->
+	<package name="DepFiscalyear" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_DepFiscalyear" class="ir.utopia.nejat2.budget.depfiscalyear.action.DepFiscalyearAction">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/Search_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_DepFiscalyear">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/Save_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_DepFiscalyear">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/View_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_DepFiscalyear" class="ir.utopia.nejat2.budget.depfiscalyear.action.DepFiscalyearAction">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/Search_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/depFiscalyear/Save_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/depFiscalyear/Save_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Bg_Bd_DepFiscalyear">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/Save_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_DepFiscalyear" class="ir.utopia.nejat2.budget.depfiscalyear.action.DepFiscalyearAction">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/Search_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/depFiscalyear/Save_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/depFiscalyear/Save_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Bg_Bd_DepFiscalyear" class="ir.utopia.nejat2.budget.depfiscalyear.action.DepFiscalyearAction">
+			<result>/WEB-INF/pages/nejat2/budget/depFiscalyear/Search_Bg_Bd_DepFiscalyear.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/depFiscalyear/Search_Bg_Bd_DepFiscalyear.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/depFiscalyear/Search_Bg_Bd_DepFiscalyear.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Program >> ************************************************* -->
+	<package name="Program" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Program" class="ir.utopia.nejat2.budget.plan.action.ProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/program/Search_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Program">
+			<result>/WEB-INF/pages/nejat2/budget/program/Save_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Program">
+			<result>/WEB-INF/pages/nejat2/budget/program/View_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Program" class="ir.utopia.nejat2.budget.plan.action.ProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/program/Search_Bg_Bd_Program.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/program/Save_Bg_Bd_Program.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/program/Save_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Bd_Program">
+			<result>/WEB-INF/pages/nejat2/budget/program/Save_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Program" class="ir.utopia.nejat2.budget.plan.action.ProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/program/Search_Bg_Bd_Program.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/program/Save_Bg_Bd_Program.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/program/Save_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Bd_Program" class="ir.utopia.nejat2.budget.plan.action.ProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/program/Search_Bg_Bd_Program.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/program/Search_Bg_Bd_Program.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/program/Search_Bg_Bd_Program.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Plan >> ************************************************* -->
+	<package name="Plan" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Plan" class="ir.utopia.nejat2.budget.plan.action.PlanAction">
+			<result>/WEB-INF/pages/nejat2/budget/plan/Search_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Plan">
+			<result>/WEB-INF/pages/nejat2/budget/plan/Save_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Plan">
+			<result>/WEB-INF/pages/nejat2/budget/plan/View_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Plan" class="ir.utopia.nejat2.budget.plan.action.PlanAction">
+			<result>/WEB-INF/pages/nejat2/budget/plan/Search_Bg_Bd_Plan.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/plan/Save_Bg_Bd_Plan.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/plan/Save_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Bd_Plan">
+			<result>/WEB-INF/pages/nejat2/budget/plan/Save_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Plan" class="ir.utopia.nejat2.budget.plan.action.PlanAction">
+			<result>/WEB-INF/pages/nejat2/budget/plan/Search_Bg_Bd_Plan.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/plan/Save_Bg_Bd_Plan.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/plan/Save_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Bd_Plan" class="ir.utopia.nejat2.budget.plan.action.PlanAction">
+			<result>/WEB-INF/pages/nejat2/budget/plan/Search_Bg_Bd_Plan.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/plan/Search_Bg_Bd_Plan.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/plan/Search_Bg_Bd_Plan.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Plan-Program >> ************************************************* -->
+	<package name="PlanProgram" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_PlanProgram" class="ir.utopia.nejat2.budget.plan.action.PlanProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/Search_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_PlanProgram">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/Save_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_PlanProgram">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/View_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_PlanProgram" class="ir.utopia.nejat2.budget.plan.action.PlanProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/Search_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/planProgram/Save_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/planProgram/Save_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Bd_PlanProgram">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/Save_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_PlanProgram" class="ir.utopia.nejat2.budget.plan.action.PlanProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/Search_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/planProgram/Save_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/planProgram/Save_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Bd_PlanProgram" class="ir.utopia.nejat2.budget.plan.action.PlanProgramAction">
+			<result>/WEB-INF/pages/nejat2/budget/planProgram/Search_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/planProgram/Search_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/planProgram/Search_Bg_Bd_PlanProgram.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Project >> ************************************************* -->
+	<package name="Project" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Project" class="ir.utopia.nejat2.budget.project.action.ProjectAction">
+			<result>/WEB-INF/pages/nejat2/budget/project/Search_Bg_Bd_Project.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Project">
+			<result>/WEB-INF/pages/nejat2/budget/project/Save_Bg_Bd_Project.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Project">
+			<result>/WEB-INF/pages/nejat2/budget/project/View_Bg_Bd_Project.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Project" class="ir.utopia.nejat2.budget.project.action.ProjectAction">
+			<result>/WEB-INF/pages/nejat2/budget/project/Search_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/project/Save_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/project/Save_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<!-- <result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result> -->
+		</action>
+		<action name="go-update_Bg_Bd_Project">
+			<result>/WEB-INF/pages/nejat2/budget/project/Save_Bg_Bd_Project.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Project" class="ir.utopia.nejat2.budget.project.action.ProjectAction">
+			<result>/WEB-INF/pages/nejat2/budget/project/Search_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/project/Save_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/project/Save_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<!-- <result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result> -->
+		</action>
+		<action name="delete_Bg_Bd_Project" class="ir.utopia.nejat2.budget.project.action.ProjectAction">
+			<result>/WEB-INF/pages/nejat2/budget/project/Search_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/project/Search_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/project/Search_Bg_Bd_Project.jsp?locale=${locale}</result>
+			<!-- <result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result> -->
+		</action>
+	</package>
+
+	<!-- ************************************************* << CreditSource >> ************************************************* -->
+	<package name="CreditSource" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_CreditSource" class="ir.utopia.nejat2.budget.creditsource.action.CreditSourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/Search_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_CreditSource">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/Save_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_CreditSource">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/View_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_CreditSource" class="ir.utopia.nejat2.budget.creditsource.action.CreditSourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/Search_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/creditSource/Save_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/creditSource/Save_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Bg_Bd_CreditSource">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/Save_Bg_Bd_CreditType.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_CreditSource" class="ir.utopia.nejat2.budget.creditsource.action.CreditSourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/Search_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/creditSource/Save_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/creditSource/Save_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Bg_Bd_CreditSource" class="ir.utopia.nejat2.budget.creditsource.action.CreditSourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditSource/Search_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/creditSource/Search_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/creditSource/Search_Bg_Bd_CreditSource.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Section >> ************************************************* -->
+	<package name="Section" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Section" class="ir.utopia.nejat2.budget.section.action.SectionAction">
+			<result>/WEB-INF/pages/nejat2/budget/section/Search_Bg_Bd_Section.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Section">
+			<result>/WEB-INF/pages/nejat2/budget/section/Save_Bg_Bd_Section.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Section">
+			<result>/WEB-INF/pages/nejat2/budget/section/View_Bg_Bd_Section.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Section" class="ir.utopia.nejat2.budget.section.action.SectionAction">
+			<result>/WEB-INF/pages/nejat2/budget/section/Search_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/section/Save_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/section/Save_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Bg_Bd_Section">
+			<result>/WEB-INF/pages/nejat2/budget/section/Save_Bg_Bd_Section.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Section" class="ir.utopia.nejat2.budget.section.action.SectionAction">
+			<result>/WEB-INF/pages/nejat2/budget/section/Search_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/section/Save_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/section/Save_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Bg_Bd_Section" class="ir.utopia.nejat2.budget.section.action.SectionAction">
+			<result>/WEB-INF/pages/nejat2/budget/section/Search_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/section/Search_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/section/Search_Bg_Bd_Section.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Activity >> ************************************************* -->
+	<package name="Activity" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Activity" class="ir.utopia.nejat2.budget.activity.action.ActivityAction">
+			<result>/WEB-INF/pages/nejat2/budget/activity/Search_Bg_Bd_Activity.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Activity">
+			<result>/WEB-INF/pages/nejat2/budget/activity/Save_Bg_Bd_Activity.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Activity">
+			<result>/WEB-INF/pages/nejat2/budget/activity/View_Bg_Bd_Activity.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Activity" class="ir.utopia.nejat2.budget.activity.action.ActivityAction">
+			<result>/WEB-INF/pages/nejat2/budget/activity/Search_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/activity/Save_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/activity/Save_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Bg_Bd_Activity">
+			<result>/WEB-INF/pages/nejat2/budget/activity/Save_Bg_Bd_Activity.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Activity" class="ir.utopia.nejat2.budget.activity.action.ActivityAction">
+			<result>/WEB-INF/pages/nejat2/budget/activity/Search_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/activity/Save_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/activity/Save_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Bg_Bd_Activity" class="ir.utopia.nejat2.budget.activity.action.ActivityAction">
+			<result>/WEB-INF/pages/nejat2/budget/activity/Search_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/activity/Search_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/activity/Search_Bg_Bd_Activity.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Strategy >> ************************************************* -->
+	<package name="Strategy" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_Strategy" class="ir.utopia.nejat2.budget.strategy.action.StrategyAction">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/Search_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Bd_Strategy">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/Save_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_Strategy">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/View_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_Strategy" class="ir.utopia.nejat2.budget.strategy.action.StrategyAction">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/Search_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/strategy/Save_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/strategy/Save_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Bg_Bd_Strategy">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/Save_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_Strategy" class="ir.utopia.nejat2.budget.strategy.action.StrategyAction">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/Search_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/strategy/Save_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/strategy/Save_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Bg_Bd_Strategy" class="ir.utopia.nejat2.budget.strategy.action.StrategyAction">
+			<result>/WEB-INF/pages/nejat2/budget/strategy/Search_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/strategy/Search_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/strategy/Search_Bg_Bd_Strategy.jsp?locale=${locale}</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+	<!-- ************************************************* << Percentage Deduction >> ************************************************* -->
+	<package name="PercentageDeduction" extends="UtopiaAuthorized">
+		<action name="search_Bg_Bd_PercentageDeduction" class="ir.utopia.nejat2.budget.percentagededuction.action.PercentageDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/Search_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>            
+		<action name="go-save_Bg_Bd_PercentageDeduction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/Save_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Bd_PersentageDeduction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/View_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Bd_PercentageDeduction" class="ir.utopia.nejat2.budget.percentagededuction.action.PercentageDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/Search_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/percentagededuction/Save_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/percentagededuction/Save_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Bd_PercentageDeduction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/Save_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Bd_PercentageDeduction" class="ir.utopia.nejat2.budget.percentagededuction.action.PercentageDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/Search_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/percentagededuction/Save_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/percentagededuction/Save_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Bd_PercentageDeduction" class="ir.utopia.nejat2.budget.percentagededuction.action.PercentageDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/percentagededuction/Search_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/percentagededuction/Search_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/percentagededuction/Search_Bg_Bd_PercentageDeduction.jsp?locale=${locale}</result>
+		</action>
+	</package>
+	<!-- ************************************************* << Value Deductions >> ************************************************* -->
+	<package name="ValueDeduction" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_ValueDeduction" class="ir.utopia.nejat2.budget.valuededuction.action.ValueDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/Search_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_ValueDeduction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/Save_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_ValueDeduction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/View_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_ValueDeduction" class="ir.utopia.nejat2.budget.valuededuction.action.ValueDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/Search_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/valuededuction/Save_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/valuededuction/Save_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Pr_ValueDeduction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/Save_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_ValueDeduction" class="ir.utopia.nejat2.budget.valuededuction.action.ValueDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/Search_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/valuededuction/Save_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/valuededuction/Save_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Pr_ValueDeduction" class="ir.utopia.nejat2.budget.valuededuction.action.ValueDeductionAction">
+			<result>/WEB-INF/pages/nejat2/budget/valuededuction/Search_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/valuededuction/Search_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/valuededuction/Search_Bg_Pr_ValueDeduction.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Approved Credits >> ************************************************* -->
+	<package name="CreditMaster" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_CreditMaster" class="ir.utopia.nejat2.budget.creditmaster.action.CreditMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/Search_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_CreditMaster">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/Save_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_CreditMaster">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/View_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_CreditMaster" class="ir.utopia.nejat2.budget.creditmaster.action.CreditMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/Search_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/creditMaster/Save_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/creditMaster/Save_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-update_Bg_Pr_CreditMaster">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/Save_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_CreditMaster" class="ir.utopia.nejat2.budget.creditmaster.action.CreditMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/Search_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/creditMaster/Save_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/creditMaster/Save_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="delete_Bg_Pr_CreditMaster" class="ir.utopia.nejat2.budget.creditmaster.action.CreditMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/creditMaster/Search_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/creditMaster/Search_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/creditMaster/Search_Bg_Pr_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-report_Bg_Pr_CreditMaster">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_CreditMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Agreements: Master >> ************************************************* -->
+	<package name="AgreementMasterJSONS" namespace="/" extends="json-default">
+	    
+		<action name="UnitManagerConfirm_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		
+		<action name="DevelopmentManagerConfirm_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="ACCOUNTINGUNITManagerConfirm_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		
+		
+		<action name="BUDGETManagerConfirm_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		
+	</package>
+
+
+	<package name="AgreementMaster" 	extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AgreementMaster">
+			<result>/WEB-INF/pages/nejat2/budget/agreementMaster/Save_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AgreementMaster">
+			<result>/WEB-INF/pages/nejat2/budget/agreementMaster/View_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result >/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementMaster/Save_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementMaster/Save_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+		</action> 
+
+
+<action name="go-update_Bg_Pr_AgreementMaster">
+			<result>/WEB-INF/pages/nejat2/budget/agreementMaster/Save_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementMaster/Save_Bg_Pr_Agreement_Master.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementMaster/Save_Bg_Pr_Agreement_Master.jsp?locale=${locale}
+			</result>
+		</action>
+		
+			
+  	    
+  	 			
+   		<action name="delete_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction">
+  	 		<result >/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreemen_tMaster.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="confirm_Bg_Pr_AgreementMaster" class="ir.utopia.nejat2.budget.agreementmaster.action.AgreementMasterAction" method="confirm">
+			<result >/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/agreementMaster/Search_Bg_Pr_Agreement_Master.jsp?locale=${locale}</result>
+   		</action>
+   		
+   		<action name="go-report_Bg_Pr_AgreementMaster">
+   			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AgreementMaster.jsp?locale=${locale}</result>
+			
+		</action>
+		
+   	
+	</package>	
+
+	<!-- ************************************************* << Agreements: Detail >> ************************************************* -->
+	<package name="AgreementDetailSubdtl" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AgreementDetailSubdtl" class="ir.utopia.nejat2.budget.agreementdetail.action.AgreementDetailSubdtlAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/Search_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AgreementDetailSubdtl">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/Save_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AgreementDetailSubdtl">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/View_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AgreementDetailSubdtl" class="ir.utopia.nejat2.budget.agreementdetail.action.AgreementDetailSubdtlAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/Search_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementDetail/Save_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementDetail/Save_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AgreementDetailSubdtl">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/Save_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AgreementDetailSubdtl" class="ir.utopia.nejat2.budget.agreementdetail.action.AgreementDetailSubdtlAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/Search_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementDetail/Save_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementDetail/Save_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AgreementDetailSubdtl" class="ir.utopia.nejat2.budget.agreementdetail.action.AgreementDetailSubdtlAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementDetail/Search_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementDetail/Search_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementDetail/Search_Bg_Pr_Agreement_DetailSubdtl.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Agreements: Credits >> ************************************************* -->
+	<package name="AgreementCredits" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AgreementCredits" class="ir.utopia.nejat2.budget.agreementcredits.action.AgreementCreditsAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/Search_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AgreementCredits">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/Save_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AgreementCredits">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/View_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AgreementCredits" class="ir.utopia.nejat2.budget.agreementcredits.action.AgreementCreditsAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/Search_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementCredits/Save_Bg_Pr_AgreementCredits.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementCredits/Save_Bg_Pr_AgreementCredits.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AgreementCredits">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/Save_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_AgreementCredits" class="ir.utopia.nejat2.budget.agreementcredits.action.AgreementCreditsAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/Search_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementCredits/Save_Bg_Pr_AgreementCredits.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementCredits/Save_Bg_Pr_AgreementCredits.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AgreementCredits" class="ir.utopia.nejat2.budget.agreementcredits.action.AgreementCreditsAction">
+			<result>/WEB-INF/pages/nejat2/budget/agreementCredits/Search_Bg_Pr_AgreementCredits.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/agreementCredits/Search_Bg_Pr_AgreementCredits.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/agreementCredits/Search_Bg_Pr_AgreementCredits.jsp?locale=${locale}
+			</result>
+			<result name="json" type="json">
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Announcements: Master >> ************************************************* -->
+	<package name="AnnounceMaster" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AnnounceMaster" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/Search_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AnnounceMaster">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AnnounceMaster">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/View_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AnnounceMaster" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/Search_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/announceMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/announceMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AnnounceMaster">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_AnnounceMaster" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/Search_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/announceMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/announceMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AnnounceMaster" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/announceMaster/Search_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/announceMaster/Search_Bg_Pr_AnnounceMaster.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/announceMaster/Search_Bg_Pr_AnnounceMaster.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Announcement: Allocate >> ************************************************* -->
+	
+	<package name="AnnounceAllocateJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>	
+	
+
+	<package name="AnnounceAllocate" 	extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AnnounceAllocate">
+			<result>/WEB-INF/pages/nejat2/budget/announceAllocate/Save_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AnnounceAllocate">
+			<result>/WEB-INF/pages/nejat2/budget/announceAllocate/View_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+			<result >/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/announceAllocate/Save_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/announceAllocate/Save_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Bg_Pr_AnnounceAllocate">
+			<result>/WEB-INF/pages/nejat2/budget/announceAllocate/Save_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+  	 			<result >/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/budget/announceAllocate/Save_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/budget/announceAllocate/Save_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction">
+  	 		<result >/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocatet.jsp?locale=${locale}</result>
+   		</action>
+   
+   		 
+   		<action name="confirm_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction" method="confirm">
+			<result >/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="updateFromDashboard_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction" method="update">
+			<result >/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="reject_Bg_Pr_AnnounceAllocate" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceAllocateAction" method="reject">
+			<result >/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceAllocate/Search_Bg_Pr_AnnounceAllocate.jsp?locale=${locale}</result>
+   		</action>
+   	  
+   	</package>	
+   		
+   		<!-- ************************************************************<< AnnounceCentral >>********************************************************* -->
+   		<package name="AnnounceCentralJSONS" namespace="/" extends="json-default">
+	    <action name="Cancel_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+		</action>
+		<action name="confirm_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="updateFromDashboard_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+   		<action name="reject_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+			<result type="json" name="json" >
+				<param name="ignoreHierarchy">false</param>
+				<param name="excludeProperties">
+				    metaData
+				  </param>
+			</result>
+   		</action>
+	</package>
+	
+	<package name="AnnounceCentral" 	extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+												    	
+		<result>/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AnnounceCentral">
+			<result>/WEB-INF/pages/nejat2/budget/announceCentral/Save_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AnnounceCentral">
+			<result>/WEB-INF/pages/nejat2/budget/announceCentral/View_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+			<result >/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/announceCentral/Save_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/announceCentral/Save_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+		</action> 
+		<action name="go-update_Bg_Pr_AnnounceCentral">
+			<result>/WEB-INF/pages/nejat2/budget/announceCentral/Save_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+		</action>
+  	    <action name="update_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+  	 			<result >/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   				<result name="error">/WEB-INF/pages/nejat2/budget/announceCentral/Save_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   				<result name="input">/WEB-INF/pages/nejat2/budget/announceCentral/Save_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+  		 </action>
+   		<action name="delete_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction">
+  	 		<result >/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   			<result name="input">/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentralt.jsp?locale=${locale}</result>
+   		</action>
+   		
+   		<action name="confirm_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction" method="confirm">
+			<result >/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="updateFromDashboard_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction" method="update">
+			<result >/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   		</action>
+   		<action name="reject_Bg_Pr_AnnounceCentral" class="ir.utopia.nejat2.budget.announcemaster.action.AnnounceCentralAction" method="reject">
+			<result >/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   			<result name="error">/WEB-INF/pages/nejat2/budget/announceCentral/Search_Bg_Pr_AnnounceCentral.jsp?locale=${locale}</result>
+   		</action>
+   	  
+	</package>
+
+	<!-- ************************************************* << Allocations: Master >> ************************************************* -->
+	<package name="AllocateMaster" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateMaster" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/Search_Bg_Pr_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateMaster">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/Save_Bg_Pr_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateMaster">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/View_Bg_Pr_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateMaster" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/Search_Bg_Pr_AllocateMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateMaster/Save_Bg_Pr_AllocateMaster.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateMaster/Save_Bg_Pr_AllocateMaster.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateMaster">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/Save_Bg_Pr_AnnounceMaster.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateMaster" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/Search_Bg_Pr_AllocateMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateMaster/Save_Bg_Pr_AllocateMaster.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateMaster/Save_Bg_Pr_AllocateMaster.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateMaster" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateMasterAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateMaster/Search_Bg_Pr_AllocateMaster.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateMaster/Search_Bg_Pr_AllocateMaster.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateMaster/Search_Bg_Pr_AllocateMaster.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocations: Current >> ************************************************* -->
+	<package name="AllocateCurrent" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateCurrent" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCurrentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/Search_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateCurrent">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/Save_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateCurrent">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/View_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateCurrent" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCurrentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/Search_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCurrent/Save_Bg_Pr_AllocateCurrent.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCurrent/Save_Bg_Pr_AllocateCurrent.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateCurrent">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/Save_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateCurrent" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCurrentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/Search_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCurrent/Save_Bg_Pr_AllocateCurrent.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCurrent/Save_Bg_Pr_AllocateCurrent.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateCurrent" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCurrentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCurrent/Search_Bg_Pr_AllocateCurrent.jsp?locale=${locale}</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCurrent/Search_Bg_Pr_AllocateCurrent.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCurrent/Search_Bg_Pr_AllocateCurrent.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateCurrent">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocations: Proprietary Revenue >> ************************************************* -->
+	<package name="AllocateProprietaryRevenue" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateProprietaryRevenue" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateProprietaryRevenueAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Search_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateProprietaryRevenue">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Save_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateProprietaryRevenue">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/View_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateProprietaryRevenue" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateProprietaryRevenueAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Search_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Save_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Save_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateProprietaryRevenue">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Save_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateProprietaryRevenue" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateProprietaryRevenueAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Search_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Save_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Save_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateProprietaryRevenue" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateProprietaryRevenueAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Search_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Search_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateProprietaryRevenue/Search_Bg_Pr_AllocateProprietaryRevenue.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateProprietaryRevenue">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocations: Capital Asset >> ************************************************* -->
+	<package name="AllocateCapitalAsset" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateCapitalAsset" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCapitalAssetAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Search_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateCapitalAsset">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Save_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateCapitalAsset">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/View_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateCapitalAsset" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCapitalAssetAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Search_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Save_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Save_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateCapitalAsset">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Save_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateCapitalAsset" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCapitalAssetAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Search_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Save_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Save_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateCapitalAsset" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCapitalAssetAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Search_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Search_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCapitalAsset/Search_Bg_Pr_AllocateCapitalAsset.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateCapitalAsset">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocations: Centralized Department >> ************************************************* -->
+	<package name="AllocateCentralizedDepartment" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateCentralizedDepartment" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedDepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Search_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateCentralizedDepartment">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Save_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateCentralizedDepartment">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/View_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateCentralizedDepartment" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedDepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Search_Bg_Pr_AllocateCentralizedDepartmente.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Save_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Save_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateCentralizedDepartment">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Save_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateCentralizedDepartment" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedDepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Search_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Save_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Save_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateCentralizedDepartment" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedDepartmentAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Search_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Search_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCentralizedDepartment/Search_Bg_Pr_AllocateCentralizedDepartment.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateCentralizedDepartment">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocations: Centralized Propritary >> ************************************************* -->
+	<package name="AllocateCentralizedPropritary" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateCentralizedPropritary" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedPropritaryAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Search_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateCentralizedPropritary">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Save_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateCentralizedPropritary">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/View_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateCentralizedPropritary" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedPropritaryAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Search_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Save_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Save_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateCentralizedPropritary">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Save_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateCentralizedPropritary" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedPropritaryAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Search_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Save_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Save_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateCentralizedPropritary" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateCentralizedPropritaryAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Search_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Search_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateCentralizedPropritary/Search_Bg_Pr_AllocateCentralizedPropritary.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateCentralizedPropritary">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocations: Annual Surplus >> ************************************************* -->
+	<package name="AllocateAnnualSurplus" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_AllocateAnnualSurplus" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateAnnualSurplusAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Search_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateAnnualSurplus">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Save_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateAnnualSurplus">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/View_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateAnnualSurplus" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateAnnualSurplusAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Search_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Save_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Save_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateAnnualSurplus">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Save_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateAnnualSurplus" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateAnnualSurplusAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Search_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Save_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Save_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateAnnualSurplus" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateAnnualSurplusAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Search_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Search_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateAnnualSurplus/Search_Bg_Pr_AllocateAnnualSurplus.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateAnnualSurplus">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Allocation: Other Resources >> ************************************************* -->
+	<package name="AllocateOtherResource" extends="UtopiaAuthorized">
+	 <action name="search_Bg_Pr_AllocateOtherResource" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateOtherResourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/Search_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_AllocateOtherResource">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_AllocateOtherResource">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/View_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_AllocateOtherResource" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateOtherResourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/Search_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateOtherResource/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateOtherResource/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_AllocateOtherResource">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_AllocateOtherResource" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateOtherResourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/Search_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateOtherResource/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateOtherResource/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_AllocateOtherResource" class="ir.utopia.nejat2.budget.allocatemaster.action.AllocateOtherResourceAction">
+			<result>/WEB-INF/pages/nejat2/budget/allocateOtherResource/Search_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/allocateOtherResource/Search_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/allocateOtherResource/Search_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-report_Bg_Pr_AllocateOtherResource">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AllocateMaster.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+<!-- ************************************************* << Residual Amount >> ************************************************* -->
+	<package name="Residualamount" extends="UtopiaAuthorized">
+	 <action name="search_Bg_Pr_Residualamount" class="ir.utopia.nejat2.budget.residualamount.action.ResidualamountAction">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/Search_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-save_Bg_Pr_Residualamount">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/Save_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-view_Bg_Pr_Residualamount">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/View_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="save_Bg_Pr_Residualamount" class="ir.utopia.nejat2.budget.residualamount.action.ResidualamountAction">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/Search_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/residualamount/Save_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/residualamount/Save_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="go-update_Bg_Pr_Residualamount">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/Save_Bg_Pr_AllocateOtherResource.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="update_Bg_Pr_Residualamount" class="ir.utopia.nejat2.budget.residualamount.action.ResidualamountAction">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/Search_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/residualamount/Save_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/residualamount/Save_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+		</action>
+		<action name="delete_Bg_Pr_Residualamount" class="ir.utopia.nejat2.budget.residualamount.action.ResidualamountAction">
+			<result>/WEB-INF/pages/nejat2/budget/residualamount/Search_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+			<result name="error">/WEB-INF/pages/nejat2/budget/residualamount/Search_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+			<result name="input">/WEB-INF/pages/nejat2/budget/residualamount/Search_Bg_Pr_Residualamount.jsp?locale=${locale}
+			</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Cardex >> ************************************************* -->
+	 <package name="Cardex" extends="UtopiaAuthorized">
+		<action name="search_Bg_Pr_Cardex">
+			<result>/WEB-INF/pages/nejat2/budget/cardex/Search_Bg_Pr_Cardex.jsp?locale=${locale}</result>
+		</action>
+	</package>
+ 
+	<!-- ************************************************* << Department Report >> ************************************************* -->
+	<package name="DepartmentReport" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_DepartmentReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_DepartmentReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_DepartmentReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_DepartmentReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Plan-Program Report >> ************************************************* -->
+	<package name="PlanReport" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_PlanReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_PlanReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_PlanReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_PlanReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Project Report >> ************************************************* -->
+	<package name="ProjectReport" extends="struts-default">
+		<action name="go-report_Bg_Rp_ProjectReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_ProjectReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Department-Plan Report >> ************************************************* -->
+	<package name="DepartmentPlanReport" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_DepartmentPlanReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_DepartmentPlanReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_DepartmentPlanReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_DepartmentPlanReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+
+
+	<!-- ************************************************* << Plan-Project Report >> ************************************************* -->
+	<package name="ProjectsPlanReport" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_ProjectsPlanReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_ProjectsPlanReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_ProjectsPlanReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_ProjectsPlanReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << CreditSource Report >> ************************************************* -->
+	<package name="CreditSourceReport" extends="struts-default">
+		<action name="go-report_Bg_Rp_CreditSourceReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_CreditSourceReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Section Report >> ************************************************* -->
+	<package name="SectionReport" extends="struts-default">
+		<action name="go-report_Bg_Rp_SectionReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_SectionReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Activity Report >> ************************************************* -->
+	<package name="ActivityReport" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_ActivityReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_ActivityReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_ActivityReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_ActivityReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Activity-Section Report >> ************************************************* -->
+	<package name="SectionActivityReport" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_SectionActivityReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_SectionActivityReport.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_SectionActivityReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_SectionActivityReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Sterategy Report >> ************************************************* -->
+	<package name="SterategyReport" extends="struts-default">
+		<action name="go-report_Bg_Rp_SterategyReport">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_SterategyReport.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Approved Credits Report >> ************************************************* -->
+	<package name="ApprovedCredits" extends="struts-default">
+		<action name="go-report_Bg_Rp_ApprovedCredits">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_ApprovedCredits.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << ApprovedCreditForDep Report >> ************************************************* -->
+	<package name="ApprovedCredit" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_ApprovedCreditForDep">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_ApprovedCreditForDep.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_ApprovedCreditForDep">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_ApprovedCreditForDep.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+	<!-- ************************************************* << Credits Configuration >> ************************************************* -->
+	<package name="ActivityDimOperation" extends="UtopiaAuthorizedGWT">
+		<action name="loadDimension_Bg_Bd_Activity" class="ir.utopia.nejat2.budget.activity.action.ActivityAction"
+			method="loadForAccountDimension">
+			<result>/WEB-INF/pages/nejat2/credit/creditConfig/crediConfig.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+<!-- ************************************************* << Bg_Rp_CreditsAllocatCompare Report >> ************************************************* -->
+	<package name="CreditsAllocatedCompare" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_CreditsAllocatedCompare">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_CreditsAllocatedCompare.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_CreditsAllocatedCompare">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_CreditsAllocatedCompare.jsp?locale=${locale}</result>
+		</action>
+	</package>
+<!-- ************************************************* << Bg_Rp_AnnounceReports Report >> ************************************************* -->
+	 <package name="AnnounceReports" extends="UtopiaAuthorized">
+		<action name="search_Bg_Rp_AnnounceReports">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Search_Bg_Rp_AnnounceReports.jsp?locale=${locale}</result>
+		</action>
+		<action name="report_Bg_Rp_AnnounceReports">
+			<result>/WEB-INF/pages/nejat2/budget/Reports/Report_Bg_Rp_AnnounceReports.jsp?locale=${locale}</result>
+		</action>
+	</package>
+
+
+</struts>
