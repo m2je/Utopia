@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="resource"/>
+	<classpathentry kind="src" path="src/main/resource"/>
+	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCommon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaUI"/>

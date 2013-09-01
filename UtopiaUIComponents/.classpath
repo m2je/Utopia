@@ -1,23 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts2"/>
-	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/google/gwtExt/gwtext2.0.6.jar"/>
-	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/google/gwtExt/gwtextux0.3.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry kind="var" path="M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/javax/javaee-api/6.0/javaee-api-6.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/jasypt/jasypt/1.5/jasypt-1.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.1/commons-lang-2.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.1/commons-codec-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/opensymphony/xwork/2.0.7/xwork-2.0.7.jar"/>
+	<classpathentry kind="var" path="M2_REPO/opensymphony/ognl/2.6.11/ognl-2.6.11.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/struts/struts2-core/2.3.4/struts2-core-2.3.4.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/struts/xwork/xwork-core/2.3.4/xwork-core-2.3.4.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/ognl/ognl/3.0.5/ognl-3.0.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javassist/javassist/3.11.0.GA/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="var" path="M2_REPO/asm/asm/3.3/asm-3.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/asm/asm-commons/3.3/asm-commons-3.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/asm/asm-tree/3.3/asm-tree-3.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/freemarker/freemarker/2.3.19/freemarker-2.3.19.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-fileupload/commons-fileupload/1.2.2/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/quartz-scheduler/quartz/2.1.0/quartz-2.1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.0.5/jackson-core-2.0.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.0.5/jackson-module-jaxb-annotations-2.0.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.0.5/jackson-databind-2.0.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.0.5/jackson-annotations-2.0.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/net/sourceforge/jexcelapi/jxl/2.6/jxl-2.6.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/jdom/jdom/1.1/jdom-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-user/2.4.0/gwt-user-2.4.0.jar"/>
+	<classpathentry kind="lib" path="F:/workspaces/git/UtopiaLib/Thirdparty/google/gwtExt/gwtext.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCommon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCore"/>
-	<classpathentry kind="lib" path="/UtopiaUI/classes" sourcepath="/UtopiaUI"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaSecurityHandler"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaUI"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
-	<classpathentry kind="con" path="oracle.eclipse.tools.weblogic.lib.system">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.utility"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Oracle WebLogic Server 12c (12.1.2) JRE">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="oracle.eclipse.tools.weblogic.lib.application/UtopiaEar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

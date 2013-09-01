@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="ejbModule"/>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCommon"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCore"/>
-	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/jasypt/jasypt-1.5.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts2"/>
-	<classpathentry kind="con" path="oracle.eclipse.tools.weblogic.lib.system">
-		<attributes>
-			<attribute name="owner.project.facets" value="#system#;jst.ejb"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Apache-commons"/>
-	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/jasypt/commons-codec-1.1.jar"/>
-	<classpathentry kind="lib" path="/UtopiaLib/Thirdparty/jasypt/commons-lang-2.1.jar"/>
-	<classpathentry kind="output" path="build/classes"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/javax/javaee-api/6.0/javaee-api-6.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jasypt/jasypt/1.5/jasypt-1.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.1/commons-lang-2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.1/commons-codec-1.1.jar"/>
+  <classpathentry kind="lib" path="C:/Users/Mehdi/git/Utopia/UtopiaCore/target/utopia-core-1.0-SNAPSHOT.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/opensymphony/xwork/2.0.7/xwork-2.0.7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/opensymphony/ognl/2.6.11/ognl-2.6.11.jar"/>
 </classpath>

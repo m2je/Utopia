@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ir.utopia</groupId>
+  <artifactId>utopia-ui</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>utopia-ui</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+      <utopia-core-path>C:\Users\Mehdi\git\Utopia\UtopiaCore\target\utopia-core-1.0-SNAPSHOT.jar</utopia-core-path>
+      <utopia-common-path>C:\Users\Mehdi\git\Utopia\UtopiaCommon\target\utopia-common-1.0-SNAPSHOT.jar</utopia-common-path>
+      
+      <utopia-security-handler-path>C:\Users\Mehdi\git\Utopia\UtopiaSecurityHandler\target\utopia-security-1.0-SNAPSHOT.jar</utopia-security-handler-path>
+      <utopia-ui-path>C:\Users\Mehdi\git\Utopia\UtopiaUI\target\utopia-ui-1.0-SNAPSHOT.jar</utopia-ui-path>
+      <xwork-version>2.0.7</xwork-version>
+      <struts-version>2.3.4</struts-version>
+  </properties>
+  <dependencies>
+	
+	<dependency>
+	   <groupId>javax</groupId>
+	   <artifactId>javaee-api</artifactId>
+	   <version>6.0</version>
+	   <scope>provided</scope>
+	</dependency>
+	
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+		<version>1.8.3</version>
+	</dependency>
+    
+	
+	<dependency>
+	   <groupId>ir.utopia</groupId>
+	   <artifactId>utopia-core</artifactId>
+	   <version>1.0-SNAPSHOT</version>
+	   <scope>system</scope>
+	   <systemPath>${utopia-core-path}</systemPath>
+	</dependency>
+	
+    <dependency>
+	   <groupId>ir.utopia</groupId>
+	   <artifactId>utopia-common</artifactId>
+	   <version>1.0-SNAPSHOT</version>
+	   <scope>system</scope>
+	   <systemPath>${utopia-common-path}</systemPath>
+	</dependency>
+	
+	<dependency>
+	   <groupId>ir.utopia</groupId>
+	   <artifactId>utopia-ui</artifactId>
+	   <version>1.0-SNAPSHOT</version>
+	   <scope>system</scope>
+	   <systemPath>${utopia-ui-path}</systemPath>
+	</dependency>
+	
+    <dependency>
+	   <groupId>ir.utopia</groupId>
+	   <artifactId>utopia-security</artifactId>
+	   <version>1.0-SNAPSHOT</version>
+	   <scope>system</scope>
+	   <systemPath>${utopia-security-handler-path}</systemPath>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.opensymphony</groupId>
+		<artifactId>xwork</artifactId>
+		<version>${xwork-version}</version>
+	</dependency>
+            
+	<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>${struts-version}</version>
+	</dependency>
+            
+     <dependency>
+		<groupId>com.google.gwt</groupId>
+		<artifactId>gwt-user</artifactId>
+		<version>2.4.0</version>
+	</dependency>
+            
+  </dependencies>
+</project>

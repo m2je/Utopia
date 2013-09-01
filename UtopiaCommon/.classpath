@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts2"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/javax/javaee-api/6.0/javaee-api-6.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCore"/>
-	<classpathentry kind="con" path="oracle.eclipse.tools.weblogic.lib.system">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.ejb"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Oracle WebLogic Server 12c (12.1.2) JRE">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
