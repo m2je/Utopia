@@ -37,6 +37,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCommon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaCore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaSecurityHandler"/>
-	<classpathentry kind="lib" path="/UtopiaUIComponents/war/WEB-INF/classes"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/UtopiaUIComponents"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

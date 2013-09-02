@@ -126,7 +126,9 @@ public class Cache<K,V> {
 		return map.values();
 	}
 
-
+	public void clear(){
+		map.clear();
+	}
 
 
 }

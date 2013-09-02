@@ -40,6 +40,7 @@ public class AuthenticateAction extends ActionSupport implements ModelDriven<Aut
 	
 	private static final Logger logger;
 	
+	public static final String IS_LOCAL_APPLICATION_KEY="__is_local_application";
 	static {
 		logger = Logger.getLogger(AuthenticateAction.class.getName());
 	}

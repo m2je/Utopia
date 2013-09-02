@@ -33,6 +33,7 @@ function redirectParent(){
 	}
 }
 </script>
+<%session.setAttribute(AuthenticateAction.IS_LOCAL_APPLICATION_KEY, true); %>
 <script type="text/javascript" src="./js/json.js"></script>
 <script type="text/javascript" src="./js/prototype.js"></script>
 <script type="text/javascript" src="./js/com_sun_faces_ajax.js"></script>

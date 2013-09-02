@@ -31,6 +31,7 @@ public interface SecurityProvider extends BasicCorePlugin{
 	
 	public static final String TOKEN_KEY_NAME="authentication_token";
 	
+	
 	/**
 	 * set attribute value base of elements in side configuration at security configuration
 	 * tag

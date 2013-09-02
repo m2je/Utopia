@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+
+    <rule>
+       <condition type="method">POST</condition> 
+       <run class="ir.utopia.core.dispatch.UtopiaAPIDispatcher" method="process">
+           <init-param>
+               <param-name>action_class</param-name>
+               <param-value>ir.utopia.security.authentication.AuthenticateAction</param-value>
+           </init-param>
+       </run>
+       <from>/api/login</from>
+       <to  last="true"></to>
+    </rule>
+
+ 
+
+</urlrewrite>
