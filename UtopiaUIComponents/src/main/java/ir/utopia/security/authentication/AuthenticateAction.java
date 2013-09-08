@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import javax.naming.NamingException;
 import javax.security.auth.Subject;
+import javax.ws.rs.Path;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -58,8 +59,10 @@ public class AuthenticateAction extends ActionSupport implements ModelDriven<Aut
 	
 	
 	}
-
-	
+	@Path("/login")
+	public void login(AuthenticationForm form){
+		
+	}
 	
 	@Override
 	public String execute() throws Exception {

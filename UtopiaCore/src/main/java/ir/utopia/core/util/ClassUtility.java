@@ -1,5 +1,8 @@
 package ir.utopia.core.util;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.TypeVariable;
@@ -12,6 +15,12 @@ import java.util.logging.Logger;
 
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlTransient;
+
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.Type;
+import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.LocalVariableNode;
+import org.objectweb.asm.tree.MethodNode;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -215,4 +224,105 @@ public class ClassUtility {
 		}
 		
 	}
+//**********************************************************************************
+	public static List<String> getParameterNames(Method imethod) {
+		try {
+			Class<?> declaringClass = imethod.getDeclaringClass();
+			ClassLoader declaringClassLoader = declaringClass.getClassLoader();
+
+			Type declaringType = Type.getType(declaringClass);
+			String constructorDescriptor = Type.getMethodDescriptor(imethod);
+			
+			String url = declaringType.getInternalName() + ".class";
+
+			InputStream classFileInputStream = declaringClassLoader.getResourceAsStream(url);
+			if (classFileInputStream == null) {
+			    throw new IllegalArgumentException("The constructor's class loader cannot find the bytecode that defined the constructor's class (URL: " + url + ")");
+			}
+
+			ClassNode classNode;
+			try {
+			    classNode = new ClassNode();
+			    ClassReader classReader = new ClassReader(classFileInputStream);
+			    classReader.accept(classNode, 0);
+			} finally {
+			    classFileInputStream.close();
+			}
+
+			@SuppressWarnings("unchecked")
+			List<MethodNode> methods = classNode.methods;
+			for (MethodNode method : methods) {
+			    if (method.name.equals(imethod.getName()) &&  method.desc.equals(constructorDescriptor)) {
+			        Type[] argumentTypes = Type.getArgumentTypes(method.desc);
+			        List<String> parameterNames = new ArrayList<String>(argumentTypes.length);
+
+			        @SuppressWarnings("unchecked")
+			        List<LocalVariableNode> localVariables = method.localVariables;
+			        for (int i = 0; i < argumentTypes.length; i++) {
+			            // The first local variable actually represents the "this" object
+			            parameterNames.add(localVariables.get(i + 1).name);
+			        }
+
+			        return parameterNames;
+			    }
+			}
+		} catch (Exception e) {
+			if(logger.isLoggable(Level.FINE)){
+				logger.log(Level.FINEST,"",e);
+			}
+		}
+
+	    return null;
+	}
+//**********************************************************************************
+	public static List<String> getParameterNames(Constructor<?> constructor) {
+	    try {
+			Class<?> declaringClass = constructor.getDeclaringClass();
+			ClassLoader declaringClassLoader = declaringClass.getClassLoader();
+
+			Type declaringType = Type.getType(declaringClass);
+			String constructorDescriptor = Type.getConstructorDescriptor(constructor);
+			
+			String url = declaringType.getInternalName() + ".class";
+
+			InputStream classFileInputStream = declaringClassLoader.getResourceAsStream(url);
+			if (classFileInputStream == null) {
+			    throw new IllegalArgumentException("The constructor's class loader cannot find the bytecode that defined the constructor's class (URL: " + url + ")");
+			}
+
+			ClassNode classNode;
+			try {
+			    classNode = new ClassNode();
+			    ClassReader classReader = new ClassReader(classFileInputStream);
+			    classReader.accept(classNode, 0);
+			} finally {
+			    classFileInputStream.close();
+			}
+
+			@SuppressWarnings("unchecked")
+			List<MethodNode> methods = classNode.methods;
+			for (MethodNode method : methods) {
+			    if (method.name.equals("<init>") && method.desc.equals(constructorDescriptor)) {
+			        Type[] argumentTypes = Type.getArgumentTypes(method.desc);
+			        List<String> parameterNames = new ArrayList<String>(argumentTypes.length);
+
+			        @SuppressWarnings("unchecked")
+			        List<LocalVariableNode> localVariables = method.localVariables;
+			        for (int i = 0; i < argumentTypes.length; i++) {
+			            // The first local variable actually represents the "this" object
+			            parameterNames.add(localVariables.get(i + 1).name);
+			        }
+
+			        return parameterNames;
+			    }
+			}
+		} catch (Exception e) {
+			if(logger.isLoggable(Level.FINE)){
+				logger.log(Level.FINEST,"",e);
+			}
+		}
+
+	    return null;
+	}
+
 }

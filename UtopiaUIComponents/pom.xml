@@ -126,5 +126,18 @@
       <scope>system</scope>
       <systemPath>${gwt-ext-path}</systemPath>
     </dependency>
+    
+    <dependency>
+	     <groupId>org.reflections</groupId>
+	     <artifactId>reflections</artifactId>
+	     <version>0.9.9-RC1</version>
+	 </dependency>
+ 
+    <dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-server</artifactId>
+		<version>1.17.1</version>
+	</dependency>
+	
   </dependencies>
 </project>

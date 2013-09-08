@@ -46,6 +46,10 @@ private static final Logger logger;
 	 public static final String JAVA_PARAMETER_TOKEN="\\"+JAVA_PARAMETER_SIGN+JAVA_PARAMETER+"\\"+JAVA_PARAMETER_SIGN;
 	 public static final String JAVA_LOGIC="("+JAVA_PARAMETER_TOKEN+")";
 
+	 public static final String REST_PARAMETER_SIGN="{";
+	 public static final String REST_PARAMETER_TOKEN="\\"+REST_PARAMETER_SIGN+JAVA_PARAMETER+"\\"+REST_PARAMETER_SIGN;
+	 public static final String REST_URI="("+REST_PARAMETER_TOKEN+")";
+	 
 	 public static final String COMBINATIONAL_LOGIC_SEPARATPR="\\}\\&|\\|\\{";
 //  *************************************************************************
     /**
@@ -164,6 +168,21 @@ private static final Logger logger;
                 String parameterName=getParameterName(param,JAVA_PARAMETER_SIGN);
                 result.add(parameterName);
                 String currentPattern="\\"+JAVA_PARAMETER_SIGN+parameterName+"\\"+JAVA_PARAMETER_SIGN;
+                input=input.replaceAll(currentPattern,"");
+                m=pat.matcher(input);
+                }
+           return result;
+    }
+//  *************************************************************************
+    public static List<String> getReSTParameters(String input){
+    	ArrayList<String>result=new ArrayList<String>();
+      	Pattern pat = Pattern.compile(REST_URI);
+        Matcher m = pat.matcher(input);
+           while (m.find()) {
+                String param=m.group(1);
+                String parameterName=getParameterName(param,REST_PARAMETER_SIGN);
+                result.add(parameterName);
+                String currentPattern="\\"+REST_PARAMETER_SIGN+parameterName+"\\"+REST_PARAMETER_SIGN;
                 input=input.replaceAll(currentPattern,"");
                 m=pat.matcher(input);
                 }

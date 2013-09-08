@@ -5,6 +5,7 @@ package ir.utopia.core.util;
 
 import java.util.Collection;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -118,7 +119,7 @@ public class Cache<K,V> {
 		return map.containsKey(key);
 	}
 
-	public Collection<K> keySet() {
+	public Set<K> keySet() {
 		return map.keySet();
 	}
 

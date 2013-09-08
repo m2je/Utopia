@@ -6,15 +6,15 @@
 
 <urlrewrite>
 
-    <rule>
-       <condition type="method">POST</condition> 
-       <run class="ir.utopia.core.dispatch.UtopiaAPIDispatcher" method="process">
+    <rule >
+        <from>/api</from>
+       <run class="ir.utopia.core.dispatch.UtopiaAPIDispatcher" method="process" >
            <init-param>
-               <param-name>action_class</param-name>
-               <param-value>ir.utopia.security.authentication.AuthenticateAction</param-value>
+               <param-name>packages_to_scan</param-name>
+               <param-value>ir.utopia</param-value>
            </init-param>
        </run>
-       <from>/api/login</from>
+      
        <to  last="true"></to>
     </rule>
 
