@@ -55,12 +55,12 @@ private static final Logger logger;
 				bean.creatUser(getUser(),form.getName(),form.getLastName(),null,form.getSex(),null,null);
 			}
 			
-			return SUCCESS;
+			return "SUCCESS";
 		} catch (Exception e) {
 			logger.log(Level.WARNING,"", e);
 			handle(e);
 		}
-		return ERROR;
+		return "ERROR";
 	}
 	
 }

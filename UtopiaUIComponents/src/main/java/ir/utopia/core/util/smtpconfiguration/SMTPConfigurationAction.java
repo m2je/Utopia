@@ -35,7 +35,7 @@ public class SMTPConfigurationAction extends UtopiaBasicAction implements Utilit
 	
 //*********************************************************************************************************************	
 	public String execute(){
-		return SUCCESS;
+		return "SUCCESS";
 	}
 //*********************************************************************************************************************
 	@Override

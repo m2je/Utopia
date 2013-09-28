@@ -1,9 +1,6 @@
 package ir.utopia.core.util.tags.comp;
 
-import java.util.List;
-
 import ir.utopia.core.ContextUtil;
-import ir.utopia.core.constants.Constants;
 import ir.utopia.core.form.UtopiaPageForm;
 import ir.utopia.core.form.annotation.NativeScriptType;
 import ir.utopia.core.logic.util.LogicParser;
@@ -15,10 +12,10 @@ import ir.utopia.core.struts.UtopiaFormNativeConfiguration;
 import ir.utopia.core.struts.UtopiaFormNativeConfiguration.NativeScriptMessage;
 import ir.utopia.core.util.WebUtil;
 
+import java.util.List;
+
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.BodyTagSupport;
-
-import com.opensymphony.xwork2.ActionContext;
 
 public class AbstractUtopiaTag extends BodyTagSupport {
 
@@ -36,7 +33,7 @@ public class AbstractUtopiaTag extends BodyTagSupport {
 	 * @return
 	 */
 	protected UtopiaPageForm getPageForm(){
-		Object configuration=ActionContext.getContext().getValueStack().findValue(Constants.PAGE_CONFIG_FORM_NAME);
+		Object configuration=null;
 		  if(configuration instanceof UtopiaPageForm){
 			  UtopiaPageForm configForm=(UtopiaPageForm) configuration;
 		     return configForm;

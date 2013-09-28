@@ -33,7 +33,6 @@ import com.google.gwt.user.client.rpc.SerializationException;
 import com.google.gwt.user.server.rpc.RPC;
 import com.google.gwt.user.server.rpc.RPCRequest;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.opensymphony.xwork2.ActionInvocation;
 
 /**
  * This class is a modified version of GWT's RemoteServiceServlet.java
@@ -49,9 +48,7 @@ class GWTServlet extends RemoteServiceServlet {
 	/** Context for the servlet */
     private ServletContext servletContext;
     
-    /** Action class to invoke */
-    private ActionInvocation actionInvocation;
-
+    
     /**
      * Find the invoked method on either the specified interface or any super.
      */
@@ -100,7 +97,7 @@ class GWTServlet extends RemoteServiceServlet {
         // now make the call
         Object callResult = null;
         try {
-            callResult = method.invoke(actionInvocation.getAction(), 
+            callResult = method.invoke(null/*actionInvocation.getAction()*/, 
                     rpcRequest.getParameters());
         } catch (IllegalAccessException iie) {
             // This may need to change this to package up up the cause
@@ -122,7 +119,8 @@ class GWTServlet extends RemoteServiceServlet {
     }
 
 	private Method findActionMethod(RPCRequest rpcRequest) {
-		StringBuffer keyBuffer=new StringBuffer(actionInvocation.getAction().getClass().getName()).append("|").append( rpcRequest.getMethod().getName());
+		Class<?> actionClass=null;//actionInvocation.getAction().getClass();
+		StringBuffer keyBuffer=new StringBuffer(actionClass.getName()).append("|").append( rpcRequest.getMethod().getName());
 		Class<?>[] paramTypes = new Class[rpcRequest.getParameters().length];
 		Method method;
 		for (int i=0; i < paramTypes.length; i++) {
@@ -139,13 +137,13 @@ class GWTServlet extends RemoteServiceServlet {
         if(cachedMethods.containsKey(key)){
         	method=cachedMethods.get(key);
         }else{
-        method=MethodUtils.getMatchingAccessibleMethod(actionInvocation.getAction().getClass(), rpcRequest.getMethod().getName(), paramTypes);
+        method=MethodUtils.getMatchingAccessibleMethod(actionClass, rpcRequest.getMethod().getName(), paramTypes);
         if(method==null){
-        	method=findMethod(actionInvocation.getAction().getClass(), rpcRequest.getMethod().getName(), paramTypes);
+        	method=findMethod(actionClass, rpcRequest.getMethod().getName(), paramTypes);
         	if(method==null){
 	            // we need to get the action method from Struts
 	            method = findInterfaceMethod(
-	                   actionInvocation.getAction().getClass(), 
+	            		actionClass, 
 	                   rpcRequest.getMethod().getName(), 
 	                   paramTypes, true);
             }
@@ -170,7 +168,7 @@ class GWTServlet extends RemoteServiceServlet {
             throw new SecurityException(
                     "Failed to locate method "+ rpcRequest.getMethod().getName()
                     + "("+ params +") on interface "
-                    + actionInvocation.getAction().getClass().getName()
+                    + actionClass.getName()
                     + " requested through interface "
                     + rpcRequest.getClass().getName());
         }
@@ -196,24 +194,7 @@ class GWTServlet extends RemoteServiceServlet {
         this.servletContext = servletContext;
     }
 
-    /**
-     * Returns the action class to invoke
-     * 
-     * @return an <code>ActionInvocation</code>
-     */
-    public ActionInvocation getActionInvocation() {
-        return actionInvocation;
-    }
-
-    /**
-     * Sets the action class to call
-     * 
-     * @param actionInvocation <code>ActionInvocation</code> to use
-     */
-    public void setActionInvocation(ActionInvocation actionInvocation) {
-        this.actionInvocation = actionInvocation;
-    }
-    
+        
     public Method findMethod(Class<?> clazz,String methodName,Object[] params){
     	Class<?>currentClass=clazz;
     	Method method=null;

@@ -4,18 +4,16 @@ import ir.utopia.core.ServiceFactory;
 import ir.utopia.core.constants.Constants;
 import ir.utopia.core.form.annotation.FormId;
 import ir.utopia.core.form.annotation.FormPersistentAttribute;
-import ir.utopia.core.form.annotation.PersistedMapForm;
-import ir.utopia.core.form.annotation.UsecaseForm;
 import ir.utopia.core.form.annotation.FormPersistentAttribute.FormToEntityDataTypeMap;
 import ir.utopia.core.form.annotation.FormPersistentAttribute.FormToEntityMapType;
+import ir.utopia.core.form.annotation.PersistedMapForm;
+import ir.utopia.core.form.annotation.UsecaseForm;
 import ir.utopia.core.importer.setting.persistent.CoImporterSetting;
 import ir.utopia.core.struts.AbstractUtopiaForm;
 import ir.utopia.core.util.DateUtil;
 
 import java.util.Calendar;
 import java.util.Date;
-
-import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
 @UsecaseForm
 @PersistedMapForm
 public class ImporterSettingForm extends AbstractUtopiaForm<CoImporterSetting>{//TODO refactor
@@ -92,7 +90,6 @@ public class ImporterSettingForm extends AbstractUtopiaForm<CoImporterSetting>{/
 		this.usecaseId=String.valueOf(usecaseId);
 	}
 	
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
 	@FormPersistentAttribute(method="getFormat")
 	public Constants.ImportFormat getFileType() {
 		return fileType;
@@ -114,7 +111,6 @@ public class ImporterSettingForm extends AbstractUtopiaForm<CoImporterSetting>{/
 	public void setResourceName(String resourceName) {
 		this.resourceName = resourceName;
 	}
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
 	@FormPersistentAttribute(method="getScdStartDate")
 	public Date getScheduleStartDate() {
 		return scheduleStartDate;
@@ -122,7 +118,6 @@ public class ImporterSettingForm extends AbstractUtopiaForm<CoImporterSetting>{/
 	public void setScheduleStartDate(Date scheduleStartDate) {
 		this.scheduleStartDate = scheduleStartDate;
 	}
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
 	@FormPersistentAttribute(method="getScdEndDate")
 	public Date getScheduleEndDate() {
 		return scheduleEndDate;

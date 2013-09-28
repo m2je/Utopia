@@ -23,10 +23,8 @@ import javax.security.auth.Subject;
 
 import org.apache.commons.beanutils.ConstructorUtils;
 
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
 
-public class UtopiaBasicAction extends ActionSupport {
+public class UtopiaBasicAction  {
 	private static final boolean IsDebugging=Boolean.getBoolean("GwtDebug");
 	private static final Logger logger;	
 	public static final String ACTION_MESSAGES_SESSION_KEY="__actionMessages";
@@ -43,7 +41,7 @@ public class UtopiaBasicAction extends ActionSupport {
 	private static final long serialVersionUID = 2424899757196990259L;
 	protected Subject getSubject(){
 		if(subject==null){
-			Map<String,Object> session= ActionContext.getContext().getSession();
+			Map<String,Object> session= null;
 			 subject= (Subject)session.get(SecurityProvider.USER_SESSION_ATTRIBUTE_NAME);	
 		}
 		 return subject;
@@ -82,7 +80,7 @@ public class UtopiaBasicAction extends ActionSupport {
 				context=ContextUtil.createAdminContext();
 			}else{
 				
-				context=ContextUtil.createContext(ActionContext.getContext().getSession());
+				context=null;
 				
 			}
 		}

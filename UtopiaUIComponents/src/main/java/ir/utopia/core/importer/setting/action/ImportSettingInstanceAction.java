@@ -24,10 +24,9 @@ public class ImportSettingInstanceAction extends UtopiaBasicAction implements Im
 	 */
 	private static final long serialVersionUID = 8087551153280023036L;
 
-	@Override
 	public String execute() throws Exception {
-		super.execute();
-		return SUCCESS;
+		
+		return "SUCCESS";
 	}
 
 	public ir.utopia.core.util.tags.datainputform.client.model.ExecutionResult deleteSettingInstance(Long settingInstanceId){

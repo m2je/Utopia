@@ -21,12 +21,8 @@ import javax.security.auth.Subject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionInvocation;
-import com.opensymphony.xwork2.interceptor.Interceptor;
-import com.opensymphony.xwork2.interceptor.ModelDrivenInterceptor;
 
-public class UtopiaSecurityStrutsInteceptor  extends ModelDrivenInterceptor implements Interceptor {
+public class UtopiaSecurityStrutsInteceptor  {
 	private static final Logger logger;
 	private static final boolean IsDebugging=Boolean.getBoolean("GwtDebug");
 	static {
@@ -41,15 +37,15 @@ public class UtopiaSecurityStrutsInteceptor  extends ModelDrivenInterceptor impl
 	 */
 	private static final long serialVersionUID = -2866147457543572174L;
 SecurityProvider securityProvider;
-	@Override
+	
 	public void destroy() {
 		securityProvider=null;
 		
 	}
 
-	@Override
+	
 	public void init() {
-		super.init();
+	
 	}
 //*********************************************************************************************************************************
 	private void initSecurityProvider(){
@@ -57,61 +53,61 @@ SecurityProvider securityProvider;
 			securityProvider=ServiceFactory.getSecurityProvider();
 	}
 //*********************************************************************************************************************************
-	@Override
-	public String intercept(ActionInvocation actionInvocation) throws Exception {
-		ContextHolder.clean();
-		HttpServletRequest request=org.apache.struts2.ServletActionContext.getRequest();
-		String requestURL=request.getRequestURI();
-		
-		String actionName;
-		UseCase usecase=null;
-		String completeUscaseName=null;
-		if(requestURL.endsWith(DATA_INPUT_PROXY_URL)){
-			actionName=Constants.predefindedActions.noAction.toString();
-		}else if(requestURL.equalsIgnoreCase(PROCESS_SERVICE_PROXY_URL)){
-			actionName=Constants.predefindedActions.noAction.toString();
-		}else{
-			String useCaseName,systemName,subSystem;
-			Map<Integer,String> map=ActionUtil.parseClassAndMethod(requestURL);
-			actionName= map.get(ActionUtil.METHOD);
-		    useCaseName=map.get(ActionUtil.USECASE);
-		    systemName=map.get(ActionUtil.SYSTEM);
-		    subSystem=map.get(ActionUtil.SUB_SYSTEM);
-		    if(isUtilityAction(systemName, subSystem, useCaseName, actionName)){
-				 completeUscaseName=securityProvider.decrypt(request.getParameter(REQUEST_USECASE_NAME_PARAMETER_NAME));
-			 }else{
-				 completeUscaseName=UsecaseUtil.getFullUsecaseName(systemName, subSystem, useCaseName);
-			 }
-		    usecase= UsecaseUtil.getUsecaseWithName(completeUscaseName);
-		 }
-		initCurrentThreadContext(usecase, actionName, request.getSession());
-		if(!IsDebugging){
-			Map<String,Object>session= actionInvocation.getInvocationContext().getSession();
-			Subject currentUser= ContextUtil.getUser(session);
-			
-			if(currentUser==null){
-				logger.log(Level.WARNING,"Non-Authorize action request from :["+request.getRemoteAddr()+"]");
-				return Action.LOGIN;
-			}
-			
-			 boolean success=true;
-			if(completeUscaseName!=null){
-					try {
-						initSecurityProvider();
-						securityProvider.doPrivilegedAction(actionName,completeUscaseName,currentUser);
-					} catch (Exception e) {
-						logger.log(Level.WARNING,"",e);
-						success=false;
-					}
-					securityProvider.LogAction(actionName,completeUscaseName, success);
-				}
-			if(!success){
-				return NON_AUTHORORIZED_ACTION_PAGE_URL;
-			}
-		}
-			
-		return actionInvocation.invoke();
-	}
+//	@Override
+//	public String intercept(ActionInvocation actionInvocation) throws Exception {
+//		ContextHolder.clean();
+//		HttpServletRequest request=org.apache.struts2.ServletActionContext.getRequest();
+//		String requestURL=request.getRequestURI();
+//		
+//		String actionName;
+//		UseCase usecase=null;
+//		String completeUscaseName=null;
+//		if(requestURL.endsWith(DATA_INPUT_PROXY_URL)){
+//			actionName=Constants.predefindedActions.noAction.toString();
+//		}else if(requestURL.equalsIgnoreCase(PROCESS_SERVICE_PROXY_URL)){
+//			actionName=Constants.predefindedActions.noAction.toString();
+//		}else{
+//			String useCaseName,systemName,subSystem;
+//			Map<Integer,String> map=ActionUtil.parseClassAndMethod(requestURL);
+//			actionName= map.get(ActionUtil.METHOD);
+//		    useCaseName=map.get(ActionUtil.USECASE);
+//		    systemName=map.get(ActionUtil.SYSTEM);
+//		    subSystem=map.get(ActionUtil.SUB_SYSTEM);
+//		    if(isUtilityAction(systemName, subSystem, useCaseName, actionName)){
+//				 completeUscaseName=securityProvider.decrypt(request.getParameter(REQUEST_USECASE_NAME_PARAMETER_NAME));
+//			 }else{
+//				 completeUscaseName=UsecaseUtil.getFullUsecaseName(systemName, subSystem, useCaseName);
+//			 }
+//		    usecase= UsecaseUtil.getUsecaseWithName(completeUscaseName);
+//		 }
+//		initCurrentThreadContext(usecase, actionName, request.getSession());
+//		if(!IsDebugging){
+//			Map<String,Object>session= actionInvocation.getInvocationContext().getSession();
+//			Subject currentUser= ContextUtil.getUser(session);
+//			
+//			if(currentUser==null){
+//				logger.log(Level.WARNING,"Non-Authorize action request from :["+request.getRemoteAddr()+"]");
+//				return Action.LOGIN;
+//			}
+//			
+//			 boolean success=true;
+//			if(completeUscaseName!=null){
+//					try {
+//						initSecurityProvider();
+//						securityProvider.doPrivilegedAction(actionName,completeUscaseName,currentUser);
+//					} catch (Exception e) {
+//						logger.log(Level.WARNING,"",e);
+//						success=false;
+//					}
+//					securityProvider.LogAction(actionName,completeUscaseName, success);
+//				}
+//			if(!success){
+//				return NON_AUTHORORIZED_ACTION_PAGE_URL;
+//			}
+//		}
+//			
+//		return actionInvocation.invoke();
+//	}
 //*********************************************************************************************************************************
 	protected boolean isUtilityAction(String systemName,String subSystem,String useCaseName,String actionName){
 		return "Co".equals(systemName)&&"Ut".equals(subSystem)&&"Attachment".equals(useCaseName)&&Constants.predefindedActions.download.name().equals(actionName);

@@ -1,40 +1,23 @@
 package ir.utopia.core.struts;
 
-import ir.utopia.core.ContextUtil;
 import ir.utopia.core.util.DateUtil;
 import ir.utopia.core.util.WebUtil;
 
 import java.util.Date;
 import java.util.Locale;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.commons.beanutils.ConstructorUtils;
 import org.apache.commons.beanutils.ConvertUtils;
-import org.apache.struts2.util.StrutsTypeConverter;
 
-import com.opensymphony.xwork2.ActionContext;
-
-public class UtopiaTypeConverter extends StrutsTypeConverter {
+public class UtopiaTypeConverter  {
 	private static final Logger logger;	
 	
 	static {
 		logger = Logger.getLogger(UtopiaTypeConverter.class.getName());
 	}
-	@Override
-	public Object convertFromString(Map ognlMap, String[] values, Class clazz) {
-//		SessionMap session=(SessionMap) ognlMap.get(ActionContext.SESSION);
-		ActionContext ctx=ActionContext.getContext();
-		String language=ContextUtil.getLoginLanguage( ctx.getSession());
-		return convertFromString( clazz,language,values);
-	}
-//****************************************************************************************************************************
-	@Override
-	public String convertToString(Map ognlMap, Object arg1) {
-
-		return null;
-	}
+	
 //****************************************************************************************************************************	
 	public static Object convertFromString( Class<?> clazz,String locale,String... values){
 		if(values==null||values.length==0){

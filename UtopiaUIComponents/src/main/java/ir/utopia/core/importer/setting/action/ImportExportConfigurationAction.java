@@ -1,5 +1,6 @@
 package ir.utopia.core.importer.setting.action;
 
+import ir.utopia.core.ContextHolder;
 import ir.utopia.core.ContextUtil;
 import ir.utopia.core.ServiceFactory;
 import ir.utopia.core.constants.Constants;
@@ -30,14 +31,11 @@ import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.struts2.interceptor.ServletRequestAware;
-
 import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationIntrospector;
-import com.opensymphony.xwork2.ActionContext;
 
-public class ImportExportConfigurationAction extends UtopiaBasicAction implements ServletRequestAware,ImExService,SearchPageImExServices{
+public class ImportExportConfigurationAction extends UtopiaBasicAction implements ImExService,SearchPageImExServices{
 	Logger logger=Logger.getLogger(ImportExportConfigurationAction.class.getName());
 	private static final String MAP_TYPE_POST_FIX="_mapType";
 	private static final String MAP_INDEX_POST_FIX="_index";
@@ -68,27 +66,25 @@ public class ImportExportConfigurationAction extends UtopiaBasicAction implement
 	 */
 	private static final long serialVersionUID = -7430097154128214639L;
 
-	@Override
 	public String execute() throws Exception {
-		super.execute();
-		Map<String,Object>context= ContextUtil.createContext(ActionContext.getContext().getSession());
+		Map<String,Object>context= ContextHolder.getContextMap();
 		try {
 			Map<Integer, String>map= ActionUtil.parseClassAndMethod(currentUri);
 			String actionName=map.get(ActionUtil.METHOD);
 			if(Constants.predefindedActions.save.name().equals(actionName)||Constants.predefindedActions.update.name().equals(actionName)){
 				createOrUpdateSetting(context);
 			}
-			return SUCCESS;
+			return "SUCCESS";
 		} catch (Exception e) {
 			logger.log(Level.WARNING,"",e);
 			result= getExceptionHandler().handel(e, context);
-			return ERROR;
+			return "ERROR";
 		}
 	}
 //***************************************************************************************************************************************	
 	public ir.utopia.core.util.tags.datainputform.client.model.ExecutionResult deleteSetting(Long settingId){
 		ir.utopia.core.util.tags.datainputform.client.model.ExecutionResult result;
-		Map<String,Object>context= ContextUtil.createContext(ActionContext.getContext().getSession());
+		Map<String,Object>context= ContextUtil.getContext();
 		try {
 			CoImporterSettingFacadeRemote settingFacade=(CoImporterSettingFacadeRemote)ServiceFactory.lookupFacade(CoImporterSettingFacadeRemote.class);
 			CoImporterSetting setting=new CoImporterSetting();
@@ -156,12 +152,7 @@ public class ImportExportConfigurationAction extends UtopiaBasicAction implement
 			result=new ExecutionResult(true);
 	}
 	
-	@SuppressWarnings("unchecked")
-	@Override
-	public void setServletRequest(HttpServletRequest request) {
-		requestParams=request.getParameterMap();
-		this.currentUri=request.getRequestURI();
-	}
+	
 
 	public Long get__settingId() {
 		return __settingId;

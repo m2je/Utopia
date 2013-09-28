@@ -35,17 +35,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.interceptor.ServletRequestAware;
-
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
 /**
  * @author Salarkia
  *
  */
 public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends UtopiaBasicAction implements
-	UtopiaControl<T>,ServletRequestAware{
+	UtopiaControl<T>{
 	public static final String RESENT_REQUEST_HANDLE_PAGE_NAME="resentRequest";
 	Map<String ,MessageNamePair.MessageType>messagesTypeMap =new  HashMap<String,MessageNamePair.MessageType>();
 	private static final Logger logger;	
@@ -95,19 +90,18 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 		
 	}
 //*******************************************************************************************
-	@Override
 	public String execute() throws Exception {
 		try {
 		findClassAndMethod();
 		String fullUscaseName=UsecaseUtil.getFullUsecaseName(systemName,subSystemName,usecaseName);
-		ActionContext ctx=ActionContext.getContext();
+		Map<String,Object>session=null;
 		
 			if(subject==null){
 				throw new NotAuthenticatedException("user session attriubute not found");
 			}
 			UtopiaPageForm pageForm=getPageForm();
 			if(FORM_SUBMIT_MODE_AJAX!=getSubmitMode()&&(Constants.predefindedActions.save.name().equals(actionName)||Constants.predefindedActions.update.name().equals(actionName))){
-				boolean consumed=SaveTokenController.isConsumed(form.getSaveToken(),ctx.getSession(),pageForm.getUsecaseActionId());
+				boolean consumed=SaveTokenController.isConsumed(form.getSaveToken(),session,pageForm.getUsecaseActionId());
 				String handlePage=UsecaseUtil.getActionUrl(fullUscaseName, predefindedActions.search.toString());
 				if(consumed){
 					if(logger.isLoggable(Level.FINE)){
@@ -131,10 +125,10 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 				return JSON_RESPONSE_NAME;
 			}else{
 				if(form.getSaveToken()!=null){
-					SaveTokenController.consumeToken(form.getSaveToken(), ctx.getSession(),pageForm.getUsecaseActionId()) ;
-					ctx.getSession().remove(form.getSaveToken());
+					SaveTokenController.consumeToken(form.getSaveToken(), session,pageForm.getUsecaseActionId()) ;
+					session.remove(form.getSaveToken());
 				}
-				String res=SUCCESS;
+				String res="SUCCESS";
 				initDefaulResponse(res,invokationResult);
 				return res;
 			}
@@ -144,15 +138,10 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 			logger.log( Level.WARNING,"", e);
 			handle(e);
 			if(predefindedActions.search.toString().equals(actionName)){
-				return SUCCESS;
+				return "SUCCESS";
 			}
-			return FORM_SUBMIT_MODE_AJAX==getSubmitMode()?JSON_RESPONSE_NAME:ERROR;
+			return FORM_SUBMIT_MODE_AJAX==getSubmitMode()?JSON_RESPONSE_NAME:"ERROR";
 		}
-	}
-//*******************************************************************************************
-	@Override
-	public boolean hasFieldErrors() {
-		return super.hasFieldErrors();
 	}
 //*******************************************************************************************
 	protected void addErrorMessage(String message){
@@ -175,16 +164,14 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 		messagesTypeMap.put(message, pair.getType());
 	}
 //*******************************************************************************************
-	@Override
 	public void addActionError(String anErrorMessage) {
-		super.addActionError(anErrorMessage);
+//		super.addActionError(anErrorMessage);
 		if(anErrorMessage!=null)
 			messagesTypeMap.put(anErrorMessage, MessageType.error);
 	}
 //*******************************************************************************************
-	@Override
 	public void addActionMessage(String aMessage) {
-		super.addActionMessage(aMessage);
+//		super.addActionMessage(aMessage);
 		if(aMessage!=null)
 			messagesTypeMap.put(aMessage, MessageType.info);
 	}
@@ -201,7 +188,7 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 			form.setExecutionResult(result);
 			if(pageForm!=null)
 				pageForm.setForm(form);
-			initActionMessages(ERROR);
+			initActionMessages("ERROR");
 		}else{
 			pageForm.setForm(form);
 			if(result!=null&&result.getMessages()!=null){
@@ -209,7 +196,7 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 					addMessage(pair);
 				}
 			}
-			initDefaulResponse(ERROR, result);
+			initDefaulResponse("ERROR", result);
 		}
 		
 	}
@@ -220,11 +207,11 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 		 if(forms!=null){
 			 pageForm.setForms(forms);
 		 }
-		 if(ERROR.equals(response)||INPUT.equals(response)){
+		 if("ERROR".equals(response)||"INPUT".equals(response)){
 			 if(form!=null&&form.getSaveToken()!=null){
-					Map<String,Object>session=ActionContext.getContext().getSession();
-					ActionContext.getContext().getValueStack(). set(LAST_UNSUCCESSFULL_TOKEN_KEY,form.getSaveToken());
-					session.put(form.getSaveToken(), form);
+//					Map<String,Object>session=ActionContext.getContext().getSession();
+//					ActionContext.getContext().getValueStack(). set(LAST_UNSUCCESSFULL_TOKEN_KEY,form.getSaveToken());
+//					session.put(form.getSaveToken(), form);
 				}
 		 }
 		initActionMessages(response);
@@ -248,13 +235,11 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 	}
 //*******************************************************************************************
 	protected UtopiaPageForm getPageForm(){
-		UtopiaPageForm pageForm=(UtopiaPageForm) ActionContext.getContext().getValueStack().findValue(Constants.PAGE_CONFIG_FORM_NAME);
+		UtopiaPageForm pageForm=null/*(UtopiaPageForm) ActionContext.getContext().getValueStack().findValue(Constants.PAGE_CONFIG_FORM_NAME)*/;
 		return pageForm;
 	}
 //*******************************************************************************************
-	@Override
 	public void validate() {
-		super.validate();
 		boolean validated=true;
 		try {
 			findClassAndMethod();
@@ -269,10 +254,10 @@ public abstract class AbstractUtopiaAction<T extends UtopiaBasicForm<?>> extends
 			logger.log(Level.WARNING,"",e);
 			validated=false;
 		}
-		Collection<String>error= getActionErrors();
+		Collection<String>error= null;
 		if(error!=null&&error.size()>0||!validated){
 			addActionError(MessageHandler.getMessage("internalApplicationError", "ir.utopia.core.constants.Glossory", getUserLocale().getLanguage()));
-			initDefaulResponse(ERROR, null);
+			initDefaulResponse("ERROR", null);
 		}
 	}
 //*******************************************************************************************
@@ -359,27 +344,11 @@ protected void convertToForm(UtopiaBasicPersistent persistent,UtopiaBasicForm<?>
 		if(subject!=null){
 			form.setLocale(getUserLocale().getLanguage());
 		}
-		form.setWindowNo(WindowController.getNextWindowNo(ActionContext.getContext().getSession()));
+//		form.setWindowNo(WindowController.getNextWindowNo(ActionContext.getContext().getSession()));
 		return form;
 	}
 //*******************************************************************************************
 	protected Object invokeMethod() throws Exception{
-//		if(predefindedActions.save.toString().equals(actionName)||
-//				predefindedActions.delete.toString().equals(actionName)||
-//				predefindedActions.update.toString().equals(actionName)
-//				){
-//			UtopiaBean bean=findBean();
-//			List<UsecaseAction> actions= usecase.getUseCaseActions();
-//			for(UsecaseAction action:actions){
-//				if(actionName.equals(action.getMethodName())){
-//					List<ActionParameter>parameters= action.getParameters();
-//					Method method= bean.getClass().getMethod(actionName, extractParmeterClass(parameters));
-//					return method.invoke(bean, extractValues(parameters));
-//				}
-//			}
-//			throw new IllegalArgumentException("Method "+actionName+" not found in class "+usecase.getRemoteClassName());
-//		
-//		}
 		List<UsecaseAction> actions= usecase.getUseCaseActions();
 		for(UsecaseAction action:actions){
 			if(actionName.equals(action.getActionName())
@@ -462,22 +431,17 @@ protected void convertToForm(UtopiaBasicPersistent persistent,UtopiaBasicForm<?>
 	}
 //**************************************************************************************************************************		
 		protected void initActionMessages(String executeResult){
-			Map<String,Object>session= ActionContext.getContext().getSession();
+			Map<String,Object>session= null;
 			@SuppressWarnings("unchecked")
 			List<MessageNamePair>messages=session.containsKey(ACTION_MESSAGES_SESSION_KEY)?(List<MessageNamePair>)session.get(ACTION_MESSAGES_SESSION_KEY): new ArrayList<MessageNamePair>();
 			
 			
 			boolean success=false;
-			success=ActionSupport.SUCCESS.equals(executeResult);
+			success="SUCCESS".equals(executeResult);
 			addActionSuccessOrErrorMessages(messages, success);
 			Collection<String>actionMessages=null;
 			Collection<String>errormessages=null;
-			if(getActionMessages()!=null){
-				actionMessages=getActionMessages();
-			}
-			if(getActionErrors()!=null){
-				errormessages=getActionErrors();
-			}
+			
 			
 			for(String actionMessage:actionMessages){
 				messages.add(new MessageNamePair(getMessageType(actionMessage),actionMessage));
@@ -495,7 +459,7 @@ protected void convertToForm(UtopiaBasicPersistent persistent,UtopiaBasicForm<?>
 		}
 //**************************************************************************************************************************
 		protected void addActionSuccessOrErrorMessages(List<MessageNamePair>messages,boolean success){
-			String language=WebUtil.getLanguage(ActionContext.getContext().getSession());
+			String language=null;//WebUtil.getLanguage(ActionContext.getContext().getSession());
 			if(success){
 				if(Constants.predefindedActions.save.toString().equals(actionName)){
 					messages.add(new MessageNamePair(MessageType.info,

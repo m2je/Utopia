@@ -29,9 +29,7 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.opensymphony.xwork2.ModelDriven;
-
-public class ImporterSettingAction extends AbstractUtopiaProcessAction<UtopiaProcessBean> implements ModelDriven<ImporterSettingForm>,UtopiaProcessAction  {
+public class ImporterSettingAction extends AbstractUtopiaProcessAction<UtopiaProcessBean> implements UtopiaProcessAction  {
 
 	private static final Logger logger;
 	
@@ -41,7 +39,6 @@ public class ImporterSettingAction extends AbstractUtopiaProcessAction<UtopiaPro
 	private static final long serialVersionUID = -4099768103662463989L;
 	private static final Long MAX_ID_RESERVED = 1000L;
 	ImporterSettingForm form;
-	@Override
 	public ImporterSettingForm getModel() {
 		if(form==null){
 			form=new ImporterSettingForm();

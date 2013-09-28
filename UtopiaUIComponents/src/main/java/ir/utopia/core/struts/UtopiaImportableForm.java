@@ -10,7 +10,6 @@ import ir.utopia.core.persistent.UtopiaPersistent;
 import java.io.File;
 import java.lang.reflect.ParameterizedType;
 
-import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
 
 @MappedSuperForm
 public class UtopiaImportableForm<P extends UtopiaPersistent,F extends AbstractUtopiaForm<P>>{
@@ -40,7 +39,7 @@ public class UtopiaImportableForm<P extends UtopiaPersistent,F extends AbstractU
 	public void setUpload(File upload) {
 		this.upload = upload;
 	}
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
+	
 	public boolean isFirstLineTitle() {
 		return firstLineTitle;
 	}
@@ -100,7 +99,6 @@ public class UtopiaImportableForm<P extends UtopiaPersistent,F extends AbstractU
 		this.to = to;
 	}
 	
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
 	public Constants.ImportFormat getFileType() {
 		return fileType;
 	}

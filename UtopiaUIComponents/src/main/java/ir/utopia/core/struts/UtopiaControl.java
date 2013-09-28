@@ -9,13 +9,11 @@ import ir.utopia.core.persistent.UtopiaBasicPersistent;
 import java.util.Collection;
 import java.util.List;
 
-import com.opensymphony.xwork2.ModelDriven;
-
 /**
  * @author Salarkia
  *
  */
-public interface UtopiaControl<T> extends ModelDriven<T> {
+public interface UtopiaControl<T>  {
 	public static final int FORM_SUBMIT_MODE_CLASSIC=1;
 	public static final int FORM_SUBMIT_MODE_AJAX=2;
 	public static final String JSON_RESPONSE_NAME="json";

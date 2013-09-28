@@ -1,5 +1,6 @@
 package ir.utopia.core.security.user.action;
 
+import ir.utopia.core.ContextUtil;
 import ir.utopia.core.ServiceFactory;
 import ir.utopia.core.messagehandler.MessageHandler;
 import ir.utopia.core.messagehandler.MessageNamePair;
@@ -18,8 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.security.auth.Subject;
-
-import com.opensymphony.xwork2.ActionContext;
 
 
 public class ChangePasswordAction extends AbstractUtopiaProcessAction<UserUtilityFacadeRemote>  implements UtopiaProcessAction  {
@@ -45,7 +44,7 @@ public class ChangePasswordAction extends AbstractUtopiaProcessAction<UserUtilit
 	public ProcessExecutionResult confirm(String[] params, String[] values) {
 		ProcessExecutionResult result=super.confirm(params, values);
 		if(result.isSuccess()){
-			Map<String,Object>session=ActionContext.getContext().getSession();
+			Map<String,Object>session=ContextUtil.getContext();
 			try {
 				
 				CoUserFacadeRemote bean=(CoUserFacadeRemote)ServiceFactory.lookupFacade(CoUserFacadeRemote.class.getName());
@@ -92,8 +91,7 @@ public class ChangePasswordAction extends AbstractUtopiaProcessAction<UserUtilit
 	}
 //****************************************************************************************
 	public Long getUserId() {
-		Subject user=(Subject)ActionContext.getContext().getSession().get(SecurityProvider.USER_SESSION_ATTRIBUTE_NAME);
-		return ServiceFactory.getSecurityProvider().getUserId(user);
+		return ContextUtil.getCurrentUserId();
 	}
 //****************************************************************************************
 

@@ -22,8 +22,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.PageContext;
 
-import com.opensymphony.xwork2.ActionContext;
-
 /**
  * @author salarkia
  *
@@ -346,7 +344,7 @@ public static Locale getLocale(HttpSession session){
 
 public static Locale getLocale(){
 	try{
-		 return ServiceFactory.getSecurityProvider().getLocaleOf((Subject)ActionContext.getContext().getSession().get(SecurityProvider.USER_SESSION_ATTRIBUTE_NAME));
+		 return ServiceFactory.getSecurityProvider().getLocaleOf(ContextUtil.getUser());
 	}catch (Exception e) {
 		e.printStackTrace();
 		return null;

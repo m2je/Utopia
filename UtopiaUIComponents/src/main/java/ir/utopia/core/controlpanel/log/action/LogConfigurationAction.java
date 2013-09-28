@@ -12,9 +12,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.opensymphony.xwork2.ModelDriven;
-
-public class LogConfigurationAction extends AbstractUtopiaInteractiveAction implements ModelDriven<LogConfigurationForm> {
+public class LogConfigurationAction extends AbstractUtopiaInteractiveAction {
 	private static final Logger logger;
 	
 	static {
@@ -25,7 +23,6 @@ public class LogConfigurationAction extends AbstractUtopiaInteractiveAction impl
 	 */
 	private static final long serialVersionUID = 1024201982311535397L;
 	LogConfigurationForm form;	
-	@Override
 	public LogConfigurationForm getModel() {
 		if(form==null){
 			form=new LogConfigurationForm();
@@ -34,9 +31,9 @@ public class LogConfigurationAction extends AbstractUtopiaInteractiveAction impl
 	}
 
 //***************************************************************************************************
-	@Override
+
 	public String execute() throws Exception {
-		String res=super.execute();
+		String res="SUCCESS";
 		Throwable ex=null;
 		try {
 			Collection<LogConfigurationDetail>details=form.getConfigRow();
@@ -59,13 +56,13 @@ public class LogConfigurationAction extends AbstractUtopiaInteractiveAction impl
 					bean.save(conf, context);
 				if(removed.size()>0)
 					bean.delete(removed, context);
-				res=SUCCESS;
+				res="SUCCESS";
 		} catch (Exception e) {
 			logger.log(Level.WARNING,"", e);
 			ex=e;
-			res=ERROR;
+			res="ERROR";
 		}
-		super.initSession(SUCCESS.equals(res), ex, "save", form.getWindowNo());
+		super.initSession("SUCCESS".equals(res), ex, "save", form.getWindowNo());
 		return res;
 		
 	}

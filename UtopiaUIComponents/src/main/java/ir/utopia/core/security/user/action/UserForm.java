@@ -21,8 +21,6 @@ import ir.utopia.core.struts.AbstractUtopiaForm;
 import java.util.Collection;
 import java.util.Set;
 
-import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
-
 @PersistedMapForm
 @DataInputForm(includedForms={
 		@IncludedForm(formClass=UserRolesForm.class,name="userRoles")})
@@ -141,7 +139,6 @@ public class UserForm  extends AbstractUtopiaForm<CoUser>{
 		this.lastName = lastName;
 	}
 	@FormPersistentAttribute
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
 	@InputItem(index=6,isManadatory=true,displayType=DisplayTypes.list)
 	public Constants.Sex getSex() {
 		return sex;

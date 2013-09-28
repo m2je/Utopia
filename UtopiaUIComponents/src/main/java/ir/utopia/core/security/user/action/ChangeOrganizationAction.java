@@ -17,8 +17,6 @@ import java.util.logging.Logger;
 
 import javax.security.auth.Subject;
 
-import com.opensymphony.xwork2.ActionContext;
-
 public class ChangeOrganizationAction extends AbstractUtopiaProcessAction<UserUtilityFacadeRemote> implements UtopiaProcessAction  {
 
 	/**
@@ -61,7 +59,7 @@ public class ChangeOrganizationAction extends AbstractUtopiaProcessAction<UserUt
 	public ProcessExecutionResult execute(String[] params, String[] values) {
 		ProcessExecutionResult result= super.execute(params, values);
 		try {
-			Map<String,Object> session= ActionContext.getContext().getSession();
+			Map<String,Object> session= ContextUtil.getContext();
 			Map<String,Object>context=ContextUtil.createContext(session);
 			Subject user=ContextUtil.getUser(context);
 			UserPreferencesInfo userPreferences=(UserPreferencesInfo)session.get(ContextUtil.USER_PREFERENCES_PARAMETER);

@@ -64,7 +64,6 @@ import java.util.logging.Logger;
 import javax.security.auth.Subject;
 import javax.servlet.http.HttpSession;
 
-import com.opensymphony.xwork2.ActionContext;
 
 public class UtopiaUIServiceProxy extends AbstractUtopiaGWTServiceAction implements
 		DataInputService,SearchPageService,ImportDataServer,ProcessHandlerServer,TreeViewDataHandler {
@@ -322,7 +321,7 @@ public class UtopiaUIServiceProxy extends AbstractUtopiaGWTServiceAction impleme
 			UtopiaFormMetaData meta= FormUtil.getMetaData(formClass);
 			
 			UseCase usecase= UsecaseUtil.getUsecaseWithName(usecaseName);
-			ActionContext.getContext().put(SEARCH_REPORT_UID_PARAM_NAME+currentUID, new ReportModel(usecase,meta,recordIds,orderByCol));
+//			ActionContext.getContext().put(SEARCH_REPORT_UID_PARAM_NAME+currentUID, new ReportModel(usecase,meta,recordIds,orderByCol));
 			return currentUID;
 		} catch (Exception e) {
 			logger.log(Level.WARNING,"", e);

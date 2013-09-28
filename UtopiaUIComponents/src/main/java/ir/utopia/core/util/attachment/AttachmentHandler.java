@@ -10,11 +10,7 @@ import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts2.ServletActionContext;
-
-import com.opensymphony.xwork2.ActionSupport;
-
-public class AttachmentHandler extends ActionSupport {
+public class AttachmentHandler  {
 	private static final Logger logger;
 	
 	static {
@@ -27,8 +23,7 @@ public class AttachmentHandler extends ActionSupport {
 	private static final long serialVersionUID = 9110762604285435222L;
 
 	
-	@Override
-	public String execute() throws Exception {
+	public String execute(HttpServletResponse response) throws Exception {
 		if(recordId==null||recordId.trim().length()==0){
 			throw new IllegalArgumentException("invalid recocrdId:"+recordId);
 		}
@@ -46,15 +41,13 @@ public class AttachmentHandler extends ActionSupport {
 			throw new IllegalArgumentException("invalid attachment recordId:"+recordId);
 		}
 		
-		HttpServletResponse response= ServletActionContext.getResponse();
 		response.setContentType(getContetType(attachment.getFileName()));
 		response.addHeader("Content-Disposition","attachment; filename=\"" + attachment.getFileName() + "\"");
 		OutputStream outStr= response.getOutputStream();
 		outStr.write(attachment.getAttachFile());
 		outStr.close();
 		response.flushBuffer();
-		 super.execute();
-		 return NONE;
+		 return "NONE";
 	}
 
 	public String getRecordId() {

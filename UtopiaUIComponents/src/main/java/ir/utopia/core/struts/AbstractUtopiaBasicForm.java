@@ -1,12 +1,12 @@
 package ir.utopia.core.struts;
 
+import ir.utopia.core.ContextUtil;
 import ir.utopia.core.ServiceFactory;
 import ir.utopia.core.form.annotation.FormPersistentAttribute;
 import ir.utopia.core.form.annotation.MappedSuperForm;
 import ir.utopia.core.logic.util.AnnotationUtil;
 import ir.utopia.core.persistent.UtopiaBasicPersistent;
 import ir.utopia.core.process.ExecutionResult;
-import ir.utopia.core.security.SecurityProvider;
 import ir.utopia.core.security.exception.NotAuthenticatedException;
 import ir.utopia.core.struts.FormAndPersistentConverter.MethodAndParams;
 
@@ -19,8 +19,6 @@ import java.util.logging.Logger;
 
 import javax.security.auth.Subject;
 
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
 
 @MappedSuperForm
 public abstract class AbstractUtopiaBasicForm<P extends UtopiaBasicPersistent> implements UtopiaBasicForm<P> {
@@ -93,11 +91,7 @@ public abstract class AbstractUtopiaBasicForm<P extends UtopiaBasicPersistent> i
 //******************************************************************************************
 	protected Subject getSubject(){
 		if(subject==null){
-			if(ActionContext.getContext()!=null){
-				Map<String,Object> session= ActionContext.getContext().getSession();
-				if(session==null)return null;
-				 subject= (Subject)session.get(SecurityProvider.USER_SESSION_ATTRIBUTE_NAME);
-			}
+				 subject=ContextUtil.getUser();
 		}
 		 return subject;
 	} 
@@ -167,7 +161,6 @@ public abstract class AbstractUtopiaBasicForm<P extends UtopiaBasicPersistent> i
 		}
 //**************************************************************************************************	
 		@Override
-		@TypeConversion(converter="ir.utopia.core.struts.WindowNoTypeConvertor")
 		public int getWindowNo() {
 			return windowNo;
 		}

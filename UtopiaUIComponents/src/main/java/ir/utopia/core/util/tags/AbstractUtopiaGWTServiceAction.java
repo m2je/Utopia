@@ -1,6 +1,7 @@
 package ir.utopia.core.util.tags;
 
 import ir.utopia.core.ContextHolder;
+import ir.utopia.core.ContextUtil;
 import ir.utopia.core.messagehandler.MessageNamePair;
 import ir.utopia.core.security.WindowController;
 import ir.utopia.core.struts.UtopiaBasicAction;
@@ -17,8 +18,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.opensymphony.xwork2.ActionContext;
-
 public  abstract class AbstractUtopiaGWTServiceAction  extends UtopiaBasicAction implements InteractiveRemoteServiceCallSupport{
 	private static final boolean IsDebugging=Boolean.getBoolean("GwtDebug");
 	private static final Logger logger;
@@ -33,7 +32,7 @@ public  abstract class AbstractUtopiaGWTServiceAction  extends UtopiaBasicAction
 	
 //********************************************************************************************************	
 	public Map<String,Object> getSession(){
-		return  ActionContext.getContext().getSession();
+		return  ContextUtil.getContext();
 	}
 //********************************************************************************************************	
 	public String getLanguage(){
@@ -104,7 +103,7 @@ public  abstract class AbstractUtopiaGWTServiceAction  extends UtopiaBasicAction
 //			context= ContextUtil.createContext(session);
 //		}
 		
-		Map<String,Object>params=ActionContext.getContext().getParameters();
+		Map<String,Object>params=ContextUtil.getContext();
 		String language=getLanguage();
 		if(params!=null&&params.size()>0){
 			try {

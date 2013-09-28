@@ -1,5 +1,6 @@
 package ir.utopia.security.authentication;
 
+import ir.utopia.core.ContextUtil;
 import ir.utopia.core.ServiceFactory;
 import ir.utopia.core.security.SecurityProvider;
 
@@ -11,12 +12,7 @@ import java.util.logging.Logger;
 import javax.security.auth.Subject;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.struts2.interceptor.ServletRequestAware;
-
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
-
-public class LogoutAction extends ActionSupport implements ServletRequestAware {
+public class LogoutAction  {
 	private static final Logger logger;
 	
 	static {
@@ -31,7 +27,7 @@ public class LogoutAction extends ActionSupport implements ServletRequestAware {
 	
 	public String execute()throws Exception{
 		try {
-			Map<String,Object> session= ActionContext.getContext().getSession();
+			Map<String,Object> session= ContextUtil.getContext();
 			 Object user= session.get(SecurityProvider.USER_SESSION_ATTRIBUTE_NAME);
 			 ServiceFactory.getSecurityProvider().logUserLogout((Subject)user);
 			if(user instanceof Subject){
@@ -44,7 +40,7 @@ public class LogoutAction extends ActionSupport implements ServletRequestAware {
 			logger.log(Level.WARNING,"fail to logout", e);
 			e.printStackTrace();
 		}
-		return super.execute();
+		return "SUCCESS";
 	}
 
 	public void setServletRequest(HttpServletRequest request) {

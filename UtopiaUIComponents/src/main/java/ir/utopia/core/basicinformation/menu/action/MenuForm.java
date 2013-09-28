@@ -12,8 +12,6 @@ import ir.utopia.core.form.annotation.PersistedMapForm;
 import ir.utopia.core.form.annotation.SearchItem;
 import ir.utopia.core.struts.AbstractUtopiaForm;
 
-import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
-
 @PersistedMapForm
 @DataInputForm
 public class MenuForm  extends AbstractUtopiaForm<CoMenu>{
@@ -157,7 +155,6 @@ public class MenuForm  extends AbstractUtopiaForm<CoMenu>{
 
 	@FormPersistentAttribute
 	@InputItem(displayType=Constants.DisplayTypes.list,isManadatory=true,index=4,breakLineAfter=true,name="linkTarget")
-	@TypeConversion(converter="ir.utopia.core.struts.UtopiaTypeConverter")
 	public MenuLinkTarget getLinkTarget() {
 		return linkTarget;
 	}

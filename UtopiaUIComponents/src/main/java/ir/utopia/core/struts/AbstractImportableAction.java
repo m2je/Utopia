@@ -64,10 +64,6 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.beanutils.ConstructorUtils;
 import org.apache.commons.io.FileUtils;
-import org.apache.struts2.interceptor.ServletRequestAware;
-
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ModelDriven;
 
 /**
  * 
@@ -78,7 +74,7 @@ import com.opensymphony.xwork2.ModelDriven;
  */
 @Deprecated
 public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?, ?>>
-		extends AbstractUtopiaProcessAction<UtopiaProcessBean> implements ServletRequestAware, ModelDriven<T>, UtopiaProcessAction{
+		extends AbstractUtopiaProcessAction<UtopiaProcessBean> implements  UtopiaProcessAction{
 	
 	private static final Logger logger;
 	
@@ -146,11 +142,7 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 	}
 	String saveRecordMessage;
 	private static final int LOAD_PAGE_SIZE=10000; 
-	protected UtopiaPageForm getPageForm(){
-		Map<String,Object> session=ActionContext.getContext().getSession();
-		UtopiaPageForm pageForm=(UtopiaPageForm)session.get(Constants.PAGE_CONFIG_FORM_NAME);
-		return pageForm;
-	}
+	
 //*********************************************************************************************	
 	@Override
 	public ProcessExecutionResult confirm(String[] params, String[] values) {
@@ -160,7 +152,7 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 		ProcessExecutionResult result=new ProcessExecutionResult()	;
 		Locale locale= getUserLocale();
 		String language=locale==null?"en": locale.getLanguage();
-		Map<String,Object>session=ActionContext.getContext().getSession();
+		Map<String,Object>session=null;//ActionContext.getContext().getSession();
 		ImportDataHandler importHandler=(ImportDataHandler)session.get(SESSION_IMPORT_DATA_HANDLER);
 		Long processId=getProcessIdentifier();
 		
@@ -221,9 +213,9 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 		ProcessExecutionResult res=super.updateExecResult(processUniqueId);
 		if(res.isSuccess()&&res.getProcessStatus()==ProcessExecutionResult.PROCESS_STATUS_FINISHED){
 			try {
-				Map<String,Object>session= ActionContext.getContext().getSession();
+				Map<String,Object>session= null;//ActionContext.getContext().getSession();
 				ImportDataProvider dataProvider=(ImportDataProvider)session.get(SESSION_IMPORT_DATA_PROVIDER);
-				ImportSetup importSetup = (ImportSetup) ActionContext.getContext().getSession().get(SESSION_IMPORT_SETUP);
+				ImportSetup importSetup = (ImportSetup) session.get(SESSION_IMPORT_SETUP);
 				Map<String,Object>context=createContext();
 				int recordCount=dataProvider.getSize(context);
 				recordCount=importSetup.isFirstLineTitle()?recordCount-1:recordCount;
@@ -447,11 +439,11 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 			BeanProcessParameter[] params=super.getProcessParameters();
 			BeanProcessParameter[] result=new BeanProcessParameter[params.length+3];
 			System.arraycopy(params, 0, result, 0, params.length);
-			Map<String,Object>session= ActionContext.getContext().getSession();
+			Map<String,Object>session= null;//ActionContext.getContext().getSession();
 			ImportDataProvider dataProvider=(ImportDataProvider)session.get(SESSION_IMPORT_DATA_PROVIDER);
 			result[params.length]=new BeanProcessParameter(ImportTransactionalRemote.PERSITENTLIST_DATA_PROVIDER,
 					dataProvider);
-			ImportSetup importSetup = (ImportSetup) ActionContext.getContext().getSession().get(SESSION_IMPORT_SETUP);
+			ImportSetup importSetup = (ImportSetup) session.get(SESSION_IMPORT_SETUP);
 			int userFrom=importSetup.getUserFrom()-1;
 			userFrom=userFrom<0?0:userFrom;
 			int userTo=importSetup.getUserTo();
@@ -475,7 +467,7 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 	public Class<? extends UtopiaProcessBean> getFacadeClass() {
 		
 		if(facadeClass==null){
-			ImportSetup importSetup = (ImportSetup) ActionContext.getContext().getSession().get(SESSION_IMPORT_SETUP);
+			ImportSetup importSetup = null;//(ImportSetup) ActionContext.getContext().getSession().get(SESSION_IMPORT_SETUP);
 			this.facadeClass= (Class<UtopiaProcessBean>) BeanUtil.findRemoteClassFromPersistent(importSetup.getPersistentClass());
 			}
 		
@@ -483,12 +475,11 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 		
 	}
 //******************************************************************************************************
-	@Override
 	public String execute() throws Exception {
 		ContextUtil.registerSessionContextExclusionParameter(SESSION_IMPORT_DATA_HANDLER);
 		ContextUtil.registerSessionContextExclusionParameter(SESSION_IMPORT_DATA_PROVIDER);
 		ContextUtil.registerSessionContextExclusionParameter(SESSION_IMPORT_SETUP);
-		Map<String,Object> session=ActionContext.getContext().getSession();
+		Map<String,Object> session=null;//ActionContext.getContext().getSession();
 		
 		UtopiaPageForm pageForm=(UtopiaPageForm)session.get(Constants.PAGE_CONFIG_FORM_NAME);
 		try {
@@ -538,17 +529,17 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 			int []fromTo=getUserFromAndTo(importSetup, importHandler,context);
 			if(fromTo[0]<0){
 				success=false;
-				addActionError(MessageHandler.getMessage("invalidFromToIndex","ir.utopia.core.struts.ImportAction",getUserLocale().getLanguage()));
+//				addActionError(MessageHandler.getMessage("invalidFromToIndex","ir.utopia.core.struts.ImportAction",getUserLocale().getLanguage()));
 			}
 			if(fromTo[1]<0){
 				success=false;
-				addActionError(MessageHandler.getMessage("emptyFileError", 
-						"ir.utopia.core.struts.ImportAction", getUserLocale().getLanguage()));
+//				addActionError(MessageHandler.getMessage("emptyFileError", 
+//						"ir.utopia.core.struts.ImportAction", getUserLocale().getLanguage()));
 			}
 			session.put(SESSION_IMPORT_SETUP, importSetup);
 			session.put(SESSION_IMPORT_DATA_HANDLER, importHandler);
 			
-			return success?SUCCESS:ERROR;
+			return success?"SUCCESS":"ERROR";
 		} catch (Exception e) {
 			ExceptionResult exRes= getExceptionHandler().handel(e, createContext());
 			logger.log(Level.WARNING,"", e);
@@ -557,7 +548,7 @@ public abstract class AbstractImportableAction<T extends UtopiaImportableForm<?,
 				pairs.addAll(exRes.getMessages());
 				session.put(ACTION_MESSAGES_SESSION_KEY, pairs);
 			}
-			return ERROR;
+			return "ERROR";
 		}
 	}
 //********************************************************************************************************

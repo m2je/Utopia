@@ -35,7 +35,6 @@ import java.util.logging.Logger;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.MethodUtils;
 
-import com.opensymphony.xwork2.ModelDriven;
 
 public abstract class AbstractUtopiaProcessAction<B extends UtopiaProcessBean> extends UtopiaBasicAction implements UtopiaProcessAction,ProcessListener {
 	private static final Logger logger;
@@ -159,12 +158,12 @@ public abstract class AbstractUtopiaProcessAction<B extends UtopiaProcessBean> e
 
 	protected BeanProcessParameter[] getProcessParameters(){
 		ArrayList<BeanProcessParameter>params=new ArrayList<BeanProcessParameter>();
-		Map<String,Object>result;
-		if(ModelDriven.class.isInstance(this)){
-			result= getFieldsValue(((ModelDriven<?>)this).getModel());
-		}else{
-			result=getFieldsValue(this);
-		}
+		Map<String,Object>result=null;
+//		if(ModelDriven.class.isInstance(this)){
+//			result= getFieldsValue(((ModelDriven<?>)this).getModel());
+//		}else{
+//			result=getFieldsValue(this);
+//		}
 		for(String key:result.keySet()){
 			params.add(new BeanProcessParameter(key, result.get(key)));
 		}
@@ -309,12 +308,12 @@ public abstract class AbstractUtopiaProcessAction<B extends UtopiaProcessBean> e
 	}
 //***************************************************************************************
 	public static void initParameters(Object invokingObject, String params[], String[] values,String locale) {
-		if (ModelDriven.class.isAssignableFrom(invokingObject.getClass())) {
-			initParametersValue(((ModelDriven<?>) invokingObject).getModel(), params,
-					values,locale);
-		} else {
+//		if (ModelDriven.class.isAssignableFrom(invokingObject.getClass())) {
+//			initParametersValue(((ModelDriven<?>) invokingObject).getModel(), params,
+//					values,locale);
+//		} else {
 			initParametersValue(invokingObject, params, values,locale);
-		}
+//		}
 	}
 //***************************************************************************************
 	private static  void initParametersValue(Object bean, String params[], String[] values,String locale) {

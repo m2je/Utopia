@@ -21,13 +21,10 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.apache.struts2.dispatcher.Dispatcher;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.input.SAXBuilder;
 
-import com.opensymphony.xwork2.config.RuntimeConfiguration;
-import com.opensymphony.xwork2.config.entities.ActionConfig;
 public abstract class UIServiceFactory {
 	private static final Logger logger;
 	
@@ -62,6 +59,7 @@ public abstract class UIServiceFactory {
 	}
 //**************************************************************************************	
 	private static void intUsecase2ActionMapping(){
+		/*
 		RuntimeConfiguration configuration= Dispatcher.getInstance().getConfigurationManager().getConfiguration().getRuntimeConfiguration();
 		Collection<Map<String,ActionConfig>>configMapCollection= configuration.getActionConfigs().values();
 		HashSet<Class<?>>loadedClasses=new HashSet<Class<?>>();
@@ -117,6 +115,7 @@ public abstract class UIServiceFactory {
 		} catch (Exception e) {
 			logger.log(Level.WARNING, "",e);
 		}
+		*/
 	} 
 //**************************************************************************************	
 	

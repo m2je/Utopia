@@ -57,7 +57,6 @@ import java.util.logging.Logger;
 
 import javax.servlet.ServletContext;
 
-import org.apache.struts2.util.ServletContextAware;
 import org.quartz.JobDataMap;
 import org.quartz.JobDetail;
 import org.quartz.JobKey;
@@ -69,7 +68,7 @@ import org.quartz.TriggerKey;
 import org.quartz.ee.servlet.QuartzInitializerListener;
 import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.impl.matchers.GroupMatcher;
-public class SchedulerConfigAction  extends UtopiaBasicAction implements SchedulerDefinitionService,ServletContextAware {
+public class SchedulerConfigAction  extends UtopiaBasicAction implements SchedulerDefinitionService{
 	private static final Logger logger;
 	
 	static {
@@ -767,12 +766,7 @@ public class SchedulerConfigAction  extends UtopiaBasicAction implements Schedul
 		
 		return result;
 	}
-//******************************************************************************************************
-@Override
-public void setServletContext(ServletContext context) {
-	this.servletContext=context;
-	
-}
+
 //******************************************************************************************************
 public ExceptionHandler getExceptionHandler(){
 	return new SchedulerExceptionHandler();
